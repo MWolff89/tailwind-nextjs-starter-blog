@@ -10,10 +10,6 @@ const MAX_DISPLAY = 5
 export default function Home({ posts }) {
   return (
     <>
-    {/* <Script>
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script src="https://mediafiles.botpress.cloud/397c76ff-3cc3-40a0-95cd-936b59e0b62a/webchat/config.js" defer></script>
-    </Script> */}
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
