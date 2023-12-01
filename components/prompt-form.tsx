@@ -28,7 +28,7 @@ export function PromptForm({
 }: PromptProps) {
   const { formRef, onKeyDown } = useEnterSubmit()
   const inputRef = React.useRef<HTMLTextAreaElement>(null)
-  const router = useRouter()
+  // const router = useRouter()
 
   React.useEffect(() => {
     if (inputRef.current) {
