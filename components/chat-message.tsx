@@ -17,21 +17,16 @@ export interface ChatMessageProps {
 
 export function ChatMessage({ message, ...props }: ChatMessageProps) {
   return (
-    <div
-      className={cn('group relative mb-4 flex items-start md:-ml-12')}
-      {...props}
-    >
+    <div className={cn('group relative mb-4 flex items-start md:-ml-12')} {...props}>
       <div
         className={cn(
           'flex h-8 w-8 shrink-0 select-none items-center justify-center rounded-md border shadow',
-          message.role === 'user'
-            ? 'bg-background'
-            : 'bg-primary text-primary-foreground'
+          message.role === 'user' ? 'bg-background' : 'bg-primary text-primary-foreground'
         )}
       >
         {message.role === 'user' ? <IconUser /> : <IconOpenAI />}
       </div>
-      <div className="flex-1 px-1 ml-4 space-y-2 overflow-hidden">
+      <div className="ml-4 flex-1 space-y-2 overflow-hidden px-1">
         <MemoizedReactMarkdown
           className="prose break-words dark:prose-invert prose-p:leading-relaxed prose-pre:p-0"
           remarkPlugins={[remarkGfm, remarkMath]}
@@ -42,9 +37,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
             code({ node, inline, className, children, ...props }) {
               if (children.length) {
                 if (children[0] == '▍') {
-                  return (
-                    <span className="mt-1 cursor-default animate-pulse">▍</span>
-                  )
+                  return <span className="mt-1 animate-pulse cursor-default">▍</span>
                 }
 
                 children[0] = (children[0] as string).replace('`▍`', '▍')
@@ -68,7 +61,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
                   {...props}
                 />
               )
-            }
+            },
           }}
         >
           {message.content}

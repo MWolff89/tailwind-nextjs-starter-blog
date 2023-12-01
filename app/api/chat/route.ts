@@ -10,7 +10,7 @@ import { getContext } from '@/lib/getContext'
 export const runtime = 'edge'
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
 })
 
 const openai = new OpenAIApi(configuration)
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
     If the context block does not provide the answer to question, you will say, "I'm sorry, but I don't know the answer to that question".
     Keep your answers at a medium length and concise without going into unnecessary details which may result in long paragraphs which discourage the user from reading.
     Instead, you may suggest follow up questions that the user can ask that are present in the context.
-    `
+    `,
     // content: `AI assistant is a brand new, powerful, human-like artificial intelligence.
     // The traits of AI include expert knowledge, helpfulness, cleverness, and articulateness.
     // AI is a well-behaved and well-mannered individual.
@@ -78,14 +78,10 @@ export async function POST(req: Request) {
 
   const res = await openai.createChatCompletion({
     model: 'gpt-4',
-    messages: [
-      prompt,
-      ...messages
-    ],
+    messages: [prompt, ...messages],
     temperature: 0.1,
-    stream: true
+    stream: true,
   })
-
 
   // Construct OpenAI Stream
   const stream = OpenAIStream(res, {
@@ -104,16 +100,16 @@ export async function POST(req: Request) {
           ...messages,
           {
             content: completion,
-            role: 'assistant'
-          }
-        ]
+            role: 'assistant',
+          },
+        ],
       }
       await kv.hmset(`chat:${id}`, payload)
       // await kv.zadd(`user:chat:${userId}`, {
       //   score: createdAt,
       //   member: `chat:${id}`
       // })
-    }
+    },
   })
 
   return new StreamingTextResponse(stream)
