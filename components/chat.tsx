@@ -20,6 +20,8 @@ import { useState } from 'react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { toast } from 'react-hot-toast'
+// import { Input } from './ui/input'
+// import { ChatScrollAnchor } from './chat-scroll-anchor'
 // import { ChatList } from './chat-list'
 
 const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'

@@ -12,6 +12,7 @@ import {
 import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 import { cn } from '@/lib/utils'
 import { useRouter } from 'next/navigation'
+// import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 
 export interface PromptProps
   extends Pick<UseChatHelpers, 'input' | 'setInput'> {
