@@ -4150,7 +4150,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ai@npm:^2.2.26":
+"ai@npm:^2.1.6":
   version: 2.2.27
   resolution: "ai@npm:2.2.27"
   dependencies:
@@ -13022,7 +13022,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.1.0
     "@typescript-eslint/parser": ^6.1.0
     "@vercel/kv": ^0.2.1
-    ai: ^2.2.26
+    ai: ^2.1.6
     autoprefixer: ^10.4.13
     class-variance-authority: ^0.7.0
     clsx: ^2.0.0
@@ -13033,6 +13033,7 @@ __metadata:
     eslint-config-next: 13.5.6
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^5.0.0
+    github-slugger: ^1.4.0
     husky: ^8.0.0
     image-size: 1.0.0
     langchain: ^0.0.198

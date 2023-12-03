@@ -1,8 +1,16 @@
+'use client'
+
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+// import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
+// import { current } from 'tailwindcss/colors';
 
 export default function Footer() {
+  // const router = useRouter()
+  // const currentUrl = router.pathname
+  // console.log('Current Url =>', currentUrl)
   return (
     <footer>
       <div className="mt-16 flex flex-col items-center">

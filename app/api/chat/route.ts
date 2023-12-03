@@ -39,7 +39,7 @@ export async function POST(req: Request) {
 
   const _context = await getContext(lastMessage.content)
 
-  console.log('__CONTEXT__ =>', _context)
+  // console.log('__CONTEXT__ =>', _context)
 
   const prompt = {
     role: `system`,

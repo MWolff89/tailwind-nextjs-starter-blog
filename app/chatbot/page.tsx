@@ -3,7 +3,7 @@ import { Chat } from '@/components/chat'
 
 export const runtime = 'edge'
 
-export default function IndexPage() {
+export default function ChatbotPage() {
   const id = nanoid()
 
   return (
