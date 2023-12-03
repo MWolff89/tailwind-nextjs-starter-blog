@@ -11,6 +11,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { Providers } from '@/components/providers'
+import Script from 'next/script'
 //
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -89,7 +90,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </SectionContainer>
           </ThemeProviders>
         </Providers>
+        <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/e6fdd5bf-eb50-4148-bdfe-8d6e533580b5/webchat/config.js" defer></script>
       </body>
+
+      {/* // In your component */}
+      {/* <Script src="https://cdn.botpress.cloud/webchat/v1/inject.js" />
+      <Script
+        src="https://mediafiles.botpress.cloud/e6fdd5bf-eb50-4148-bdfe-8d6e533580b5/webchat/config.js"
+        defer
+      /> */}
     </html>
   )
 }

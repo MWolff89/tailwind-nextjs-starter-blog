@@ -12,7 +12,7 @@ export default function Footer() {
   // const currentUrl = router.pathname
   // console.log('Current Url =>', currentUrl)
   return (
-    <footer>
+    <footer className='footer'>
       <div className="mt-16 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
