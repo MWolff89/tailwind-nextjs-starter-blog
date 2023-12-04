@@ -10,22 +10,24 @@ import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 const Header = () => {
   const { theme } = useTheme()
+  const [logo, setLogo] = useState(LogoWhite)
+
+  useEffect(() => {
+    setLogo(theme === 'dark' ? LogoWhite : LogoBlack)
+  }, [theme])
+
   return (
     <header className="flex items-center justify-between py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center h-[30px]">
             <div className="mr-3">
               {/* <Logo /> */}
-              <Image
-                src={theme === 'dark' ? LogoWhite : LogoBlack}
-                width={28}
-                height={28}
-                alt="BlackOrchid AI Logo"
-              />
+              <Image src={logo} width={22} height={22} alt="BlackOrchid AI Logo" />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hidden h-6 text-2xl font-semibold sm:block">

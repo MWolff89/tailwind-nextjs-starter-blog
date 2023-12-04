@@ -1,14 +1,14 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'BlackOrchid AI',
+  title: 'BLACKORCHID AI',
   author: 'Maltin Wolf',
-  headerTitle: 'BlackOrchid AI',
+  headerTitle: 'BLACKORCHID AI',
   description: 'According to a study by McKinsey, generative AI could deliver total value in the range of $2.6 trillion to $4.4 trillion in economic benefits annually when applied across industries.',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/static/images/logo2.png',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'root@blackorchidai.com',
