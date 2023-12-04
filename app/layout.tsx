@@ -11,7 +11,9 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { Providers } from '@/components/providers'
-import Script from 'next/script'
+// import { Space_Grotesk } from 'next/font/google'
+// import Script from 'next/script'
+// import { Space_Grotesk } from 'next/font/google'
 //
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
