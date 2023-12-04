@@ -50,9 +50,11 @@ export default function ChatbotPage() {
               <label htmlFor="password" className="block text-lg font-semibold">
                 Enter Password
               </label>
-              <div className='text-sm mt-2 mb-6'>
-                <p className="text-gray-500">This is a private chatbot. Please enter the password to continue.</p>
-                <p className='text-gray-400'>
+              <div className="mb-6 mt-2 text-sm">
+                <p className="text-gray-500">
+                  This is a private chatbot. Please enter the password to continue.
+                </p>
+                <p className="text-gray-400">
                   Contact us if you would like to have a private chatbot for your business or
                   website.
                 </p>
