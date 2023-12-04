@@ -29,14 +29,11 @@ export default function ChatbotPage() {
     <div className=" bg-gradient-to-b from-10% to-50%">
       <div className="flex items-center justify-center">
         {authenticated ? (
-         <Chat id={id} />
+          <Chat id={id} />
         ) : (
-          <form
-            onSubmit={handlePasswordSubmit}
-            className="p-8 rounded-lg shadow-md max-w-md"
-          >
+          <form onSubmit={handlePasswordSubmit} className="max-w-md rounded-lg p-8 shadow-md">
             <div className="mb-6">
-              <label htmlFor="password" className="text-lg font-semibold block">
+              <label htmlFor="password" className="block text-lg font-semibold">
                 Enter Password
               </label>
               <input
@@ -44,13 +41,13 @@ export default function ChatbotPage() {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400"
+                className="w-full rounded-md border px-4 py-2 focus:border-blue-400 focus:outline-none"
               />
             </div>
             <Button
               type="submit"
               // variant="primary"
-              className="w-full flex items-center justify-center"
+              className="flex w-full items-center justify-center"
             >
               {/* <IconLock className="mr-2" /> */}
               Unlock Chat
