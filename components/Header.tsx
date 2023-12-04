@@ -22,16 +22,19 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between py-10">
-      <div>
+      <div className='flex justify-center items-center'>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="flex h-[30px] items-center justify-center">
+          <div className="flex h-[30px] items-center justify-between">
             <div className="mr-3">
               {/* <Logo /> */}
               <Image src={logo} width={22} height={22} alt="BlackOrchid AI Logo" />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
+              <div className="hidden h-6 text-2xl font-semibold sm:block flex justify-center items-center">
+                <p>
+
                 {siteMetadata.headerTitle}
+                </p>
               </div>
             ) : (
               siteMetadata.headerTitle
