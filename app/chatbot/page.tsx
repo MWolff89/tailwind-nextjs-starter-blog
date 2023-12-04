@@ -32,7 +32,7 @@ export default function ChatbotPage() {
   }
 
   return (
-    <div className={`bg-${chatTheme === 'dark' ? 'black' : 'white'}`}>
+    <div className={`bg-background}`}>
       <div className="flex items-center justify-center">
         {authenticated ? (
           <Chat id={id} />
