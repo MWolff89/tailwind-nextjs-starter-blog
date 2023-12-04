@@ -24,7 +24,7 @@ const Header = () => {
     <header className="flex items-center justify-between py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="flex items-center justify-center h-[30px]">
+          <div className="flex h-[30px] items-center justify-center">
             <div className="mr-3">
               {/* <Logo /> */}
               <Image src={logo} width={22} height={22} alt="BlackOrchid AI Logo" />
