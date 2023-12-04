@@ -21,10 +21,18 @@ export default function ChatbotPage() {
   }, [resolvedTheme])
 
   const handlePasswordSubmit = (e) => {
+    console.log(
+      'ChatbotPage.tsx: handlePasswordSubmit: e: ',
+      e,
+      'password: ',
+      password,
+      'authenticated: ',
+      authenticated
+    )
     e.preventDefault()
 
     // Check the password (replace 'yourpassword' with your actual password)
-    if (password === 'yourpassword') {
+    if (password === 'nkp') {
       setAuthenticated(true)
     } else {
       alert('Invalid password')
@@ -42,6 +50,13 @@ export default function ChatbotPage() {
               <label htmlFor="password" className="block text-lg font-semibold">
                 Enter Password
               </label>
+              <div className='text-sm mt-2 mb-6'>
+                <p className="text-gray-500">This is a private chatbot. Please enter the password to continue.</p>
+                <p className='text-gray-400'>
+                  Contact us if you would like to have a private chatbot for your business or
+                  website.
+                </p>
+              </div>
               <input
                 type="password"
                 id="password"
