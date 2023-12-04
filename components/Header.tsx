@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between py-10">
-      <div className='flex justify-center items-center'>
+      <div className="flex items-center justify-center">
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex h-[30px] items-center justify-between">
             <div className="mr-3">
@@ -30,11 +30,8 @@ const Header = () => {
               <Image src={logo} width={22} height={22} alt="BlackOrchid AI Logo" />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block flex justify-center items-center">
-                <p>
-
-                {siteMetadata.headerTitle}
-                </p>
+              <div className="flex hidden h-6 items-center justify-center text-2xl font-semibold sm:block">
+                <p>{siteMetadata.headerTitle}</p>
               </div>
             ) : (
               siteMetadata.headerTitle
