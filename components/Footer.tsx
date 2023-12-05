@@ -3,14 +3,11 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
-// import { useRouter } from 'next/router'
-import { useRouter } from 'next/navigation'
-// import { current } from 'tailwindcss/colors';
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
-  // const router = useRouter()
-  // const currentUrl = router.pathname
-  // console.log('Current Url =>', currentUrl)
+  const pathname = usePathname()
+  if (pathname === '/chatbot') return null
   return (
     <footer className="footer">
       <div className="mt-16 flex flex-col items-center">

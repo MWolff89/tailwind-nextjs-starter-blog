@@ -108,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://mediafiles.botpress.cloud/e6fdd5bf-eb50-4148-bdfe-8d6e533580b5/webchat/config.js"
           defer
         ></script> */}
-        <BotpressWebChat />
+        {/* <BotpressWebChat /> */}
       </body>
 
       {/* // In your component */}
