@@ -29,17 +29,17 @@ const exampleMessages = [
 
 const namkeepauExampleMessages = [
   {
-    heading: "Tell me more about Nam Kee Pau",
+    heading: 'Tell me more about Nam Kee Pau',
     message: `Tell me more about Nam Kee Pau`,
   },
   {
-    heading: "Where are you located?",
+    heading: 'Where are you located?',
     message: `Where are you located?`,
   },
   {
-    heading: "WHat special bundles do you have?",
+    heading: 'WHat special bundles do you have?',
     message: `What special bundles do you have?`,
-  }
+  },
 ]
 
 export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {

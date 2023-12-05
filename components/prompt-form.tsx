@@ -34,7 +34,7 @@ export function PromptForm({ onSubmit, input, setInput, isLoading }: PromptProps
       }}
       ref={formRef}
     >
-      <div className="bg-background relative flex max-h-60 w-full grow flex-col overflow-hidden pr-8 sm:rounded-md sm:border sm:pr-12 bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+      <div className="bg-background relative flex max-h-60 w-full grow flex-col overflow-hidden bg-white pr-8 text-black antialiased dark:bg-gray-950 dark:text-white sm:rounded-md sm:border sm:pr-12">
         {/* <Tooltip>
           <TooltipTrigger asChild>
             <button

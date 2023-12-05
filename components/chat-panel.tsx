@@ -32,20 +32,28 @@ export function ChatPanel({
       <div className="mx-auto sm:max-w-2xl sm:px-4">
         <div className="flex h-10 items-center justify-center ">
           {isLoading ? (
-            <Button variant="outline" onClick={() => stop()} className="bg-background bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+            <Button
+              variant="outline"
+              onClick={() => stop()}
+              className="bg-background bg-white text-black antialiased dark:bg-gray-950 dark:text-white"
+            >
               <IconStop className="mr-2" />
               Stop generating
             </Button>
           ) : (
             messages?.length > 0 && (
-              <Button variant="outline" onClick={() => reload()} className="bg-background bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+              <Button
+                variant="outline"
+                onClick={() => reload()}
+                className="bg-background bg-white text-black antialiased dark:bg-gray-950 dark:text-white"
+              >
                 <IconRefresh className="mr-2" />
                 Regenerate response
               </Button>
             )
           )}
         </div>
-        <div className="bg-background space-y-4 border-t px-4 py-2 shadow-lg sm:rounded-t-xl sm:border md:py-4 bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+        <div className="bg-background space-y-4 border-t bg-white px-4 py-2 text-black antialiased shadow-lg dark:bg-gray-950 dark:text-white sm:rounded-t-xl sm:border md:py-4">
           <PromptForm
             onSubmit={async (value) => {
               await append({
