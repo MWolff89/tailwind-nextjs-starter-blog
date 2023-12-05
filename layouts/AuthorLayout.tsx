@@ -1,7 +1,12 @@
-import { ReactNode } from 'react'
+'use client'
+
+import { ReactNode, useEffect, useState } from 'react'
 import type { Authors } from 'contentlayer/generated'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
+import { useTheme } from 'next-themes'
+import LogoWhite from '@/data/blackorchidai-white-08.png'
+import LogoBlack from '@/data/blackorchidai-08.png'
 
 interface Props {
   children: ReactNode
@@ -9,7 +14,16 @@ interface Props {
 }
 
 export default function AuthorLayout({ children, content }: Props) {
-  const { name, avatar, occupation, company, email, twitter, linkedin, github } = content
+  const { name, avatar, avatardark, occupation, company, email, twitter, linkedin, github } =
+    content
+
+  const { resolvedTheme } = useTheme()
+  const [chatTheme, setChatTheme] = useState(resolvedTheme === 'dark' ? 'dark' : 'light')
+
+  useEffect(() => {
+    console.log('AuthorLayout.tsx: useEffect: resolvedTheme: ', resolvedTheme)
+    setChatTheme(resolvedTheme === 'dark' ? 'dark' : 'light')
+  }, [resolvedTheme])
 
   return (
     <>
@@ -23,7 +37,11 @@ export default function AuthorLayout({ children, content }: Props) {
           <div className="flex flex-col items-center space-x-2 pt-8">
             {avatar && (
               <Image
-                src={avatar}
+                src={
+                  chatTheme === 'dark'
+                    ? LogoWhite
+                    : LogoBlack
+                }
                 alt="avatar"
                 width={192}
                 height={192}

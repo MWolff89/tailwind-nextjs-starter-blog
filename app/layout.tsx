@@ -12,6 +12,8 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { Providers } from '@/components/providers'
 import BotpressWebChat from '@/lib/botpresswebchat'
+import React from 'react'
+// import { usePathname } from 'next/navigation'
 // import { Space_Grotesk } from 'next/font/google'
 // import Script from 'next/script'
 // import { Space_Grotesk } from 'next/font/google'
@@ -63,6 +65,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+
   return (
     <html
       lang={siteMetadata.language}
@@ -106,9 +109,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* <script async src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
         <script
           src="https://mediafiles.botpress.cloud/e6fdd5bf-eb50-4148-bdfe-8d6e533580b5/webchat/config.js"
-          defer
         ></script> */}
-        {/* <BotpressWebChat /> */}
+        <BotpressWebChat />
       </body>
 
       {/* // In your component */}

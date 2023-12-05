@@ -4,7 +4,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import Script from 'next/script'
-import BotpressWebChat from '@/lib/botpresswebchat'
 
 const MAX_DISPLAY = 5
 
@@ -91,7 +90,6 @@ export default function Home({ posts }) {
           <NewsletterForm />
         </div>
       )}
-      <BotpressWebChat />
     </>
   )
 }
