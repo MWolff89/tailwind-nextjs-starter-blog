@@ -19,7 +19,7 @@ const exampleMessages = [
   },
   {
     heading: 'What is the pricing?',
-    message: 'What is the pricing for Yoga Mala classes?',
+    message: 'What is the pricing for Nam Kee Pau classes?',
   },
   {
     heading: 'Do you have a free trial?',
@@ -27,13 +27,28 @@ const exampleMessages = [
   },
 ]
 
+const namkeepauExampleMessages = [
+  {
+    heading: "Tell me more about Nam Kee Pau",
+    message: `Tell me more about Nam Kee Pau`,
+  },
+  {
+    heading: "Where are you located?",
+    message: `Where are you located?`,
+  },
+  {
+    heading: "WHat special bundles do you have?",
+    message: `What special bundles do you have?`,
+  }
+]
+
 export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
   return (
     <div className="mx-auto max-w-2xl px-4">
       <div className="bg-background rounded-lg border p-8">
-        <h1 className="mb-2 text-lg font-semibold">Welcome to Yoga Mala Chatbot!</h1>
+        <h1 className="mb-2 text-lg font-semibold">Welcome to Nam Kee Pau Chatbot!</h1>
         <p className="text-muted-foreground mb-2 leading-normal">
-          This is an demo AI chatbot built for Yoga Mala Singapore by{' '}
+          This is an demo AI chatbot built for Nam Kee Pau by{' '}
           <ExternalLink href="https://tailwind-nextjs-starter-blog-eight-gamma.vercel.app/about/">
             BlackOrchid AI
           </ExternalLink>
@@ -43,7 +58,7 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
           You can start a conversation here or try the following examples:
         </p>
         <div className="mt-4 flex flex-col items-start space-y-2">
-          {exampleMessages.map((message, index) => (
+          {namkeepauExampleMessages.map((message, index) => (
             <Button
               key={index}
               variant="link"

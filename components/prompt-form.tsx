@@ -20,7 +20,7 @@ export function PromptForm({ onSubmit, input, setInput, isLoading }: PromptProps
     if (inputRef.current) {
       inputRef.current.focus()
     }
-  }, [])
+  }, [input])
 
   return (
     <form
