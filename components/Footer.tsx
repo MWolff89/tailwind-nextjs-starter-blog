@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 
 export default function Footer() {
   const pathname = usePathname()
-  if (pathname === '/chatbot') return null
+  // if (pathname === '/chatbot') return null
   return (
     <footer className="footer">
       <div className="mt-16 flex flex-col items-center">
