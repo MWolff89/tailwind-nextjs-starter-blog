@@ -40,46 +40,48 @@ export default function ChatbotPage() {
   }
 
   return (
-    <div className={`bg-background}`}>
-      <div className="flex items-center justify-center">
+    <div className={`bg-background`}>
+      <div className="">
         {authenticated ? (
           <Chat id={id} />
         ) : (
-          <form onSubmit={handlePasswordSubmit} className="max-w-md rounded-lg p-8 shadow-md">
-            <div className="mb-6">
-              <label htmlFor="password" className="block text-lg font-semibold">
-                Enter Password
-              </label>
-              <div className="mb-6 mt-2 text-sm">
-                <p className="text-gray-500">
-                  This is a private chatbot. Please enter the password to continue.
-                </p>
-                <p className="text-gray-400">
-                  Contact us if you would like to have a private chatbot for your business or
-                  website.
-                </p>
+          <div className="flex items-center justify-center">
+            <form onSubmit={handlePasswordSubmit} className="max-w-md rounded-lg p-8 shadow-md">
+              <div className="mb-6">
+                <label htmlFor="password" className="block text-lg font-semibold">
+                  Enter Password
+                </label>
+                <div className="mb-6 mt-2 text-sm">
+                  <p className="text-gray-500">
+                    This is a private chatbot. Please enter the password to continue.
+                  </p>
+                  <p className="text-gray-400">
+                    Contact us if you would like to have a private chatbot for your business or
+                    website.
+                  </p>
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className={`w-full rounded-md border px-4 py-2 focus:border-${
+                    chatTheme === 'dark' ? 'blue' : 'blue-400'
+                  } focus:outline-none ${
+                    chatTheme === 'dark' ? 'text-black' : 'text-black' // Change text color accordingly
+                  }`}
+                />
               </div>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className={`w-full rounded-md border px-4 py-2 focus:border-${
-                  chatTheme === 'dark' ? 'blue' : 'blue-400'
-                } focus:outline-none ${
-                  chatTheme === 'dark' ? 'text-black' : 'text-black' // Change text color accordingly
+              <Button
+                type="submit"
+                className={`flex w-full items-center justify-center ${
+                  chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
                 }`}
-              />
-            </div>
-            <Button
-              type="submit"
-              className={`flex w-full items-center justify-center ${
-                chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-              }`}
-            >
-              Unlock Chat
-            </Button>
-          </form>
+              >
+                Unlock Chat
+              </Button>
+            </form>
+          </div>
         )}
       </div>
     </div>
