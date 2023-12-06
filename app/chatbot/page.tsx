@@ -81,7 +81,7 @@ export default function ChatbotPage() {
                 Unlock Chat
               </Button>
             </form>
-          </div>
+          </div> 
         )}
       </div>
     </div>
