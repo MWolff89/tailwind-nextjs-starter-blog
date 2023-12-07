@@ -107,46 +107,84 @@ export default function Home({ posts }) {
         </div>
         <div className="container flex items-center justify-center py-2">
           <div className="grid w-full grid-cols-3 gap-4">
-            <div className="col-span-1 flex flex-col items-center justify-center">
-              <div className="h-full w-full rounded-md bg-gray-900 flex flex-col items-center justify-start pt-8 pb-8">
-                <h1 className="text-center text-3xl font-bold text-white">1500 SGD</h1>
-                <p className="text-center text-lg text-white">Lite</p>
+            {[
+              {
+                price: '1500 SGD',
+                plan: 'Lite Plan',
+                setup: '1-time setup',
+                subscription: '1 year subscription',
+                includes: ['1-time setup', '1 year subscription'],
+                additional: [
+                  'Capturing leads',
+                  'Recommendation of specific products',
+                  'Bookings and scheduling systems synchronization to AI chatbot',
+                ],
+              },
+              {
+                price: '2500 SGD',
+                plan: 'Basic Plan',
+                setup: '1-time setup',
+                subscription: '1 year subscription',
+                includes: ['1-time setup', '1 year subscription'],
+                additional: [
+                  'Capturing leads',
+                  'Recommendation of specific products',
+                  'Bookings and scheduling systems synchronization to AI chatbot',
+                ],
+              },
+              {
+                price: '3000 SGD',
+                plan: 'Premium Plan',
+                setup: '1-time setup',
+                subscription: '1 year subscription',
+                includes: ['1-time setup', '1 year subscription'],
+                additional: [
+                  'Capturing leads',
+                  'Recommendation of specific products',
+                  'Bookings and scheduling systems synchronization to AI chatbot',
+                ],
+              },
+            ].map((item) => (
+              <div className="col-span-1 flex flex-col items-center justify-center">
+                <div className="flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8">
+                  <h1 className="text-center text-3xl font-bold text-white">{
+                    item.price
+                  }</h1>
+                  <p className="text-md text-center font-medium text-gray-400">{
+                    item.plan
+                  }</p>
+                  {/* divider */}
+                  <div className="my-4 w-1/2 border-b-2 border-white"></div>
+                  <p className="text-center text-sm text-white">{
+                    item.setup
+                  }</p>
+                  <p className="text-center text-sm text-white">{
+                    item.subscription
+                  }</p>
+                  {/* divider */}
+                  <div className="my-4 w-1/2 border-b-2 border-white"></div>
+
+                  <div className="mt-0">
+                    <p className="text-md text-center font-semibold uppercase text-white">
+                      Includes:
+                    </p>
+                    {/* bulleted list */}
+                    <ul className="text-md text-center text-white">
+                      {
+                        item.includes.map((i) => (
+                          <li>{i}</li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                  {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
                 <p className="text-md text-center text-white">
-                  Includes: 1-time setup, enjoy AI chatbot for 1 year.
-                </p>
-                <p className="text-md text-center text-white">
-                  Additional Fees: Capturing leads, Recommendation of specific products, Bookings
-                  and scheduling systems synchronization to AI chatbot.
-                </p>
+                  Capturing leads, Recommendation of specific products, Bookings and scheduling
+                  systems synchronization to AI chatbot.
+                </p> */}
+                </div>
               </div>
-            </div>
-            <div className="col-span-1 flex flex-col items-center justify-center">
-              <div className="h-full w-full rounded-md bg-gray-900 flex flex-col items-center justify-start pt-8 pb-8">
-                <h1 className="text-center text-3xl font-bold text-white">2500 SGD</h1>
-                <p className="text-center text-lg text-white">Basic</p>
-                <p className="text-md text-center text-white">
-                  Includes: 1-time setup, enjoy for 2 years.
-                </p>
-                <p className="text-md text-center text-white">
-                  Additional Fees: Capturing leads, Recommendation of specific products, Bookings
-                  and scheduling systems synchronization to AI chatbot.
-                </p>
-              </div>
-            </div>
-            <div className="col-span-1 flex flex-col items-center justify-center">
-              <div className="h-full w-full rounded-md bg-gray-900 flex flex-col items-center justify-start pt-8 pb-8">
-                <h1 className="text-center text-3xl font-bold text-white">3000 SGD</h1>
-                <p className="text-center text-lg text-white">Premium</p>
-                <p className="text-md text-center text-white">
-                  Includes: 1-time setup, enjoy for life. Monitors and generates information from
-                  pattern recognition of customer inquiries.
-                </p>
-                <p className="text-md text-center text-white">
-                  Additional Fees: Capturing leads, Recommendation of specific products, Bookings
-                  and scheduling systems synchronization to AI chatbot.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
