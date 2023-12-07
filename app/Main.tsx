@@ -145,6 +145,7 @@ export default function Home({ posts }) {
           </div>
         </div>
         <div className="container flex items-center justify-center py-8">
+          {/* | */}
           <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
             {pricingPlans.map((item) => (
               <div key={item.price} className="flex items-center justify-center">
