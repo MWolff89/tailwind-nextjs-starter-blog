@@ -105,8 +105,8 @@ export default function Home({ posts }) {
             </Button>
           </div>
         </div>
-        <div className="container flex items-center justify-center py-2">
-          <div className="grid w-full grid-cols-3 gap-4">
+        <div className="container flex items-center justify-center py-8">
+          <div className="grid w-full grid-cols-3 gap-6">
             {[
               {
                 price: '1500 SGD',
