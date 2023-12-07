@@ -86,7 +86,7 @@ export default function Home({ posts }) {
               consultation and experience the difference yourself.
             </div>
           </div>
-          <div className="xl:flex-col h-full flex gap-4 items-center justify-center">
+          <div className="flex h-full items-center justify-center gap-4 xl:flex-col">
             <Button
               type="submit"
               className={`flex w-full items-center justify-center ${
@@ -103,6 +103,50 @@ export default function Home({ posts }) {
             >
               Learn More
             </Button>
+          </div>
+        </div>
+        <div className="container flex items-center justify-center py-2">
+          <div className="grid w-full grid-cols-3 gap-4">
+            <div className="col-span-1 flex flex-col items-center justify-center">
+              <div className="h-full w-full rounded-md bg-gray-900 flex flex-col items-center justify-start pt-8 pb-8">
+                <h1 className="text-center text-3xl font-bold text-white">1500 SGD</h1>
+                <p className="text-center text-lg text-white">Lite</p>
+                <p className="text-md text-center text-white">
+                  Includes: 1-time setup, enjoy AI chatbot for 1 year.
+                </p>
+                <p className="text-md text-center text-white">
+                  Additional Fees: Capturing leads, Recommendation of specific products, Bookings
+                  and scheduling systems synchronization to AI chatbot.
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 flex flex-col items-center justify-center">
+              <div className="h-full w-full rounded-md bg-gray-900 flex flex-col items-center justify-start pt-8 pb-8">
+                <h1 className="text-center text-3xl font-bold text-white">2500 SGD</h1>
+                <p className="text-center text-lg text-white">Basic</p>
+                <p className="text-md text-center text-white">
+                  Includes: 1-time setup, enjoy for 2 years.
+                </p>
+                <p className="text-md text-center text-white">
+                  Additional Fees: Capturing leads, Recommendation of specific products, Bookings
+                  and scheduling systems synchronization to AI chatbot.
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 flex flex-col items-center justify-center">
+              <div className="h-full w-full rounded-md bg-gray-900 flex flex-col items-center justify-start pt-8 pb-8">
+                <h1 className="text-center text-3xl font-bold text-white">3000 SGD</h1>
+                <p className="text-center text-lg text-white">Premium</p>
+                <p className="text-md text-center text-white">
+                  Includes: 1-time setup, enjoy for life. Monitors and generates information from
+                  pattern recognition of customer inquiries.
+                </p>
+                <p className="text-md text-center text-white">
+                  Additional Fees: Capturing leads, Recommendation of specific products, Bookings
+                  and scheduling systems synchronization to AI chatbot.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
