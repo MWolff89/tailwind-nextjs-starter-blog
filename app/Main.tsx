@@ -1,13 +1,25 @@
+'use client'
+
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import Script from 'next/script'
+import Image from '@/components/Image'
+import { Button } from '@/components/ui/button'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 const MAX_DISPLAY = 5
 
 export default function Home({ posts }) {
+  const { resolvedTheme } = useTheme()
+  const [chatTheme, setChatTheme] = useState(resolvedTheme === 'dark' ? 'dark' : 'light')
+
+  useEffect(() => {
+    setChatTheme(resolvedTheme === 'dark' ? 'dark' : 'light')
+  }, [resolvedTheme])
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -52,8 +64,10 @@ export default function Home({ posts }) {
           </div>
         </div>
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h2 className="text-xl font-italic leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
-          Experience the pinnacle of AI design, tailored specifically to empower your business.
+          <h2 className="font-italic text-xl leading-7 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-8 md:text-4xl md:leading-12">
+            According to a study by McKinsey, generative AI could deliver total value in the range
+            of $2.6 trillion to $4.4 trillion in economic benefits annually when applied across
+            industries.
           </h2>
           {/* <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
@@ -62,6 +76,36 @@ export default function Home({ posts }) {
             Stay ahead of the curve.
           </p> */}
         </div>
+        <div className="items-start space-y-2 py-8 xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0">
+          <div className="flex flex-col items-center space-x-2">
+            <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
+              Join the Elite
+            </h3>
+            <div className="text-center text-gray-500 dark:text-gray-400">
+              Elevate your business with BlackOrchid’s premium AI Consultancy services. Book a
+              consultation and experience the difference yourself.
+            </div>
+          </div>
+          <div className="xl:flex-col h-full flex gap-4 items-center justify-center">
+            <Button
+              type="submit"
+              className={`flex w-full items-center justify-center ${
+                chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
+              }`}
+            >
+              Book Now
+            </Button>
+            <Button
+              type="submit"
+              className={`flex w-full items-center justify-center ${
+                chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
+              }`}
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {

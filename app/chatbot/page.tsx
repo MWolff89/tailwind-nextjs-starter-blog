@@ -9,11 +9,11 @@ import { useTheme } from 'next-themes'
 export const runtime = 'edge'
 
 export default function ChatbotPage() {
-  const { resolvedTheme } = useTheme()
   const [password, setPassword] = useState('')
   const [authenticated, setAuthenticated] = useState(false)
   const id = nanoid()
-
+  
+  const { resolvedTheme } = useTheme()
   const [chatTheme, setChatTheme] = useState(resolvedTheme === 'dark' ? 'dark' : 'light')
 
   useEffect(() => {
