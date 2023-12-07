@@ -13,6 +13,45 @@ import { useEffect, useState } from 'react'
 
 const MAX_DISPLAY = 5
 
+const pricingPlans = [
+  {
+    price: '1500 SGD',
+    plan: 'Lite Plan',
+    setup: '1-time setup',
+    subscription: '1 year subscription',
+    includes: ['1-time setup', '1 year subscription'],
+    additional: [
+      'Capturing leads',
+      'Recommendation of specific products',
+      'Bookings and scheduling systems synchronization to AI chatbot',
+    ],
+  },
+  {
+    price: '2500 SGD',
+    plan: 'Basic Plan',
+    setup: '1-time setup',
+    subscription: '1 year subscription',
+    includes: ['1-time setup', '1 year subscription'],
+    additional: [
+      'Capturing leads',
+      'Recommendation of specific products',
+      'Bookings and scheduling systems synchronization to AI chatbot',
+    ],
+  },
+  {
+    price: '3000 SGD',
+    plan: 'Premium Plan',
+    setup: '1-time setup',
+    subscription: '1 year subscription',
+    includes: ['1-time setup', '1 year subscription'],
+    additional: [
+      'Capturing leads',
+      'Recommendation of specific products',
+      'Bookings and scheduling systems synchronization to AI chatbot',
+    ],
+  },
+]
+
 export default function Home({ posts }) {
   const { resolvedTheme } = useTheme()
   const [chatTheme, setChatTheme] = useState(resolvedTheme === 'dark' ? 'dark' : 'light')
@@ -107,62 +146,18 @@ export default function Home({ posts }) {
         </div>
         <div className="container flex items-center justify-center py-8">
           <div className="grid w-full grid-cols-3 gap-6">
-            {[
-              {
-                price: '1500 SGD',
-                plan: 'Lite Plan',
-                setup: '1-time setup',
-                subscription: '1 year subscription',
-                includes: ['1-time setup', '1 year subscription'],
-                additional: [
-                  'Capturing leads',
-                  'Recommendation of specific products',
-                  'Bookings and scheduling systems synchronization to AI chatbot',
-                ],
-              },
-              {
-                price: '2500 SGD',
-                plan: 'Basic Plan',
-                setup: '1-time setup',
-                subscription: '1 year subscription',
-                includes: ['1-time setup', '1 year subscription'],
-                additional: [
-                  'Capturing leads',
-                  'Recommendation of specific products',
-                  'Bookings and scheduling systems synchronization to AI chatbot',
-                ],
-              },
-              {
-                price: '3000 SGD',
-                plan: 'Premium Plan',
-                setup: '1-time setup',
-                subscription: '1 year subscription',
-                includes: ['1-time setup', '1 year subscription'],
-                additional: [
-                  'Capturing leads',
-                  'Recommendation of specific products',
-                  'Bookings and scheduling systems synchronization to AI chatbot',
-                ],
-              },
-            ].map((item) => (
-              <div className="col-span-1 flex flex-col items-center justify-center" key={
-                item.price
-              }>
+            {pricingPlans.map((item) => (
+              <div
+                className="col-span-1 flex flex-col items-center justify-center"
+                key={item.price}
+              >
                 <div className="flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8">
-                  <h1 className="text-center text-3xl font-bold text-white">{
-                    item.price
-                  }</h1>
-                  <p className="text-md text-center font-medium text-gray-400">{
-                    item.plan
-                  }</p>
+                  <h1 className="text-center text-3xl font-bold text-white">{item.price}</h1>
+                  <p className="text-md text-center font-medium text-gray-400">{item.plan}</p>
                   {/* divider */}
                   <div className="my-4 w-1/2 border-b-2 border-white"></div>
-                  <p className="text-center text-sm text-white">{
-                    item.setup
-                  }</p>
-                  <p className="text-center text-sm text-white">{
-                    item.subscription
-                  }</p>
+                  <p className="text-center text-sm text-white">{item.setup}</p>
+                  <p className="text-center text-sm text-white">{item.subscription}</p>
                   {/* divider */}
                   <div className="my-4 w-1/2 border-b-2 border-white"></div>
 
@@ -172,11 +167,9 @@ export default function Home({ posts }) {
                     </p>
                     {/* bulleted list */}
                     <ul className="text-md text-center text-white">
-                      {
-                        item.includes.map((i) => (
-                          <li>{i}</li>
-                        ))
-                      }
+                      {item.includes.map((i) => (
+                        <li>{i}</li>
+                      ))}
                     </ul>
                   </div>
                   {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
