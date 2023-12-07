@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'BlackOrchid AI',
   author: 'Maltin Wolf',
   headerTitle: 'BLACKORCHID AI',
-  description: 'According to a study by McKinsey, generative AI could deliver total value in the range of $2.6 trillion to $4.4 trillion in economic benefits annually when applied across industries.',
+  description: 'Unleash the full potential of your business with our tailor-made AI chatbots. At BlackOrchid, we craft highly advanced AI agents that fit your business needs like a glove.',
+  // description: 'According to a study by McKinsey, generative AI could deliver total value in the range of $2.6 trillion to $4.4 trillion in economic benefits annually when applied across industries.',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
