@@ -74,8 +74,8 @@ export default function Home({ posts }) {
           </p>
         </div>
         <div className="container flex flex-col items-center justify-center">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <div className="my-8 flex flex-col items-start justify-start">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3 py-8">
+            <div className="flex flex-col items-start justify-start">
               <h1 className="text-lg font-medium uppercase text-primary-500">
                 Seamless Integration
               </h1>
@@ -85,7 +85,7 @@ export default function Home({ posts }) {
               </p>
             </div>
 
-            <div className="my-8 flex flex-col items-start justify-start">
+            <div className="flex flex-col items-start justify-start">
               <h1 className="text-lg font-medium uppercase text-primary-500">Smart Adaptation</h1>
               <p className="text-left text-lg">
                 Dynamic learning capabilities consistently refine the AI's performance, adapting to
@@ -93,7 +93,7 @@ export default function Home({ posts }) {
               </p>
             </div>
 
-            <div className="my-8 flex flex-col items-start justify-start">
+            <div className="flex flex-col items-start justify-start">
               <h1 className="text-lg font-medium uppercase text-primary-500">Customer Focus</h1>
               <p className="text-left text-lg">
                 Delight your customers with swift, accurate, and personalized responses, powered by
@@ -145,10 +145,12 @@ export default function Home({ posts }) {
           </div>
         </div>
         <div className="container flex items-center justify-center py-8">
-          <div className="grid w-full grid-cols-3 gap-6">
+          <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
             {pricingPlans.map((item) => (
+              <div className='flex items-center justify-center'>
+
               <div
-                className="col-span-1 flex flex-col items-center justify-center"
+                className="col-span-1 flex flex-col items-center justify-center w-[400px]"
                 key={item.price}
               >
                 <div className="flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8">
@@ -178,6 +180,7 @@ export default function Home({ posts }) {
                   systems synchronization to AI chatbot.
                 </p> */}
                 </div>
+              </div>
               </div>
             ))}
           </div>
