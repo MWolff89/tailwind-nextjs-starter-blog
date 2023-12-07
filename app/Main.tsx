@@ -147,7 +147,7 @@ export default function Home({ posts }) {
         <div className="container flex items-center justify-center py-8">
           <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
             {pricingPlans.map((item) => (
-              <div className="flex items-center justify-center">
+              <div key={item.price} className="flex items-center justify-center">
                 <div
                   className="col-span-1 flex w-[400px] flex-col items-center justify-center"
                   key={item.price}
@@ -168,8 +168,8 @@ export default function Home({ posts }) {
                       </p>
                       {/* bulleted list */}
                       <ul className="text-md text-center text-white">
-                        {item.includes.map((i) => (
-                          <li>{i}</li>
+                        {item.includes.map((i, index) => (
+                          <li key={index + '-' + i}>{i}</li>
                         ))}
                       </ul>
                     </div>
