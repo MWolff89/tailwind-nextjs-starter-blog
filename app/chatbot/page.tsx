@@ -12,7 +12,7 @@ export default function ChatbotPage() {
   const [password, setPassword] = useState('')
   const [authenticated, setAuthenticated] = useState(false)
   const id = nanoid()
-  
+
   const { resolvedTheme } = useTheme()
   const [chatTheme, setChatTheme] = useState(resolvedTheme === 'dark' ? 'dark' : 'light')
 
@@ -38,7 +38,6 @@ export default function ChatbotPage() {
       alert('Invalid password')
     }
   }
-
   return (
     <div className={`bg-background`}>
       <div className="">

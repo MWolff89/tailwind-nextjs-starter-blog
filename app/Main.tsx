@@ -145,7 +145,9 @@ export default function Home({ posts }) {
                 ],
               },
             ].map((item) => (
-              <div className="col-span-1 flex flex-col items-center justify-center">
+              <div className="col-span-1 flex flex-col items-center justify-center" key={
+                item.price
+              }>
                 <div className="flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8">
                   <h1 className="text-center text-3xl font-bold text-white">{
                     item.price
