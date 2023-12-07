@@ -74,7 +74,7 @@ export default function Home({ posts }) {
           </p>
         </div>
         <div className="container flex flex-col items-center justify-center">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3 py-8">
+          <div className="grid grid-cols-1 gap-4 py-8 md:grid-cols-3 lg:grid-cols-3">
             <div className="flex flex-col items-start justify-start">
               <h1 className="text-lg font-medium uppercase text-primary-500">
                 Seamless Integration
@@ -145,42 +145,41 @@ export default function Home({ posts }) {
           </div>
         </div>
         <div className="container flex items-center justify-center py-8">
-          <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
+          <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
             {pricingPlans.map((item) => (
-              <div className='flex items-center justify-center'>
+              <div className="flex items-center justify-center">
+                <div
+                  className="col-span-1 flex w-[400px] flex-col items-center justify-center"
+                  key={item.price}
+                >
+                  <div className="flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8">
+                    <h1 className="text-center text-3xl font-bold text-white">{item.price}</h1>
+                    <p className="text-md text-center font-medium text-gray-400">{item.plan}</p>
+                    {/* divider */}
+                    <div className="my-4 w-1/2 border-b-2 border-white"></div>
+                    <p className="text-center text-sm text-white">{item.setup}</p>
+                    <p className="text-center text-sm text-white">{item.subscription}</p>
+                    {/* divider */}
+                    <div className="my-4 w-1/2 border-b-2 border-white"></div>
 
-              <div
-                className="col-span-1 flex flex-col items-center justify-center w-[400px]"
-                key={item.price}
-              >
-                <div className="flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8">
-                  <h1 className="text-center text-3xl font-bold text-white">{item.price}</h1>
-                  <p className="text-md text-center font-medium text-gray-400">{item.plan}</p>
-                  {/* divider */}
-                  <div className="my-4 w-1/2 border-b-2 border-white"></div>
-                  <p className="text-center text-sm text-white">{item.setup}</p>
-                  <p className="text-center text-sm text-white">{item.subscription}</p>
-                  {/* divider */}
-                  <div className="my-4 w-1/2 border-b-2 border-white"></div>
-
-                  <div className="mt-0">
-                    <p className="text-md text-center font-semibold uppercase text-white">
-                      Includes:
-                    </p>
-                    {/* bulleted list */}
-                    <ul className="text-md text-center text-white">
-                      {item.includes.map((i) => (
-                        <li>{i}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
+                    <div className="mt-0">
+                      <p className="text-md text-center font-semibold uppercase text-white">
+                        Includes:
+                      </p>
+                      {/* bulleted list */}
+                      <ul className="text-md text-center text-white">
+                        {item.includes.map((i) => (
+                          <li>{i}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
                 <p className="text-md text-center text-white">
                   Capturing leads, Recommendation of specific products, Bookings and scheduling
                   systems synchronization to AI chatbot.
                 </p> */}
+                  </div>
                 </div>
-              </div>
               </div>
             ))}
           </div>
