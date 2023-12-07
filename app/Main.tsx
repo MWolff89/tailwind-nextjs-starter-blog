@@ -115,33 +115,35 @@ export default function Home({ posts }) {
             Stay ahead of the curve.
           </p> */}
         </div>
-        <div className="items-start space-y-2 py-8 xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center space-x-2">
-            <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
-              Join the Elite
-            </h3>
-            <div className="text-center text-gray-500 dark:text-gray-400">
-              Elevate your business with BlackOrchid’s premium AI Consultancy services. Book a
-              consultation and experience the difference yourself.
+        <div className="flex items-center justify-center">
+          <div className="items-start space-y-2 py-8 xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0">
+            <div className="flex max-w-[550px] flex-col items-center space-x-2">
+              <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
+                Join the Elite
+              </h3>
+              <div className="text-center text-gray-500 dark:text-gray-400">
+                Elevate your business with BlackOrchid’s premium AI Consultancy services. Book a
+                consultation and experience the difference yourself.
+              </div>
             </div>
-          </div>
-          <div className="flex h-full items-center justify-center gap-4 xl:flex-col">
-            <Button
-              type="submit"
-              className={`flex w-full items-center justify-center ${
-                chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-              }`}
-            >
-              Book Now
-            </Button>
-            <Button
-              type="submit"
-              className={`flex w-full items-center justify-center ${
-                chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-              }`}
-            >
-              Learn More
-            </Button>
+            <div className="flex h-full max-w-[550px] items-center justify-center gap-4 xl:flex-col">
+              <Button
+                type="submit"
+                className={`flex w-full items-center justify-center ${
+                  chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
+                }`}
+              >
+                Book Now
+              </Button>
+              <Button
+                type="submit"
+                className={`flex w-full items-center justify-center ${
+                  chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
+                }`}
+              >
+                Learn More
+              </Button>
+            </div>
           </div>
         </div>
         <div className="container flex items-center justify-center py-8">
