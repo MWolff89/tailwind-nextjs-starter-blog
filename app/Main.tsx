@@ -16,7 +16,7 @@ const MAX_DISPLAY = 5
 const pricingPlans = [
   {
     price: '1500 SGD',
-    plan: 'Lite Plan',
+    plan: 'Starter Plan',
     setup: '1-time setup',
     subscription: '1 year subscription',
     includes: ['1-time setup', '1 year subscription'],
@@ -25,10 +25,13 @@ const pricingPlans = [
       'Recommendation of specific products',
       'Bookings and scheduling systems synchronization to AI chatbot',
     ],
+    // gradient of gray
+    color: ' bg-gradient-to-r from-gray-800 to-gray-900',
+    lightModeColor: ' bg-gradient-to-r from-gray-50 to-gray-100',
   },
   {
     price: '2500 SGD',
-    plan: 'Basic Plan',
+    plan: 'Standard Plan',
     setup: '1-time setup',
     subscription: '1 year subscription',
     includes: ['1-time setup', '1 year subscription'],
@@ -37,10 +40,13 @@ const pricingPlans = [
       'Recommendation of specific products',
       'Bookings and scheduling systems synchronization to AI chatbot',
     ],
+    // gradient of gray
+    color: ' bg-gradient-to-r from-gray-700 to-gray-800',
+    lightModeColor: ' bg-gradient-to-r from-gray-100 to-gray-200',
   },
   {
     price: '3000 SGD',
-    plan: 'Premium Plan',
+    plan: 'Artisan Plan',
     setup: '1-time setup',
     subscription: '1 year subscription',
     includes: ['1-time setup', '1 year subscription'],
@@ -49,6 +55,8 @@ const pricingPlans = [
       'Recommendation of specific products',
       'Bookings and scheduling systems synchronization to AI chatbot',
     ],
+    color: ' bg-gradient-to-r from-gray-600 to-gray-800',
+    lightModeColor: ' bg-gradient-to-r from-gray-100 to-gray-300',
   },
 ]
 
@@ -104,9 +112,10 @@ export default function Home({ posts }) {
         </div>
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h2 className="font-italic text-xl leading-7 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-8 md:text-4xl md:leading-12">
-            According to a study by McKinsey, generative AI could deliver total value in the range
-            of $2.6 trillion to $4.4 trillion in economic benefits annually when applied across
-            industries.
+            McKinsey estimates that generative AI could increase productivity in customer care by up
+            to 45%. And Louder Co.’s customers are already feeling the impact – one client went from
+            $10 million to close to $20 million in annual revenues without adding a single person to
+            their staff.
           </h2>
           {/* <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
@@ -115,76 +124,89 @@ export default function Home({ posts }) {
             Stay ahead of the curve.
           </p> */}
         </div>
-        <div className="flex items-center justify-center">
-          <div className="items-start space-y-2 py-8 xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0">
-            <div className="flex max-w-[550px] flex-col items-center space-x-2">
-              <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
-                Join the Elite
-              </h3>
-              <div className="text-center text-gray-500 dark:text-gray-400">
-                Elevate your business with BlackOrchid’s premium AI Consultancy services. Book a
-                consultation and experience the difference yourself.
-              </div>
-            </div>
-            <div className="flex h-full max-w-[550px] items-center justify-center gap-4 xl:flex-col">
-              <Button
-                type="submit"
-                className={`flex w-full items-center justify-center ${
-                  chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-                }`}
-              >
-                Book Now
-              </Button>
-              <Button
-                type="submit"
-                className={`flex w-full items-center justify-center ${
-                  chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-                }`}
-              >
-                Learn More
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="container flex items-center justify-center py-8">
-          {/* | */}
-          <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
-            {pricingPlans.map((item) => (
-              <div key={item.price} className="flex items-center justify-center">
-                <div
-                  className="col-span-1 flex w-[400px] flex-col items-center justify-center"
-                  key={item.price}
-                >
-                  <div className="flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8">
-                    <h1 className="text-center text-3xl font-bold text-white">{item.price}</h1>
-                    <p className="text-md text-center font-medium text-gray-400">{item.plan}</p>
-                    {/* divider */}
-                    <div className="my-4 w-1/2 border-b-2 border-white"></div>
-                    <p className="text-center text-sm text-white">{item.setup}</p>
-                    <p className="text-center text-sm text-white">{item.subscription}</p>
-                    {/* divider */}
-                    <div className="my-4 w-1/2 border-b-2 border-white"></div>
+        <div>
+          <div className="container flex items-center justify-center py-8">
+            {/* | */}
+            <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
+              {pricingPlans.map((item, index) => {
+                const color = chatTheme === 'dark' ? item.color : item.lightModeColor
+                const textColor = chatTheme === 'dark' ? 'text-white' : 'text-black'
+                const secondaryTextColor = chatTheme === 'dark' ? 'text-gray-400' : 'text-gray-700'
+                return <div key={item.price} className={`flex items-center justify-center + ${
+                  textColor
+                }`}>
+                  <div
+                    className="col-span-1 flex w-[400px] flex-col items-center justify-center"
+                    key={item.price}
+                  >
+                    <div
+                      className={
+                        `flex h-full w-full flex-col items-center justify-start rounded-md pb-8 pt-8` +
+                        color
+                      }
+                    >
+                      <h1 className={`text-center text-3xl font-bold ${textColor}`}>{item.price}</h1>
+                      <p className={`text-md text-center font-medium ${secondaryTextColor}`}>{item.plan}</p>
+                      {/* divider */}
+                      <div className="my-4 w-1/2 border-b-2 border-white"></div>
+                      <p className={`text-center text-sm ${textColor}`}>{item.setup}</p>
+                      <p className={`text-center text-sm ${textColor}`}>{item.subscription}</p>
+                      {/* divider */}
+                      <div className="my-4 w-1/2 border-b-2 border-white"></div>
 
-                    <div className="mt-0">
-                      <p className="text-md text-center font-semibold uppercase text-white">
-                        Includes:
-                      </p>
-                      {/* bulleted list */}
-                      <ul className="text-md text-center text-white">
-                        {item.includes.map((i, index) => (
-                          <li key={index + '-' + i}>{i}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
+                      <div className="mt-0">
+                        <p className={`text-md text-center font-semibold uppercase ${textColor}`}>
+                          Includes:
+                        </p>
+                        {/* bulleted list */}
+                        <ul className={`text-md text-center ${textColor}`}>
+                          {item.includes.map((i, index) => (
+                            <li key={index + '-' + i}>{i}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
                 <p className="text-md text-center text-white">
                   Capturing leads, Recommendation of specific products, Bookings and scheduling
                   systems synchronization to AI chatbot.
                 </p> */}
+                    </div>
                   </div>
                 </div>
+})}
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="items-start space-y-2 py-8 xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0">
+              <div className="flex max-w-[550px] flex-col items-center space-x-2">
+                <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
+                  Be Part of the Pioneers
+                </h3>
+                <div className="text-center text-gray-500 dark:text-gray-400">
+                  An AI readiness assessment can help identify pain points and quick-win
+                  opportunities for adoption while determining the optimal degree of AI
+                  implementation. Book a consultation and experience the difference yourself.
+                </div>
               </div>
-            ))}
+              <div className="flex h-full max-w-[550px] items-center justify-center gap-4 xl:flex-col">
+                <Button
+                  type="submit"
+                  className={`flex w-full items-center justify-center ${
+                    chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
+                  }`}
+                >
+                  Book Now
+                </Button>
+                <Button
+                  type="submit"
+                  className={`flex w-full items-center justify-center ${
+                    chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
+                  }`}
+                >
+                  Learn More
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
 

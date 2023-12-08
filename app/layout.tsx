@@ -24,6 +24,13 @@ const space_grotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 })
 
+// const instrument_serif = Instrument_Serif({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-instrument-serif',
+//   weight: '400'
+// })
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
