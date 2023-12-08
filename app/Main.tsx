@@ -10,13 +10,14 @@ import Image from '@/components/Image'
 import { Button } from '@/components/ui/button'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { CircleDollarSign, DraftingCompass, Coffee, Box, Gem } from 'lucide-react'
 
 const MAX_DISPLAY = 5
 
 const pricingPlans = [
   {
     price: '1500 SGD',
-    plan: 'Starter Plan',
+    plan: 'Savings Plan',
     setup: '1-time setup',
     subscription: '1 year subscription',
     includes: ['1-time setup', '1 year subscription'],
@@ -26,12 +27,12 @@ const pricingPlans = [
       'Bookings and scheduling systems synchronization to AI chatbot',
     ],
     // gradient of gray
-    color: ' bg-gradient-to-r from-gray-800 to-gray-900',
+    color: ' bg-gray-900',
     lightModeColor: ' bg-gradient-to-r from-gray-50 to-gray-100',
   },
   {
     price: '2500 SGD',
-    plan: 'Standard Plan',
+    plan: 'Basic Plan',
     setup: '1-time setup',
     subscription: '1 year subscription',
     includes: ['1-time setup', '1 year subscription'],
@@ -41,7 +42,7 @@ const pricingPlans = [
       'Bookings and scheduling systems synchronization to AI chatbot',
     ],
     // gradient of gray
-    color: ' bg-gradient-to-r from-gray-700 to-gray-800',
+    color: ' bg-gray-900',
     lightModeColor: ' bg-gradient-to-r from-gray-100 to-gray-200',
   },
   {
@@ -55,8 +56,9 @@ const pricingPlans = [
       'Recommendation of specific products',
       'Bookings and scheduling systems synchronization to AI chatbot',
     ],
-    color: ' bg-gradient-to-r from-gray-600 to-gray-800',
+    color: ' bg-gray-900',
     lightModeColor: ' bg-gradient-to-r from-gray-100 to-gray-300',
+    // textAugmentColor: ' text-yellow-300',
   },
 ]
 
@@ -132,6 +134,11 @@ export default function Home({ posts }) {
                 const color = chatTheme === 'dark' ? item.color : item.lightModeColor
                 const textColor = chatTheme === 'dark' ? 'text-white' : 'text-black'
                 const secondaryTextColor = chatTheme === 'dark' ? 'text-gray-400' : 'text-gray-700'
+
+                const icons = [CircleDollarSign, Box, Gem]
+
+                const LucideIcon = icons[index] // Use a different icon for each pricing plan
+
                 return (
                   <div
                     key={item.price}
@@ -142,11 +149,16 @@ export default function Home({ posts }) {
                       key={item.price}
                     >
                       <div
-                        className={
-                          `flex h-full w-full flex-col items-center justify-start rounded-md pb-8 pt-8` +
-                          color
-                        }
+                        className={`relative flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8`}
                       >
+                        {/* <div className="absolute left-0 top-0 p-4">
+                          <LucideIcon size={24} />
+                        </div> */}
+
+                        <div className="flex items-center justify-center pb-4">
+                          <LucideIcon size={24} />
+                        </div>
+
                         <h1 className={`text-center text-3xl font-bold ${textColor}`}>
                           {item.price}
                         </h1>
