@@ -132,48 +132,55 @@ export default function Home({ posts }) {
                 const color = chatTheme === 'dark' ? item.color : item.lightModeColor
                 const textColor = chatTheme === 'dark' ? 'text-white' : 'text-black'
                 const secondaryTextColor = chatTheme === 'dark' ? 'text-gray-400' : 'text-gray-700'
-                return <div key={item.price} className={`flex items-center justify-center + ${
-                  textColor
-                }`}>
+                return (
                   <div
-                    className="col-span-1 flex w-[400px] flex-col items-center justify-center"
                     key={item.price}
+                    className={`+ flex items-center justify-center ${textColor}`}
                   >
                     <div
-                      className={
-                        `flex h-full w-full flex-col items-center justify-start rounded-md pb-8 pt-8` +
-                        color
-                      }
+                      className="col-span-1 flex w-[400px] flex-col items-center justify-center"
+                      key={item.price}
                     >
-                      <h1 className={`text-center text-3xl font-bold ${textColor}`}>{item.price}</h1>
-                      <p className={`text-md text-center font-medium ${secondaryTextColor}`}>{item.plan}</p>
-                      {/* divider */}
-                      <div className="my-4 w-1/2 border-b-2 border-white"></div>
-                      <p className={`text-center text-sm ${textColor}`}>{item.setup}</p>
-                      <p className={`text-center text-sm ${textColor}`}>{item.subscription}</p>
-                      {/* divider */}
-                      <div className="my-4 w-1/2 border-b-2 border-white"></div>
-
-                      <div className="mt-0">
-                        <p className={`text-md text-center font-semibold uppercase ${textColor}`}>
-                          Includes:
+                      <div
+                        className={
+                          `flex h-full w-full flex-col items-center justify-start rounded-md pb-8 pt-8` +
+                          color
+                        }
+                      >
+                        <h1 className={`text-center text-3xl font-bold ${textColor}`}>
+                          {item.price}
+                        </h1>
+                        <p className={`text-md text-center font-medium ${secondaryTextColor}`}>
+                          {item.plan}
                         </p>
-                        {/* bulleted list */}
-                        <ul className={`text-md text-center ${textColor}`}>
-                          {item.includes.map((i, index) => (
-                            <li key={index + '-' + i}>{i}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
+                        {/* divider */}
+                        <div className="my-4 w-1/2 border-b-2 border-white"></div>
+                        <p className={`text-center text-sm ${textColor}`}>{item.setup}</p>
+                        <p className={`text-center text-sm ${textColor}`}>{item.subscription}</p>
+                        {/* divider */}
+                        <div className="my-4 w-1/2 border-b-2 border-white"></div>
+
+                        <div className="mt-0">
+                          <p className={`text-md text-center font-semibold uppercase ${textColor}`}>
+                            Includes:
+                          </p>
+                          {/* bulleted list */}
+                          <ul className={`text-md text-center ${textColor}`}>
+                            {item.includes.map((i, index) => (
+                              <li key={index + '-' + i}>{i}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
                 <p className="text-md text-center text-white">
                   Capturing leads, Recommendation of specific products, Bookings and scheduling
                   systems synchronization to AI chatbot.
                 </p> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-})}
+                )
+              })}
             </div>
           </div>
           <div className="flex items-center justify-center">
