@@ -1,4 +1,9 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import {
+  ArrowPathIcon,
+  CloudArrowUpIcon,
+  FingerPrintIcon,
+  LockClosedIcon,
+} from '@heroicons/react/24/outline'
 
 const features = [
   {
@@ -9,8 +14,7 @@ const features = [
   },
   {
     name: 'Personalized Responses',
-    description:
-      `AI chatbots excel at learning from past interactions, delivering personalized responses that cater to individual preferences. This learning capability enhances customer satisfaction.`,
+    description: `AI chatbots excel at learning from past interactions, delivering personalized responses that cater to individual preferences. This learning capability enhances customer satisfaction.`,
     icon: LockClosedIcon,
   },
   {
@@ -32,12 +36,16 @@ export default function FeaturesShowcase() {
     <div className="bg-background py-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary-500">Artificial Intelligence</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary-500">
+            Artificial Intelligence
+          </h2>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
             Our chatbots are built different
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-400">
-          Businesses are constantly seeking innovative solutions to enhance user experience and streamline operations. One such groundbreaking advancement is the transition from traditional chatbots to AI-powered conversational agents.
+            Businesses are constantly seeking innovative solutions to enhance user experience and
+            streamline operations. One such groundbreaking advancement is the transition from
+            traditional chatbots to AI-powered conversational agents.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -48,12 +56,11 @@ export default function FeaturesShowcase() {
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
                     <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
-                  <span className='text-gray-500 dark:text-gray-400 uppercase'>
-
-                  {feature.name}
-                  </span>
+                  <span className="uppercase text-gray-500 dark:text-gray-400">{feature.name}</span>
                 </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">{feature.description}</dd>
+                <dd className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
+                  {feature.description}
+                </dd>
               </div>
             ))}
           </dl>
