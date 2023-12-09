@@ -113,13 +113,13 @@ const PricingInfoWrapper = () => {
                   {item.plan}
                 </p>
                 {/* divider */}
-                <div className="my-4 w-full border-b-2 border-white"></div>
-                <div className="flex w-full flex-col items-center">
-                  <p className={`text-center text-sm text-gray-300`}>{item.setup}</p>
-                  <p className={`text-center text-sm text-gray-300`}>{item.subscription}</p>
+                <div className="my-4 w-full border-b-[1px] border-primary-300"></div>
+                <div className="flex w-full flex-col items-center px-2">
+                  <p className={`text-center text-sm font-thin text-gray-100`}>{item.setup}</p>
+                  <p className={`text-center text-sm`}>{item.subscription}</p>
                   {/* divider */}
                 </div>
-                <div className="my-4 w-full border-b-2 border-white"></div>
+                <div className="my-4 w-full border-b-[1px] border-primary-300"></div>
 
                 <div className="mt-0 flex w-full flex-col items-start px-8 py-4">
                   <h5
