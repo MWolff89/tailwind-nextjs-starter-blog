@@ -19,15 +19,15 @@ const JoinNow = () => {
             Not sure where to start?
           </h3>
           <div className="flex flex-col gap-2 text-center text-gray-500 dark:text-gray-400">
-            <p>
-              We are dedicated to helping local businesses. Book a free 15 min consultation now and
-              receive a complimentary AI agent demo trained on your website's public data.
+            <p className="text-gray-300">
+              <span>We support local businesses. </span>Book a free 15-min consultation for a
+              personalized AI agent demo using your website's data.
             </p>
             <p>
-              During the call, we will identify pain points and quick-win opportunities for your
-              business, helping you determine the optimal degree of AI implementation.
+              Identify pain points and quick-win opportunities during the call to guide your optimal
+              AI implementation.
             </p>
-            <p>Don't miss the AI Revolution.</p>
+            <p className="text-gray-300">Don't miss the AI Revolution.</p>
           </div>
         </div>
         <div className="flex h-full max-w-[550px] items-center justify-center gap-4 xl:flex-col">

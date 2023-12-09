@@ -6,8 +6,8 @@ import { CircleDollarSign, DraftingCompass, Coffee, Box, Gem } from 'lucide-reac
 
 const pricingPlans = [
   {
-    price: '1500 SGD',
-    plan: 'Savings Plan',
+    price: '1,500 SGD',
+    plan: 'Savings',
     setup: '1-time setup',
     subscription: '1 year subscription',
     includes: [
@@ -26,8 +26,8 @@ const pricingPlans = [
     lightModeColor: ' bg-gradient-to-r from-gray-50 to-gray-100',
   },
   {
-    price: '2500 SGD',
-    plan: 'Basic Plan',
+    price: '2,500 SGD',
+    plan: 'Basic',
     setup: '1-time setup',
     subscription: '1 year subscription',
     includes: ['1-time setup', '1 year subscription'],
@@ -41,8 +41,8 @@ const pricingPlans = [
     lightModeColor: ' bg-gradient-to-r from-gray-100 to-gray-200',
   },
   {
-    price: '4000 SGD',
-    plan: 'Artisan Plan',
+    price: '4,000 SGD',
+    plan: 'Artisan',
     setup: '1-time setup',
     subscription: '1 year subscription',
     includes: [
@@ -108,7 +108,7 @@ const PricingInfoWrapper = () => {
 
                 <h1 className={`text-center text-3xl font-bold text-white`}>{item.price}</h1>
                 <p
-                  className={`mt-1 text-center text-sm font-medium uppercase tracking-wider text-gray-300`}
+                  className={`mt-1 pt-1 text-center text-sm font-medium uppercase tracking-widest text-gray-300`}
                 >
                   {item.plan}
                 </p>
@@ -122,7 +122,9 @@ const PricingInfoWrapper = () => {
                 <div className="my-4 w-full border-b-2 border-white"></div>
 
                 <div className="mt-0 flex w-full flex-col items-start py-4">
-                  <h5 className={`mb-2 text-center text-sm font-bold uppercase text-gray-400`}>
+                  <h5
+                    className={`mb-2 text-center text-sm font-bold uppercase tracking-widest text-gray-400`}
+                  >
                     Features:
                   </h5>
                   {/* bulleted list */}
