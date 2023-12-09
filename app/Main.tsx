@@ -46,7 +46,7 @@ const pricingPlans = [
     lightModeColor: ' bg-gradient-to-r from-gray-100 to-gray-200',
   },
   {
-    price: '3000 SGD',
+    price: '4000 SGD',
     plan: 'Artisan Plan',
     setup: '1-time setup',
     subscription: '1 year subscription',
@@ -63,12 +63,14 @@ const pricingPlans = [
 ]
 
 export default function Home({ posts }) {
-  const { resolvedTheme } = useTheme()
-  const [chatTheme, setChatTheme] = useState(resolvedTheme === 'dark' ? 'dark' : 'light')
+  const { theme, resolvedTheme } = useTheme()
+  const [chatTheme, setChatTheme] = useState(theme === 'dark' ? 'dark' : 'light')
 
   useEffect(() => {
-    setChatTheme(resolvedTheme === 'dark' ? 'dark' : 'light')
-  }, [resolvedTheme])
+    setChatTheme(theme === 'dark' ? 'dark' : 'light')
+  }, [theme, resolvedTheme])
+
+
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -142,7 +144,7 @@ export default function Home({ posts }) {
                 return (
                   <div
                     key={item.price}
-                    className={`+ flex items-center justify-center ${textColor}`}
+                    className={`+ flex items-center justify-center`}
                   >
                     <div
                       className="col-span-1 flex w-[400px] flex-col items-center justify-center"
@@ -159,25 +161,25 @@ export default function Home({ posts }) {
                           <LucideIcon size={24} />
                         </div>
 
-                        <h1 className={`text-center text-3xl font-bold ${textColor}`}>
+                        <h1 className={`text-center text-3xl font-bold text-white`}>
                           {item.price}
                         </h1>
-                        <p className={`text-md text-center font-medium ${secondaryTextColor}`}>
+                        <p className={`text-md text-center font-medium text-gray-400`}>
                           {item.plan}
                         </p>
                         {/* divider */}
                         <div className="my-4 w-1/2 border-b-2 border-white"></div>
-                        <p className={`text-center text-sm ${textColor}`}>{item.setup}</p>
-                        <p className={`text-center text-sm ${textColor}`}>{item.subscription}</p>
+                        <p className={`text-center text-sm text-white`}>{item.setup}</p>
+                        <p className={`text-center text-sm text-white`}>{item.subscription}</p>
                         {/* divider */}
                         <div className="my-4 w-1/2 border-b-2 border-white"></div>
 
                         <div className="mt-0">
-                          <p className={`text-md text-center font-semibold uppercase ${textColor}`}>
+                          <p className={`text-md text-center font-semibold uppercase text-white`}>
                             Includes:
                           </p>
                           {/* bulleted list */}
-                          <ul className={`text-md text-center ${textColor}`}>
+                          <ul className={`text-md text-center text-white`}>
                             {item.includes.map((i, index) => (
                               <li key={index + '-' + i}>{i}</li>
                             ))}
