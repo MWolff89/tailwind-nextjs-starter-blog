@@ -11,10 +11,11 @@ const pricingPlans = [
     setup: 'For small businesses with straightforward requirements.',
     subscription: '',
     includes: [
-      'Basic AI chatbot functionality with predefined responses',
-      'Limited training on generic industry data',
-      'Email support with a 24-hour response time',
-      'Monthly performance reports',
+      `Trained on your website's public data.`,
+      `Real-time updates to the chatbot's knowledge via website sync.`,
+      `Email support with a 24-hour response time.`,
+      `Weekly performance reports with actionable insights.`,
+      `Monthly performance reports.`,
     ],
     additional: [
       'Capturing leads',
@@ -53,8 +54,8 @@ const pricingPlans = [
       `Access to transcripts of all chat histories for compliance and analysis.`,
       `Unlimited 1-hour consults throughout the year (subject to availability, limited to once per day).`,
       `Priority email and phone support with a dedicated account manager.`,
-      `Weekly performance reports with actionable insights.
-Priority access to beta features.`,
+      `Weekly performance reports with actionable insights.`,
+      `Priority access to beta features.`,
       `Quarterly strategy workshops.`,
     ],
     additional: [

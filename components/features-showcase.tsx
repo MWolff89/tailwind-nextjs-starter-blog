@@ -33,7 +33,7 @@ const features = [
 
 export default function FeaturesShowcase() {
   return (
-    <div className="bg-background py-8">
+    <div className="bg-background pb-8 pt-6 sm:pb-24 sm:pt-16">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-primary-500">Trust Us</h2>
@@ -46,7 +46,7 @@ export default function FeaturesShowcase() {
             traditional chatbots to AI-powered conversational agents.
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <div className="mx-auto mt-16 max-w-3xl sm:mt-20 lg:mt-24 lg:max-w-5xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
