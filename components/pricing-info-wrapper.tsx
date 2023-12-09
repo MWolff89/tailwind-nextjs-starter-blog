@@ -8,8 +8,8 @@ const pricingPlans = [
   {
     price: '1,500 SGD',
     plan: 'Savings',
-    setup: '1-time setup',
-    subscription: '1 year subscription',
+    setup: 'For small businesses with straightforward requirements.',
+    subscription: '',
     includes: [
       'Basic AI chatbot functionality with predefined responses',
       'Limited training on generic industry data',
@@ -28,8 +28,8 @@ const pricingPlans = [
   {
     price: '2,500 SGD',
     plan: 'Basic',
-    setup: '1-time setup',
-    subscription: '1 year subscription',
+    setup: 'For those seeking a more personalized and responsive AI solution.',
+    subscription: '',
     includes: ['1-time setup', '1 year subscription'],
     additional: [
       'Capturing leads',
@@ -43,8 +43,8 @@ const pricingPlans = [
   {
     price: '4,000 SGD',
     plan: 'Artisan',
-    setup: '1-time setup',
-    subscription: '1 year subscription',
+    setup: 'For those requiring a highly personalized, continuously evolving AI solution.',
+    subscription: '',
     includes: [
       `Trained on your website's public data`,
       `Unlimited additional data sources (PDF, TXT, DOC)`,
@@ -96,7 +96,7 @@ const PricingInfoWrapper = () => {
               key={item.price}
             >
               <div
-                className={`relative flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 px-6 pb-8 pt-8`}
+                className={`relative flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8`}
               >
                 {/* <div className="absolute left-0 top-0 p-4">
                           <LucideIcon size={24} />
@@ -114,14 +114,14 @@ const PricingInfoWrapper = () => {
                 </p>
                 {/* divider */}
                 <div className="my-4 w-full border-b-2 border-white"></div>
-                <div className="flex w-full flex-col items-start">
-                  <p className={`text-left text-sm text-white`}>{item.setup}</p>
-                  <p className={`text-left text-sm text-white`}>{item.subscription}</p>
+                <div className="flex w-full flex-col items-center">
+                  <p className={`text-center text-sm text-gray-300`}>{item.setup}</p>
+                  <p className={`text-center text-sm text-gray-300`}>{item.subscription}</p>
                   {/* divider */}
                 </div>
                 <div className="my-4 w-full border-b-2 border-white"></div>
 
-                <div className="mt-0 flex w-full flex-col items-start py-4">
+                <div className="mt-0 flex w-full flex-col items-start px-8 py-4">
                   <h5
                     className={`mb-2 text-center text-sm font-bold uppercase tracking-widest text-gray-400`}
                   >
@@ -130,7 +130,9 @@ const PricingInfoWrapper = () => {
                   {/* bulleted list */}
                   <ul className={`list-disc space-y-3 text-left text-sm text-white`}>
                     {item.includes.map((i, index) => (
-                      <li key={index + '-' + i}>{i}</li>
+                      <li key={index + '-' + i} className={`border-b border-gray-700 py-1`}>
+                        {i}
+                      </li>
                     ))}
                   </ul>
                 </div>
