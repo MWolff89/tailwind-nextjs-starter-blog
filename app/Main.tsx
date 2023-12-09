@@ -70,7 +70,6 @@ export default function Home({ posts }) {
     setChatTheme(theme === 'dark' ? 'dark' : 'light')
   }, [theme, resolvedTheme])
 
-
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -142,10 +141,7 @@ export default function Home({ posts }) {
                 const LucideIcon = icons[index] // Use a different icon for each pricing plan
 
                 return (
-                  <div
-                    key={item.price}
-                    className={`+ flex items-center justify-center`}
-                  >
+                  <div key={item.price} className={`+ flex items-center justify-center`}>
                     <div
                       className="col-span-1 flex w-[400px] flex-col items-center justify-center"
                       key={item.price}
