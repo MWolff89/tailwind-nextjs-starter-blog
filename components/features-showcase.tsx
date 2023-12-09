@@ -7,26 +7,26 @@ import {
 
 const features = [
   {
-    name: 'Beyond Scripted Responses',
+    name: 'Beyond Robotic Responses',
     description:
-      'While traditional chatbots follow a predetermined path like phone menus, AI-powered counterparts use contextual understanding to analyze user intent, delivering more accurate and natural responses.',
+      'Our AI agents use state-of-the-art AI technologies to mirror human conversation nuances. This focus on sounding genuinely human improves user interactions, creating a more authentic conversational experience.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'Personalized Responses',
-    description: `AI chatbots excel at learning from past interactions, delivering personalized responses that cater to individual preferences. This learning capability enhances customer satisfaction.`,
+    name: 'Personalized Conversations',
+    description: `Our AI agents excel at learning from past interactions, delivering personalized responses that remembers and understands the user. This learning capability empowers a more tailored experience for each user.`,
     icon: LockClosedIcon,
   },
   {
     name: 'Handling Complexity',
     description:
-      'AI chatbots excel in handling diverse and complex inquiries, reducing the workload for customer service and enhancing cost-effectiveness by adapting to unpredictable scenarios.',
+      'Our AI agents are designed to handle diverse and complex inquiries, significantly reducing the workload for customer service and enhancing cost-effectiveness by adapting to unpredictable scenarios.',
     icon: ArrowPathIcon,
   },
   {
     name: 'Instant Responses, 24/7 Availability',
     description:
-      'AI chatbots boost customer experience by eliminating wait times, offering instant 24/7 assistance, and generating substantial cost savings for businesses by automating customer service.',
+      'Our AI agents boost customer experience by eliminating wait times, offering instant 24/7 assistance, and generating substantial cost savings by automating customer service at a highly sophisticated level.',
     icon: FingerPrintIcon,
   },
 ]
@@ -36,9 +36,7 @@ export default function FeaturesShowcase() {
     <div className="bg-background py-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary-500">
-            Artificial Intelligence
-          </h2>
+          <h2 className="text-base font-semibold leading-7 text-primary-500">Trust Us</h2>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
             Our chatbots are built different
           </h2>

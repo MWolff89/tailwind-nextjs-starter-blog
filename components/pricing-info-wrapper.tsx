@@ -78,7 +78,7 @@ const PricingInfoWrapper = () => {
         return (
           <div
             key={item.price}
-            className={`+ flex items-center justify-center rounded-md border border-indigo-700`}
+            className={`+ flex items-center justify-center rounded-md border border-indigo-300`}
           >
             <div
               className="col-span-1 flex h-full w-[400px] flex-col items-center justify-center"
