@@ -45,7 +45,18 @@ const pricingPlans = [
     plan: 'Artisan Plan',
     setup: '1-time setup',
     subscription: '1 year subscription',
-    includes: ['1-time setup', '1 year subscription'],
+    includes: [
+      `Trained on your website's public data`,
+      `Unlimited additional data sources (PDF, TXT, DOC)`,
+      `Real-time updates to the chatbot's knowledge via website sync.`,
+      `3 free integrations with a third-party platform (e.g., appointment scheduling software).`,
+      `Access to transcripts of all chat histories for compliance and analysis.`,
+      `Unlimited 1-hour consults throughout the year (subject to availability, limited to once per day).`,
+      `Priority email and phone support with a dedicated account manager.`,
+      `Weekly performance reports with actionable insights.
+Priority access to beta features.`,
+      `Quarterly strategy workshops.`,
+    ],
     additional: [
       'Capturing leads',
       'Recommendation of specific products',
@@ -81,7 +92,7 @@ const PricingInfoWrapper = () => {
             className={`+ flex items-center justify-center rounded-md border border-indigo-300`}
           >
             <div
-              className="col-span-1 flex h-full w-[400px] flex-col items-center justify-center"
+              className="col-span-1 flex h-full w-full flex-col items-center justify-center"
               key={item.price}
             >
               <div
@@ -92,11 +103,15 @@ const PricingInfoWrapper = () => {
                         </div> */}
 
                 <div className="flex items-center justify-center pb-4">
-                  <LucideIcon size={24} />
+                  <LucideIcon size={24} className="text-primary-400" />
                 </div>
 
                 <h1 className={`text-center text-3xl font-bold text-white`}>{item.price}</h1>
-                <p className={`text-md text-center font-medium text-gray-400`}>{item.plan}</p>
+                <p
+                  className={`mt-1 text-center text-sm font-medium uppercase tracking-wider text-gray-300`}
+                >
+                  {item.plan}
+                </p>
                 {/* divider */}
                 <div className="my-4 w-full border-b-2 border-white"></div>
                 <div className="flex w-full flex-col items-start">
@@ -106,12 +121,12 @@ const PricingInfoWrapper = () => {
                 </div>
                 <div className="my-4 w-full border-b-2 border-white"></div>
 
-                <div className="mt-0 flex w-full flex-col items-start">
-                  <p className={`text-md text-center font-semibold uppercase text-white`}>
-                    Includes:
-                  </p>
+                <div className="mt-0 flex w-full flex-col items-start py-4">
+                  <h5 className={`mb-2 text-center text-sm font-bold uppercase text-gray-400`}>
+                    Features:
+                  </h5>
                   {/* bulleted list */}
-                  <ul className={`text-md text-left text-white`}>
+                  <ul className={`list-disc space-y-3 text-left text-sm text-white`}>
                     {item.includes.map((i, index) => (
                       <li key={index + '-' + i}>{i}</li>
                     ))}

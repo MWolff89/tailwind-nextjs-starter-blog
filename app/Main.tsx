@@ -48,7 +48,7 @@ export default function Home({ posts }) {
             Stay ahead of the curve.
           </p> */}
         </div>
-        <div>
+        <div className="flex flex-col items-center justify-center">
           <div className="container flex items-center justify-center py-8">
             {/* | */}
             <PricingInfoWrapper />
