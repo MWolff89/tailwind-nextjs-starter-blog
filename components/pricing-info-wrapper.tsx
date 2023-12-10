@@ -8,9 +8,9 @@ const pricingPlans = [
   {
     price: '1,500 SGD',
     plan: 'Savings',
-    setup: 'For small businesses with straightforward requirements.',
-    subscription: '',
-    includes: [
+    description: 'For small businesses with straightforward requirements.',
+
+    features: [
       `Trained on your website's public data.`,
       `Real-time updates to the chatbot's knowledge via website sync.`,
       `Email support with a 24-hour response time.`,
@@ -29,9 +29,19 @@ const pricingPlans = [
   {
     price: '2,500 SGD',
     plan: 'Basic',
-    setup: 'For those seeking a more personalized and responsive AI solution.',
-    subscription: '',
-    includes: ['1-time setup', '1 year subscription'],
+    description: 'For those seeking a more personalized and responsive AI solution.',
+
+    features: [
+      `Trained on your website's public data`,
+      `3 additional data sources (PDF, TXT, DOC)`,
+      `Real-time updates to the chatbot's knowledge via website sync.`,
+      `1 free integration with a third-party platform (e.g., appointment scheduling software).`,
+      `Access to transcripts of all chat histories for compliance and analysis.`,
+      `7 consulting meetups/calls of an hour's duration throughout the year (subject to availability, limited to once per day).`,
+      `Priority email support with a 12-hour response time.`,
+      `Monthly performance reports with actionable insights.`,
+      `Bi-monthly strategy calls.`,
+    ],
     additional: [
       'Capturing leads',
       'Recommendation of specific products',
@@ -44,9 +54,9 @@ const pricingPlans = [
   {
     price: '4,000 SGD',
     plan: 'Artisan',
-    setup: 'For those requiring a highly personalized, continuously evolving AI solution.',
-    subscription: '',
-    includes: [
+    description: 'For those requiring a highly personalized, continuously evolving AI solution.',
+
+    features: [
       `Trained on your website's public data`,
       `Unlimited additional data sources (PDF, TXT, DOC)`,
       `Real-time updates to the chatbot's knowledge via website sync.`,
@@ -116,8 +126,10 @@ const PricingInfoWrapper = () => {
                 {/* divider */}
                 <div className="my-4 w-full border-b-[1px] border-primary-300"></div>
                 <div className="flex w-full flex-col items-center px-2">
-                  <p className={`text-center text-sm font-thin text-gray-100`}>{item.setup}</p>
-                  <p className={`text-center text-sm`}>{item.subscription}</p>
+                  <p className={`text-center text-sm font-thin text-gray-100`}>
+                    {item.description}
+                  </p>
+                  {/* <p className={`text-center text-sm`}>{item.subscription}</p> */}
                   {/* divider */}
                 </div>
                 <div className="my-4 w-full border-b-[1px] border-primary-300"></div>
@@ -130,7 +142,7 @@ const PricingInfoWrapper = () => {
                   </h5>
                   {/* bulleted list */}
                   <ul className={`list-disc space-y-3 text-left text-sm text-white`}>
-                    {item.includes.map((i, index) => (
+                    {item.features.map((i, index) => (
                       <li key={index + '-' + i} className={`border-b border-gray-700 py-1`}>
                         {i}
                       </li>
