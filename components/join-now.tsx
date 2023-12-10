@@ -11,6 +11,29 @@ const JoinNow = () => {
   useEffect(() => {
     setChatTheme(theme === 'dark' ? 'dark' : 'light')
   }, [theme, resolvedTheme])
+
+  const handleBookNowClick = () => {
+    // Execute the desired action when "Book Now" is clicked
+    if (
+      window.voiceflow &&
+      window.voiceflow.chat &&
+      typeof window.voiceflow.chat.open === 'function'
+    ) {
+      window.voiceflow.chat.open()
+      setTimeout(function () {
+        window.voiceflow.chat.interact({
+          type: 'intent',
+          payload: {
+            intent: {
+              name: 'Services and products',
+            },
+            entities: [],
+          },
+        })
+      }, 1000)
+    }
+  }
+
   return (
     <div className="flex items-center justify-center">
       <div className="items-start space-y-2 py-8 xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0">
@@ -36,6 +59,7 @@ const JoinNow = () => {
             className={`flex w-full items-center justify-center ${
               chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
             }`}
+            onClick={handleBookNowClick} // Attach the click event handler
           >
             Book Now
           </Button>

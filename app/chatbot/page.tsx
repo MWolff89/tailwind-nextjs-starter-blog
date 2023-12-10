@@ -5,6 +5,7 @@ import { Chat } from '@/components/chat'
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { useTheme } from 'next-themes'
+import {} from '@voiceflow/react-chat'
 
 export const runtime = 'edge'
 
