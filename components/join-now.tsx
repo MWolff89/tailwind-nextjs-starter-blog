@@ -15,9 +15,9 @@ const JoinNow = () => {
   const handleBookNowClick = () => {
     // Execute the desired action when "Book Now" is clicked
     if (
-      window.voiceflow &&
-      window.voiceflow.chat &&
-      typeof window.voiceflow.chat.open === 'function'
+      (window as any).voiceflow &&
+      (window as any).voiceflow.chat &&
+      typeof (window as any).voiceflow.chat.open === 'function'
     ) {
       window.voiceflow.chat.open()
       setTimeout(function () {
