@@ -1,4 +1,5 @@
 'use client'
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { useEffect, useState } from 'react'
 import { Button } from './ui/button'
@@ -15,13 +16,13 @@ const JoinNow = () => {
   const handleBookNowClick = () => {
     // Execute the desired action when "Book Now" is clicked
     if (
-      (window as any).voiceflow &&
-      (window as any).voiceflow.chat &&
+      typeof (window as any).voiceflow !== 'undefined' &&
+      typeof (window as any).voiceflow.chat !== 'undefined' &&
       typeof (window as any).voiceflow.chat.open === 'function'
     ) {
-      window.voiceflow.chat.open()
+      ;(window as any).voiceflow.chat.open()
       setTimeout(function () {
-        window.voiceflow.chat.interact({
+        ;(window as any).voiceflow.chat.interact({
           type: 'intent',
           payload: {
             intent: {
