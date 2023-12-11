@@ -37,7 +37,7 @@ const JoinNow = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="items-start space-y-2 py-8 xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0">
+      <div className="items-start space-y-6 pb-16 pt-8 xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0">
         <div className="flex max-w-[550px] flex-col items-center space-x-2">
           <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
             Not sure where to start?
@@ -51,24 +51,23 @@ const JoinNow = () => {
               Identify pain points and quick-win opportunities during the call to guide your optimal
               AI implementation.
             </p>
-            <p className="text-gray-300">Don't miss the AI Revolution.</p>
+            <p className="font-semibold text-gray-300">Don't miss the AI Revolution.</p>
           </div>
         </div>
         <div className="flex h-full max-w-[550px] items-center justify-center gap-4 xl:flex-col">
+          {' '}
           <Button
             type="submit"
-            className={`flex w-full items-center justify-center ${
-              chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-            }`}
+            className={`flex w-full items-center justify-center  bg-gray-800 uppercase
+            text-white dark:bg-gray-200 dark:text-black`}
             onClick={handleBookNowClick} // Attach the click event handler
           >
             Book Now
           </Button>
           <Button
             type="submit"
-            className={`flex w-full items-center justify-center ${
-              chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-            }`}
+            className={`} flex w-full items-center justify-center rounded-none bg-transparent uppercase
+            dark:text-white dark:underline`}
           >
             Learn More
           </Button>

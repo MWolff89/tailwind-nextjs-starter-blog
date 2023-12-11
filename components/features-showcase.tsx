@@ -8,6 +8,7 @@ import {
   PuzzlePieceIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/outline'
+import { ArrowBigDown } from 'lucide-react'
 
 const features = [
   {

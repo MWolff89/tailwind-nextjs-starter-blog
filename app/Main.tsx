@@ -5,14 +5,8 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-import Script from 'next/script'
-import Image from '@/components/Image'
-import { Button } from '@/components/ui/button'
-import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
 import PricingInfoWrapper from '@/components/pricing-info-wrapper'
 import FeaturesShowcase from '@/components/features-showcase'
-import ThreeColFeatureList from '@/components/three-col-feature'
 import JoinNow from '@/components/join-now'
 
 const MAX_DISPLAY = 5
@@ -55,7 +49,6 @@ export default function Home({ posts }) {
           </div>
           <JoinNow />
         </div>
-
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {

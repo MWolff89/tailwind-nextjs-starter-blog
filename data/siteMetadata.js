@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'BlackOrchid AI',
+  title: 'BlackOrchid Pte. Ltd.',
   author: 'Maltin Wolf',
   headerTitle: 'BLACKORCHID AI',
   // description: 'We help companies optimise customer service operations and drive competitive advantage. At BlackOrchid, we craft highly advanced AI agents that fit your business needs like a glove.',
