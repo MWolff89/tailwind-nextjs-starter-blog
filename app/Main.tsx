@@ -10,7 +10,7 @@ import FeaturesShowcase from '@/components/features-showcase'
 import JoinNow from '@/components/join-now'
 import QuotationBlock from '@/components/quotation-block'
 
-const MAX_DISPLAY = 5
+export const MAX_DISPLAY = 5
 
 export default function Home({ posts }) {
   return (
