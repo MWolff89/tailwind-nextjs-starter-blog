@@ -61,9 +61,9 @@ export default function FeaturesShowcase() {
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
                     <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
-                  <span className="uppercase text-gray-500 dark:text-gray-400">{feature.name}</span>
+                  <span className="uppercase text-gray-500 dark:text-gray-300">{feature.name}</span>
                 </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
+                <dd className="mt-2 text-base leading-6 text-gray-600 dark:text-gray-400 sm:leading-7">
                   {feature.description}
                 </dd>
               </div>
