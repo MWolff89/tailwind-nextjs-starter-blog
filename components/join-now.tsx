@@ -6,13 +6,6 @@ import { Button } from './ui/button'
 import { useTheme } from 'next-themes'
 
 const JoinNow = () => {
-  const { theme, resolvedTheme } = useTheme()
-  const [chatTheme, setChatTheme] = useState(theme === 'dark' ? 'dark' : 'light')
-
-  useEffect(() => {
-    setChatTheme(theme === 'dark' ? 'dark' : 'light')
-  }, [theme, resolvedTheme])
-
   const handleBookNowClick = () => {
     // Execute the desired action when "Book Now" is clicked
     if (
