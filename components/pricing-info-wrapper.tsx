@@ -8,67 +8,55 @@ const pricingPlans = [
   {
     price: '1,500 SGD',
     plan: 'Savings',
-    description: 'For small businesses with straightforward requirements.',
+    description: 'Ideal for small businesses with straightforward requirements.',
     features: [
-      `Trained on your website's public data.`,
-      `Real-time updates to the chatbot's knowledge via website sync.`,
-      `Email support with a 24-hour response time.`,
-      `Weekly performance reports with actionable insights.`,
-      `Monthly performance reports.`,
+      "Trained on your website's public data.",
+      'Real-time updates via website sync.',
+      '24-hour email support.',
+      'Weekly & monthly performance reports.',
     ],
   },
   {
     price: '2,500 SGD',
     plan: 'Basic',
-    description: 'For those seeking a more personalized and responsive AI solution.',
-
+    description: 'Perfect for those seeking a personalized and responsive AI solution.',
     features: [
-      `Trained on your website's public data`,
-      `3 additional data sources (PDF, TXT, DOC)`,
-      `Real-time updates to the chatbot's knowledge via website sync.`,
-      `1 free integration with a third-party platform (e.g., appointment scheduling software).`,
-      `Access to transcripts of all chat histories for compliance and analysis.`,
-      `7 consulting meetups/calls of an hour's duration throughout the year (subject to availability, limited to once per day).`,
-      `Priority email support with a 12-hour response time.`,
-      `Monthly performance reports with actionable insights.`,
-      `Bi-monthly strategy calls.`,
+      "Trained on your website's public data.",
+      '3 additional data sources (PDF, TXT, DOC).',
+      'Real-time updates via website sync.',
+      '1 free third-party integration (e.g., appointment scheduling).',
+      'Access to chat history transcripts.',
+      '7 consulting meetups/calls annually.',
+      '12-hour priority email support.',
+      'Bi-monthly strategy calls.',
+      'Monthly performance reports.',
     ],
   },
   {
     price: '4,000 SGD',
     plan: 'Artisan',
-    description: 'For those requiring a highly personalized, continuously evolving AI solution.',
-
+    description:
+      'Tailored for those requiring a highly personalized, continuously evolving AI solution.',
     features: [
-      `Trained on your website's public data`,
-      `Unlimited additional data sources (PDF, TXT, DOC)`,
-      `Real-time updates to the chatbot's knowledge via website sync.`,
-      `3 free integrations with a third-party platform (e.g., appointment scheduling software).`,
-      `Access to transcripts of all chat histories for compliance and analysis.`,
-      `Unlimited 1-hour consults throughout the year (subject to availability, limited to once per day).`,
-      `Priority email and phone support with a dedicated account manager.`,
-      `Weekly performance reports with actionable insights.`,
-      `Priority access to beta features.`,
-      `Quarterly strategy workshops.`,
+      "Trained on your website's public data.",
+      'Unlimited additional data sources (PDF, TXT, DOC).',
+      'Real-time updates via website sync.',
+      '3 free third-party integrations (e.g., appointment scheduling).',
+      'Access to chat history transcripts.',
+      'Unlimited 1-hour consults annually.',
+      'Priority email and phone support with a dedicated manager.',
+      'Weekly performance reports.',
+      'Priority access to beta features.',
+      'Quarterly strategy workshops.',
     ],
   },
 ]
 
 const PricingInfoWrapper = () => {
-  const { theme, resolvedTheme } = useTheme()
-  const [chatTheme, setChatTheme] = useState(theme === 'dark' ? 'dark' : 'light')
-
-  useEffect(() => {
-    setChatTheme(theme === 'dark' ? 'dark' : 'light')
-  }, [theme, resolvedTheme])
   return (
     <>
       <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
         {pricingPlans.map((item, index) => {
-          //   const color = chatTheme === 'dark' ? item.color : item.lightModeColor
-          //   const textColor = chatTheme === 'dark' ? 'text-white' : 'text-black'
-          //   const secondaryTextColor = chatTheme === 'dark' ? 'text-gray-400' : 'text-gray-700'
-
           const icons = [CircleDollarSign, Box, Gem]
 
           const LucideIcon = icons[index] // Use a different icon for each pricing plan

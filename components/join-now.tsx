@@ -1,9 +1,8 @@
 'use client'
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Button } from './ui/button'
-import { useTheme } from 'next-themes'
 
 const JoinNow = () => {
   const handleBookNowClick = () => {
