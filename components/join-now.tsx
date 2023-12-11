@@ -26,7 +26,7 @@ const JoinNow = () => {
           type: 'intent',
           payload: {
             intent: {
-              name: 'Services and products',
+              name: 'New Consultation Booking',
             },
             entities: [],
           },
