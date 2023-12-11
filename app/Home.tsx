@@ -1,5 +1,4 @@
 'use client'
-
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -8,9 +7,7 @@ import NewsletterForm from 'pliny/ui/NewsletterForm'
 import PricingInfoWrapper from '@/components/pricing-info-wrapper'
 import FeaturesShowcase from '@/components/features-showcase'
 import JoinNow from '@/components/join-now'
-import QuotationBlock from '@/components/quotation-block'
-
-const MAX_DISPLAY = 5
+import { MAX_DISPLAY } from './Main'
 
 export default function Home({ posts }) {
   return (
@@ -32,7 +29,20 @@ export default function Home({ posts }) {
         </div>
         <FeaturesShowcase />
         {/* <ThreeColFeatureList /> */}
-        <QuotationBlock />
+        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+          <h2 className="font-italic text-2xl leading-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-8 md:text-4xl md:leading-12">
+            McKinsey estimates that generative AI could increase productivity in customer care by up
+            to 45%. And Louder Co.’s customers are already feeling the impact – one client went from
+            $10 million to close to $20 million in annual revenues without adding a single person to
+            their staff.
+          </h2>
+          {/* <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+              {siteMetadata.description}
+            </p>
+            <p className="text-lg font-semibold leading-7 text-gray-500 dark:text-gray-400">
+              Stay ahead of the curve.
+            </p> */}
+        </div>
         <div className="flex flex-col items-center justify-center">
           <div className="container flex items-center justify-center py-8">
             {/* | */}
