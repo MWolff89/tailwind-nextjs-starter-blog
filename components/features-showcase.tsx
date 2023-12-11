@@ -47,7 +47,7 @@ export default function FeaturesShowcase() {
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
             Our chatbots are built different
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-400">
+          <p className="text-md mt-6 leading-6 text-gray-500 dark:text-gray-400 sm:text-lg sm:leading-8">
             Businesses are constantly seeking innovative solutions to enhance user experience and
             streamline operations. One such groundbreaking advancement is the transition from
             traditional chatbots to AI-powered conversational agents.

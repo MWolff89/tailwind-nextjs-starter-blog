@@ -5,6 +5,7 @@ const siteMetadata = {
   headerTitle: 'BLACKORCHID AI',
   // description: 'We help companies optimise customer service operations and drive competitive advantage. At BlackOrchid, we craft highly advanced AI agents that fit your business needs like a glove.',
   description: `At BlackOrchid, we craft very advanced AI agents. We're excellent at what we do. We carefully tailor AI agents to your unique business needs with meticulous precision to reduce costs, increase revenue, and improve customer experience.`,
+  mobileDescription: `At BlackOrchid, we craft very advanced AI agents. We're excellent at what we do.`,
   // description: 'According to a study by McKinsey, generative AI could deliver total value in the range of $2.6 trillion to $4.4 trillion in economic benefits annually when applied across industries.',
   language: 'en-us',
   theme: 'dark', // system, dark or light

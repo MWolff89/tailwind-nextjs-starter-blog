@@ -19,8 +19,11 @@ export default function Home({ posts }) {
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Don't miss the AI revolution.
           </h1>
-          <p className="text-md leading-6 text-gray-500 dark:text-gray-400 sm:text-lg sm:leading-7">
+          <p className="text-md hidden leading-6 text-gray-500 dark:text-gray-400 sm:block sm:text-lg sm:leading-7">
             {siteMetadata.description}
+          </p>
+          <p className="text-md block leading-6 text-gray-500 dark:text-gray-400 sm:hidden sm:text-lg sm:leading-7">
+            {siteMetadata.mobileDescription}
           </p>
           <p className="text-lg font-semibold leading-7 text-gray-500 dark:text-gray-300">
             Stay ahead of the curve.
