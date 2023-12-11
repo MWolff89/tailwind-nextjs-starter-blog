@@ -14,6 +14,7 @@ const JoinNow = () => {
     ) {
       ;(window as any).voiceflow.chat.open()
       setTimeout(function () {
+        // ;(window as any).voiceflow.chat.clear()
         ;(window as any).voiceflow.chat.interact({
           type: 'intent',
           payload: {
