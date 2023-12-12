@@ -17,13 +17,13 @@ export default function Home({ posts }) {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 md:text-4xl md:leading-14">
             Don't miss the AI revolution.
           </h1>
-          <p className="text-md hidden leading-6 text-gray-500 dark:text-gray-400 sm:block sm:text-lg sm:leading-7">
+          {/* <p className="text-md hidden leading-6 text-gray-500 dark:text-gray-400 sm:block sm:text-lg sm:leading-7">
             {siteMetadata.description}
-          </p>
-          <p className="text-md block leading-6 text-gray-500 dark:text-gray-400 sm:hidden sm:text-lg sm:leading-7">
+          </p> */}
+          <p className="text-md leading-6 text-gray-500 dark:text-gray-400 sm:text-lg sm:leading-7">
             {siteMetadata.mobileDescription}
           </p>
           <p className="text-lg font-semibold leading-7 text-gray-500 dark:text-gray-300">
@@ -92,7 +92,7 @@ export default function Home({ posts }) {
           })}
         </ul>
       </div>
-      {posts.length > MAX_DISPLAY && (
+      {/* {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
@@ -102,7 +102,7 @@ export default function Home({ posts }) {
             All Posts &rarr;
           </Link>
         </div>
-      )}
+      )} */}
       {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />

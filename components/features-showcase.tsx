@@ -14,24 +14,24 @@ const features = [
   {
     name: 'Beyond Robotic Responses',
     description:
-      'Our AI agents use state-of-the-art AI technologies to mirror human conversation nuances. This focus on sounding genuinely human improves user interactions, creating a more authentic conversational experience.',
+      'Our AI agents use state-of-the-art AI technologies to mirror human conversation nuances. This focus on sounding genuinely human improves user interactions.',
     icon: HeartIcon,
   },
   {
     name: 'Personalized Conversations',
-    description: `Our AI agents excel at learning from past interactions, delivering personalized responses that remembers and understands the user. This learning capability empowers a more tailored experience for each user.`,
+    description: `Our AI agents excel at learning from past interactions, delivering personalized responses that remembers and understands the user.`,
     icon: UserIcon,
   },
   {
     name: 'Handling Complexity',
     description:
-      'Our AI agents are designed to handle diverse and complex inquiries, significantly reducing the workload for customer service and enhancing cost-effectiveness by adapting to unpredictable scenarios.',
+      'Our AI agents are designed to handle diverse and complex inquiries, significantly reducing the workload for customer service and enhancing cost-effectiveness.',
     icon: PuzzlePieceIcon,
   },
   {
     name: 'Instant Responses, 24/7 Availability',
     description:
-      'Our AI agents boost customer experience by eliminating wait times, offering instant 24/7 assistance, and generating substantial cost savings by automating customer service at a highly sophisticated level.',
+      'Our AI agents boost customer experience by eliminating wait times, offering instant 24/7 assistance, and generating substantial cost savings.',
     icon: RocketLaunchIcon,
   },
 ]
