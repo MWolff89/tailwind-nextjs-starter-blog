@@ -4,7 +4,6 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
-import NewsletterForm from 'pliny/ui/NewsletterForm'
 import PricingInfoWrapper from '@/components/pricing-info-wrapper'
 import FeaturesShowcase from '@/components/features-showcase'
 import JoinNow from '@/components/join-now'
@@ -20,6 +19,11 @@ export default function Home({ posts }) {
           <h1 className="text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 md:text-4xl md:leading-14">
             Don't miss the AI revolution.
           </h1>
+
+          {/* <h1 className="text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 md:text-4xl md:leading-14">
+            Don't lose the AI advantage.
+          </h1> */}
+          {/* nd.mr.alc */}
           {/* <p className="text-md hidden leading-6 text-gray-500 dark:text-gray-400 sm:block sm:text-lg sm:leading-7">
             {siteMetadata.description}
           </p> */}
@@ -103,11 +107,11 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )} */}
-      {siteMetadata.newsletter?.provider && (
+      {/* {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
-      )}
+      )} */}
     </>
   )
 }

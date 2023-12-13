@@ -6,26 +6,31 @@ import { Button } from './ui/button'
 
 const JoinNow = () => {
   const handleBookNowClick = () => {
+    // Open URL in new tab
+    window.open(
+      'https://calendly.com/blackorchidai/ai-discovery-session-with-blackorchid-ai',
+      '_blank'
+    )
     // Execute the desired action when "Book Now" is clicked
-    if (
-      typeof (window as any).voiceflow !== 'undefined' &&
-      typeof (window as any).voiceflow.chat !== 'undefined' &&
-      typeof (window as any).voiceflow.chat.open === 'function'
-    ) {
-      ;(window as any).voiceflow.chat.open()
-      setTimeout(function () {
-        // ;(window as any).voiceflow.chat.clear()
-        ;(window as any).voiceflow.chat.interact({
-          type: 'intent',
-          payload: {
-            intent: {
-              name: 'New Consultation Booking',
-            },
-            entities: [],
-          },
-        })
-      }, 1000)
-    }
+    // if (
+    //   typeof (window as any).voiceflow !== 'undefined' &&
+    //   typeof (window as any).voiceflow.chat !== 'undefined' &&
+    //   typeof (window as any).voiceflow.chat.open === 'function'
+    // ) {
+    //   ;(window as any).voiceflow.chat.open()
+    //   setTimeout(function () {
+    //     // ;(window as any).voiceflow.chat.clear()
+    //     ;(window as any).voiceflow.chat.interact({
+    //       type: 'intent',
+    //       payload: {
+    //         intent: {
+    //           name: 'New Consultation Booking',
+    //         },
+    //         entities: [],
+    //       },
+    //     })
+    //   }, 1000)
+    // }
   }
 
   return (
@@ -58,7 +63,10 @@ const JoinNow = () => {
             Book Now
           </Button>
           <Button
-            type="submit"
+            // type="submit"
+            onClick={() => {
+              window.open('https://www.blackorchidai.com/blog/what-are-ai-agents', '_blank')
+            }}
             className={`} flex w-full items-center justify-center rounded-none bg-transparent uppercase
             dark:text-white dark:underline`}
           >

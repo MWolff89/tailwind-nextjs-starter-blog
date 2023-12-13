@@ -22,14 +22,14 @@ export default function ChatbotPage() {
   }, [resolvedTheme])
 
   const handlePasswordSubmit = (e) => {
-    console.log(
-      'ChatbotPage.tsx: handlePasswordSubmit: e: ',
-      e,
-      'password: ',
-      password,
-      'authenticated: ',
-      authenticated
-    )
+    // console.log(
+    //   'ChatbotPage.tsx: handlePasswordSubmit: e: ',
+    //   e,
+    //   'password: ',
+    //   password,
+    //   'authenticated: ',
+    //   authenticated
+    // )
     e.preventDefault()
 
     // Check the password (replace 'yourpassword' with your actual password)

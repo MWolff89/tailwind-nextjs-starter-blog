@@ -1,9 +1,6 @@
 'use client'
 import Link from '@/components/Link'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { formatDate } from 'pliny/utils/formatDate'
-import NewsletterForm from 'pliny/ui/NewsletterForm'
 import PricingInfoWrapper from '@/components/pricing-info-wrapper'
 import FeaturesShowcase from '@/components/features-showcase'
 import JoinNow from '@/components/join-now'
@@ -113,11 +110,11 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-      {siteMetadata.newsletter?.provider && (
+      {/* {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
-      )}
+      )} */}
     </>
   )
 }

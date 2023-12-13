@@ -37,7 +37,7 @@ const namkeepauExampleMessages = [
     message: `Where are you located?`,
   },
   {
-    heading: 'WHat special bundles do you have?',
+    heading: 'What special bundles do you have?',
     message: `What special bundles do you have?`,
   },
 ]
@@ -49,10 +49,7 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
         <h1 className="mb-2 text-lg font-semibold">Welcome to Nam Kee Pau Chatbot!</h1>
         <p className="text-muted-foreground mb-2 leading-normal">
           This is an demo AI chatbot built for Nam Kee Pau by{' '}
-          <ExternalLink href="https://tailwind-nextjs-starter-blog-eight-gamma.vercel.app/about/">
-            BlackOrchid AI
-          </ExternalLink>
-          .
+          <ExternalLink href="https://www.blackorchidai.com/about">BlackOrchid AI</ExternalLink>.
         </p>
         <p className="text-muted-foreground leading-normal">
           You can start a conversation here or try the following examples:
@@ -62,7 +59,7 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
             <Button
               key={index}
               variant="link"
-              className="h-auto p-0 text-base"
+              className="h-auto p-0 text-left text-base"
               onClick={() => setInput(message.message)}
             >
               <IconArrowRight className="text-muted-foreground mr-2" />

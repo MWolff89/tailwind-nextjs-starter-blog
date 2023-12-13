@@ -20,7 +20,7 @@ export default function AuthorLayout({ children, content }: Props) {
   const [chatTheme, setChatTheme] = useState(resolvedTheme === 'dark' ? 'dark' : 'light')
 
   useEffect(() => {
-    console.log('AuthorLayout.tsx: useEffect: resolvedTheme: ', resolvedTheme)
+    // console.log('AuthorLayout.tsx: useEffect: resolvedTheme: ', resolvedTheme)
     setChatTheme(resolvedTheme === 'dark' ? 'dark' : 'light')
   }, [resolvedTheme])
 

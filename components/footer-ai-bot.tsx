@@ -12,8 +12,8 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       {...props}
     >
       {/* Learn where this can be used{" "} */}
-      <ExternalLink href="https://tailwind-nextjs-starter-blog-eight-gamma.vercel.app/about/">
-        Learn where this can be used
+      <ExternalLink href="https://www.blackorchidai.com/blog/elevating-customer-engagement">
+        Learn why you should use this
       </ExternalLink>
     </p>
     // </div>
