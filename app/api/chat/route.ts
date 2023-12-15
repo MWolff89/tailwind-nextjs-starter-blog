@@ -19,7 +19,7 @@ export async function POST(req: Request) {
   const json = await req.json()
   const { messages, previewToken } = json
 
-  // console.log(`Messages =>`, messages)
+  console.log(`Messages =>`, messages)
 
   const lastMessage = messages[messages.length - 1]
 

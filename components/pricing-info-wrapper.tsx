@@ -1,7 +1,6 @@
 'use client'
 
-import { useTheme } from 'next-themes'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { CircleDollarSign, DraftingCompass, Coffee, Box, Gem } from 'lucide-react'
 
 const pricingPlans = [
@@ -9,10 +8,11 @@ const pricingPlans = [
     price: '1,500 SGD',
     plan: 'Savings',
     description: 'Ideal for small businesses with straightforward requirements.',
+    subscription: "1 year license",
     features: [
       "Trained on your website's public data.",
       'Real-time updates via website sync.',
-      '24-hour email support.',
+      'Email support with a 24-hour turnaround time.',
       'Weekly & monthly performance reports.',
     ],
   },
@@ -20,6 +20,7 @@ const pricingPlans = [
     price: '2,500 SGD',
     plan: 'Basic',
     description: 'Perfect for those seeking a personalized and responsive AI solution.',
+    subscription: "1 year license",
     features: [
       "Trained on your website's public data.",
       '3 additional data sources (PDF, TXT, DOC).',
@@ -27,7 +28,7 @@ const pricingPlans = [
       '1 free third-party integration (e.g., appointment scheduling).',
       'Access to chat history transcripts.',
       '7 consulting meetups/calls annually.',
-      '12-hour priority email support.',
+      'Priority email and phone support with a 12-hour turnaround time.',
       'Bi-monthly strategy calls.',
       'Monthly performance reports.',
     ],
@@ -37,6 +38,7 @@ const pricingPlans = [
     plan: 'Artisan',
     description:
       'Tailored for those requiring a highly personalized, continuously evolving AI solution.',
+    subscription: "1 year license",
     features: [
       "Trained on your website's public data.",
       'Unlimited additional data sources (PDF, TXT, DOC).',
@@ -44,7 +46,7 @@ const pricingPlans = [
       '3 free third-party integrations (e.g., appointment scheduling).',
       'Access to chat history transcripts.',
       'Unlimited 1-hour consults annually.',
-      'Priority email and phone support with a dedicated manager.',
+      'Priority email and phone support with a dedicated manager with a 6-hour turnaround time.',
       'Weekly performance reports.',
       'Priority access to beta features.',
       'Quarterly strategy workshops.',
@@ -87,12 +89,16 @@ const PricingInfoWrapper = () => {
                   >
                     {item.plan}
                   </p>
+                  <p className={`text-center text-xs text-gray-300 py-1 uppercase font-medium`}>
+                    {item.subscription}
+                  </p>
                   {/* divider */}
                   <div className="my-4 w-full border-b-[1px] border-primary-300"></div>
                   <div className="flex w-full flex-col items-center px-2">
                     <p className={`text-center text-sm font-thin text-gray-100`}>
                       {item.description}
                     </p>
+
                     {/* <p className={`text-center text-sm`}>{item.subscription}</p> */}
                     {/* divider */}
                   </div>

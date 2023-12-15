@@ -43,6 +43,6 @@
     ".contentlayer/generated/**/*.json",
     ".next/types/**/*.ts",
     "global.d.ts" // Adjust the path based on your project structure
-  ],
+, "data/blog/pricing-information.mdx"  ],
   "exclude": ["node_modules"]
 }
