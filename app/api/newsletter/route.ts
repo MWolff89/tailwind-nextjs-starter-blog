@@ -6,5 +6,4 @@ const handler = NewsletterAPI({
   provider: siteMetadata.newsletter.provider,
 })
 
-
 export { handler as GET, handler as POST }

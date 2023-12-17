@@ -8,7 +8,7 @@ const pricingPlans = [
     price: '1,500 SGD',
     plan: 'Savings',
     description: 'Ideal for small businesses with straightforward requirements.',
-    subscription: "1 year license",
+    subscription: '1 year license',
     features: [
       "Trained on your website's public data.",
       'Real-time updates via website sync.',
@@ -20,7 +20,7 @@ const pricingPlans = [
     price: '2,500 SGD',
     plan: 'Basic',
     description: 'Perfect for those seeking a personalized and responsive AI solution.',
-    subscription: "1 year license",
+    subscription: '1 year license',
     features: [
       "Trained on your website's public data.",
       '3 additional data sources (PDF, TXT, DOC).',
@@ -38,7 +38,7 @@ const pricingPlans = [
     plan: 'Artisan',
     description:
       'Tailored for those requiring a highly personalized, continuously evolving AI solution.',
-    subscription: "1 year license",
+    subscription: '1 year license',
     features: [
       "Trained on your website's public data.",
       'Unlimited additional data sources (PDF, TXT, DOC).',
@@ -88,7 +88,7 @@ const PricingInfoWrapper = () => {
                   >
                     {item.plan}
                   </p>
-                  <p className={`text-center text-xs text-gray-300 py-1 uppercase font-medium`}>
+                  <p className={`py-1 text-center text-xs font-medium uppercase text-gray-300`}>
                     {item.subscription}
                   </p>
                   {/* divider */}
