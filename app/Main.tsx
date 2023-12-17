@@ -27,6 +27,12 @@ export default function Home({ posts }) {
           {/* <p className="text-md hidden leading-6 text-gray-500 dark:text-gray-400 sm:block sm:text-lg sm:leading-7">
             {siteMetadata.description}
           </p> */}
+          {/* SO TO DEL */}
+          <p className='text-md'>
+
+
+          </p>
+          {/* EO TO DEL */}
           <p className="text-md leading-6 text-gray-500 dark:text-gray-400 sm:text-lg sm:leading-7">
             {siteMetadata.mobileDescription}
           </p>

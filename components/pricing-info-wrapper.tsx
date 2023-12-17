@@ -82,7 +82,6 @@ const PricingInfoWrapper = () => {
                   <div className="flex items-center justify-center pb-4">
                     <LucideIcon size={24} className="text-primary-400" />
                   </div>
-
                   <h1 className={`text-center text-3xl font-bold text-white`}>{item.price}</h1>
                   <p
                     className={`mt-1 pt-1 text-center text-sm font-medium uppercase tracking-widest text-gray-300`}
