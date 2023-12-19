@@ -125,12 +125,14 @@ const PricingInfoWrapper = () => {
     Artisan: 'Yes',
   }
 
+  const licenseDuration = '1 year'
+
   // Icons for each plan
   const icons = [CircleDollarSign, Box, Gem]
 
   return (
-    <div className="w-full rounded-md border border-indigo-300">
-      <table className="min-w-full divide-y divide-gray-200">
+    <div className="w-full rounded-lg border border-gray-900 bg-gray-800 p-1">
+      <table className="min-w-full divide-y divide-gray-700">
         <thead className="bg-gray-900">
           <tr>
             <th
@@ -156,8 +158,9 @@ const PricingInfoWrapper = () => {
             })}
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-200 bg-gray-900">
+        <tbody className="divide-y divide-gray-700 bg-gray-900">
           <TotalPrice plans={plans} />
+          <LicenseDuration licenseDuration={licenseDuration} plans={plans} />
           <TrainedOnYourData trainedOnYourData={trainedOnYourData} />
           <RealtimeUpdates realtimeUpdates={realtimeUpdates} />
           <WebWidget webWidget={webWidget} />
@@ -455,6 +458,17 @@ const PriorityAccessToBetaFeatures = ({ priorityAccessToBetaFeatures }) => {
               '❌'}
         </td>
       ))}
+    </tr>
+  )
+}
+
+const LicenseDuration = ({ licenseDuration, plans }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">License Duration</td>
+      <td className="pricing-td md:bg-gray-800" colSpan={Object.keys(plans).length}>
+        {licenseDuration}
+      </td>
     </tr>
   )
 }

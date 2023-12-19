@@ -22,12 +22,16 @@
   @apply my-5;
 }
 
+/* .pricing-th {
+  @apply border-r border-b border-indigo-300;
+} */
+
 .pricing-tr-label {
-  @apply whitespace-nowrap px-6 py-4 text-xs font-medium uppercase tracking-wider text-gray-300;
+  @apply whitespace-nowrap px-6 py-4 text-xs font-medium uppercase tracking-wider text-gray-400 border-r border-gray-800;
 }
 
 .pricing-td {
-  @apply whitespace-nowrap px-6 py-4 text-center text-sm text-gray-200;
+  @apply whitespace-nowrap px-6 py-4 text-center text-sm text-gray-200 border-r border-gray-800;
 }
 
 @media (max-width: 768px) {
