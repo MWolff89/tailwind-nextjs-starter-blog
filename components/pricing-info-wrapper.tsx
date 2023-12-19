@@ -1,136 +1,413 @@
 'use client'
 
-import React from 'react'
-import { CircleDollarSign, DraftingCompass, Coffee, Box, Gem } from 'lucide-react'
-
-const pricingPlans = [
-  {
-    price: '1,500 SGD',
-    plan: 'Savings',
-    description: 'Ideal for small businesses with straightforward requirements.',
-    subscription: '1 year license',
-    features: [
-      "Trained on your website's public data.",
-      'Real-time updates via website sync.',
-      'Email support with a 24-hour turnaround time.',
-      'Weekly & monthly performance reports.',
-    ],
-  },
-  {
-    price: '2,500 SGD',
-    plan: 'Basic',
-    description: 'Perfect for those seeking a personalized and responsive AI solution.',
-    subscription: '1 year license',
-    features: [
-      "Trained on your website's public data.",
-      '3 additional data sources (PDF, TXT, DOC).',
-      'Real-time updates via website sync.',
-      '1 free third-party integration (e.g., appointment scheduling).',
-      'Access to chat history transcripts.',
-      '7 consulting meetups/calls annually.',
-      'Priority email and phone support with a 12-hour turnaround time.',
-      'Bi-monthly strategy calls.',
-      'Monthly performance reports.',
-    ],
-  },
-  {
-    price: '4,000 SGD',
-    plan: 'Artisan',
-    description:
-      'Tailored for those requiring a highly personalized, continuously evolving AI solution.',
-    subscription: '1 year license',
-    features: [
-      "Trained on your website's public data.",
-      'Unlimited additional data sources (PDF, TXT, DOC).',
-      'Real-time updates via website sync.',
-      '3 free third-party integrations (e.g., appointment scheduling).',
-      'Access to chat history transcripts.',
-      'Unlimited 1-hour consults annually.',
-      'Priority email and phone support with a dedicated manager with a 6-hour turnaround time.',
-      'Weekly performance reports.',
-      'Priority access to beta features.',
-      'Quarterly strategy workshops.',
-    ],
-  },
-]
+import React, { useState } from 'react'
+import { CircleDollarSign, Box, Gem } from 'lucide-react'
 
 const PricingInfoWrapper = () => {
+  // Initialize state to track additional costs for deployment options
+  const [selectedOptions, setSelectedOptions] = useState({
+    Savings: {},
+    Basic: {},
+    Artisan: {},
+  })
+
+  // Handle change in deployment options
+  const handleOptionChange = (plan, option) => {
+    setSelectedOptions((prev) => ({
+      ...prev,
+      [plan]: {
+        ...prev[plan],
+        [option]: !prev[plan][option],
+      },
+    }))
+  }
+
+  // Calculate total price based on selected options
+  const calculateTotalPrice = (basePrice, plan) => {
+    const optionsPricing = {
+      'Slack or Internal Tool': plan === 'Savings' ? 300 : plan === 'Basic' ? 500 : 700,
+      'Model Customization for Internal Tool':
+        plan === 'Savings' ? 500 : plan === 'Basic' ? 800 : 1000,
+    }
+
+    return Object.keys(selectedOptions[plan]).reduce((total, current) => {
+      return total + (selectedOptions[plan][current] ? optionsPricing[current] : 0)
+    }, basePrice)
+  }
+
+  const baseFeatures = [
+    "Trained on your website's public data.",
+    'Real-time updates via website sync.',
+  ]
+
+  const additionalDataSources = {
+    Savings: 0,
+    Basic: 3,
+    Artisan: 'Unlimited',
+  }
+
+  // Define the plans and their base prices
+  const plans = {
+    Savings: 1500,
+    Basic: 2500,
+    Artisan: 4000,
+  }
+
+  const emailSupport = {
+    Savings: '24 hours',
+    Basic: '12 hours',
+    Artisan: '6 hours',
+  }
+
+  const performanceReports = {
+    Savings: 'Monthly',
+    Basic: 'Bi-monthly',
+    Artisan: 'Weekly',
+  }
+
+  const webWidget = {
+    Savings: 'Yes',
+    Basic: 'Yes',
+    Artisan: 'Yes',
+  }
+
+  const tokenLimits = {
+    Savings: '10 million',
+    Basic: '20 million',
+    Artisan: '30 million',
+  }
+
+  const thirdPartyIntegrations = {
+    Savings: 0,
+    Basic: 1,
+    Artisan: 3,
+  }
+
+  const deploymentOptions = {
+    Savings: ['Web Widget'],
+    Basic: ['Web Widget', 'Slack or Discord'],
+    Artisan: ['Web Widget', 'Slack or Discord', 'WhatsApp or Telegram'],
+  }
+
+  const slackDeployment = {
+    Savings: 300,
+    Basic: 100,
+    Artisan: 0,
+  }
+
+  const whatsappDeployment = {
+    Savings: 500,
+    Basic: 300,
+    Artisan: 0,
+  }
+
+  const telegramDeployment = {
+    Savings: 300,
+    Basic: 100,
+    Artisan: 0,
+  }
+
+  const discordDeployment = {
+    Savings: 300,
+    Basic: 100,
+    Artisan: 0,
+  }
+
+  const modelVariants = {
+    Savings: 0,
+    Basic: 1,
+    Artisan: 2,
+  }
+
+  const realtimeUpdates = {
+    Savings: 'Yes',
+    Basic: 'Yes',
+    Artisan: 'Yes',
+  }
+
+  const trainedOnYourData = {
+    Savings: 'Yes',
+    Basic: 'Yes',
+    Artisan: 'Yes',
+  }
+
+  const chatHistoryTranscripts = {
+    Savings: 'No',
+    Basic: 'Yes',
+    Artisan: 'Yes',
+  }
+
+  // Icons for each plan
+  const icons = [CircleDollarSign, Box, Gem]
+
   return (
-    <>
-      <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
-        {pricingPlans.map((item, index) => {
-          const icons = [CircleDollarSign, Box, Gem]
-
-          const LucideIcon = icons[index] // Use a different icon for each pricing plan
-
-          return (
-            <div
-              key={item.price}
-              className={`+ flex items-center justify-center rounded-md border border-indigo-300`}
+    <div className="w-full rounded-md border border-indigo-300">
+      <table className="min-w-full divide-y divide-gray-200">
+        <thead className="bg-gray-900">
+          <tr>
+            <th
+              scope="col"
+              className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-400"
             >
-              <div
-                className="col-span-1 flex h-full w-full flex-col items-center justify-center"
-                key={item.price}
-              >
-                <div
-                  className={`relative flex h-full w-full flex-col items-center justify-start rounded-md bg-gray-900 pb-8 pt-8`}
+              Feature
+            </th>
+            {Object.keys(plans).map((plan, index) => {
+              const LucideIcon = icons[index]
+              return (
+                <th
+                  key={plan}
+                  scope="col"
+                  className="px-6 py-3 text-center text-xs font-medium uppercase tracking-wider text-gray-400"
                 >
-                  {/* <div className="absolute left-0 top-0 p-4">
-                          <LucideIcon size={24} />
-                        </div> */}
-
-                  <div className="flex items-center justify-center pb-4">
-                    <LucideIcon size={24} className="text-primary-400" />
+                  {plan}
+                  <div className="mt-2">
+                    <LucideIcon size={24} className="mx-auto text-primary-400" />
                   </div>
-                  <h1 className={`text-center text-3xl font-bold text-white`}>{item.price}</h1>
-                  <p
-                    className={`mt-1 pt-1 text-center text-sm font-medium uppercase tracking-widest text-gray-300`}
-                  >
-                    {item.plan}
-                  </p>
-                  <p className={`py-1 text-center text-xs font-medium uppercase text-gray-300`}>
-                    {item.subscription}
-                  </p>
-                  {/* divider */}
-                  <div className="my-4 w-full border-b-[1px] border-primary-300"></div>
-                  <div className="flex w-full flex-col items-center px-2">
-                    <p className={`text-center text-sm font-thin text-gray-100`}>
-                      {item.description}
-                    </p>
-
-                    {/* <p className={`text-center text-sm`}>{item.subscription}</p> */}
-                    {/* divider */}
+                </th>
+              )
+            })}
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-200 bg-gray-900">
+          {/* Rows for features */}
+          {/* Row for total price */}
+          <tr>
+            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+              Base Price
+            </td>
+            {Object.keys(plans).map((plan) => (
+              <td
+                key={plan}
+                className="text-md whitespace-nowrap px-6 py-4 text-center font-medium text-white"
+              >
+                {calculateTotalPrice(plans[plan], plan)} SGD
+              </td>
+            ))}
+          </tr>
+          <TrainedOnYourData trainedOnYourData={trainedOnYourData} />
+          <RealtimeUpdates realtimeUpdates={realtimeUpdates} />
+          <WebWidget webWidget={webWidget} />
+          <tr>
+            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+              Email Support
+            </td>
+            {Object.keys(emailSupport).map((plan) => (
+              <td
+                key={plan}
+                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
+              >
+                <div>Within</div>
+                <div>{emailSupport[plan]}</div>
+              </td>
+            ))}
+          </tr>
+          <tr>
+            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+              Performance Reports
+            </td>
+            {Object.keys(performanceReports).map((plan) => (
+              <td
+                key={plan}
+                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
+              >
+                {performanceReports[plan]}
+              </td>
+            ))}
+          </tr>
+          {/* Rows for deployment options */}
+          <tr>
+            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+              Deployment Options
+            </td>
+            {Object.keys(deploymentOptions).map((plan) => (
+              <td
+                key={plan}
+                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
+              >
+                {/* Bulleted */}
+                <ul className="list-inside list-disc">
+                  {deploymentOptions[plan].map((option) => (
+                    <li key={option}>{option}</li>
+                  ))}
+                </ul>
+              </td>
+            ))}
+          </tr>
+          <TokenLimits tokenLimits={tokenLimits} />
+          <ChatHistoryTranscripts chatHistoryTranscripts={chatHistoryTranscripts} />
+          <tr>
+            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+              Additional Data Sources
+            </td>
+            {Object.keys(additionalDataSources).map((plan) => (
+              <td
+                key={plan}
+                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
+              >
+                {/* if 0 then red cross emoji, else put the content*/}
+                {additionalDataSources[plan] === 0 ? (
+                  // Red Cross Emoticon
+                  '❌'
+                ) : (
+                  <div>
+                    {additionalDataSources[plan]}
+                    {/* <div className="text-xs text-gray-400">per month</div> */}
                   </div>
-                  <div className="my-4 w-full border-b-[1px] border-primary-300"></div>
+                )}
+              </td>
+            ))}
+          </tr>
 
-                  <div className="mt-0 flex w-full flex-col items-start px-8 py-4">
-                    <h5
-                      className={`mb-2 text-center text-sm font-bold uppercase tracking-widest text-gray-400`}
-                    >
-                      Features:
-                    </h5>
-                    {/* bulleted list */}
-                    <ul className={`list-disc space-y-3 text-left text-sm text-white`}>
-                      {item.features.map((i, index) => (
-                        <li key={index + '-' + i} className={`border-b border-gray-700 py-1`}>
-                          {i}
-                        </li>
-                      ))}
-                    </ul>
+          <tr>
+            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+              Third Party Integrations
+            </td>
+            {Object.keys(thirdPartyIntegrations).map((plan) => (
+              <td
+                key={plan}
+                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
+              >
+                {/* Red cross if 0, else display the number */}
+                {thirdPartyIntegrations[plan] === 0 ? (
+                  // Red Cross Emoticon
+                  '❌'
+                ) : (
+                  <div>
+                    {thirdPartyIntegrations[plan]}
+                    {/* <div className="text-xs text-gray-400">per month</div> */}
                   </div>
-                  {/* <p className="text-md text-center text-white font-semibold uppercase">Additional Fees:</p>
-                <p className="text-md text-center text-white">
-                  Capturing leads, Recommendation of specific products, Bookings and scheduling
-                  systems synchronization to AI chatbot.
-                </p> */}
-                </div>
-              </div>
-            </div>
-          )
-        })}
-      </div>
-    </>
+                )}
+              </td>
+            ))}
+          </tr>
+
+          {/* Rows for model variants */}
+          <tr>
+            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+              Model Variants
+            </td>
+            {/* Red cross if none, else display number with a + in front */}
+            {Object.keys(modelVariants).map((plan) => (
+              <td
+                key={plan}
+                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
+              >
+                {modelVariants[plan] === 0 ? (
+                  // Red Cross Emoticon
+                  '❌'
+                ) : (
+                  <div>
+                    +{modelVariants[plan]}
+                    {/* <div className="text-xs text-gray-400">per month</div> */}
+                  </div>
+                )}
+              </td>
+            ))}
+          </tr>
+
+          {/* ...other option rows */}
+        </tbody>
+      </table>
+    </div>
   )
 }
 
 export default PricingInfoWrapper
+
+const TokenLimits = ({ tokenLimits }) => {
+  {
+    /* Token Limits */
+  }
+  return (
+    <tr>
+      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Token Limits</td>
+      {Object.keys(tokenLimits).map((plan) => (
+        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+          {tokenLimits[plan]}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const RealtimeUpdates = ({ realtimeUpdates }) => {
+  {
+    /* Realtime Updates */
+  }
+  return (
+    <tr>
+      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Knowledge sync</td>
+      {Object.keys(realtimeUpdates).map((plan) => (
+        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+          {/* Green Tick if Yes */}
+          {realtimeUpdates[plan] === 'Yes'
+            ? // Green Tick Emoticon
+              '✔️'
+            : // Red Cross Emoticon
+              '❌'}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const TrainedOnYourData = ({ trainedOnYourData }) => {
+  {
+    /* Trained on your data */
+  }
+  return (
+    <tr>
+      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+        Trained on your website
+      </td>
+      {Object.keys(trainedOnYourData).map((plan) => (
+        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+          {/* Green Tick if Yes */}
+          {trainedOnYourData[plan] === 'Yes'
+            ? // Green Tick Emoticon
+              '✔️'
+            : // Red Cross Emoticon
+              '❌'}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const WebWidget = ({ webWidget }) => {
+  return (
+    <tr>
+      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Web Widget</td>
+      {Object.keys(webWidget).map((plan) => (
+        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+          {/* {webWidget[plan]} */}
+          {/* Greentick Emoticon */}
+          ✔️
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const ChatHistoryTranscripts = ({ chatHistoryTranscripts }) => {
+  {
+    /* Chat History Transcripts */
+  }
+  return (
+    <tr>
+      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
+        Chat History Transcripts
+      </td>
+      {Object.keys(chatHistoryTranscripts).map((plan) => (
+        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+          {/* Green Tick if Yes */}
+          {chatHistoryTranscripts[plan] === 'Yes'
+            ? // Green Tick Emoticon
+              '✔️'
+            : // Red Cross Emoticon
+              '❌'}
+        </td>
+      ))}
+    </tr>
+  )
+}
