@@ -131,7 +131,7 @@ const PricingInfoWrapper = () => {
   const icons = [CircleDollarSign, Box, Gem]
 
   return (
-    <div className="w-full rounded-lg border border-gray-900 bg-gray-800 p-1">
+    <div className="w-full rounded-lg border border-indigo-900 bg-gray-800 p-1">
       <table className="min-w-full divide-y divide-gray-700">
         <thead className="bg-gray-900">
           <tr>
