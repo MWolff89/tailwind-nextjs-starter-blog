@@ -22,6 +22,30 @@
   @apply my-5;
 }
 
+.pricing-tr-label {
+  @apply whitespace-nowrap px-6 py-4 text-xs font-medium uppercase tracking-wider text-gray-300;
+}
+
+.pricing-td {
+  @apply whitespace-nowrap px-6 py-4 text-center text-sm text-gray-200;
+}
+
+@media (max-width: 768px) {
+  .pricing-th,
+  .pricing-tr-label,
+  .pricing-td {
+    display: block; /* stack the table cells */
+  }
+
+  .pricing-tr-label {
+    @apply bg-gray-800; /* differentiate labels from cells on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* even more styles adjustments for smaller screens */
+}
+
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {

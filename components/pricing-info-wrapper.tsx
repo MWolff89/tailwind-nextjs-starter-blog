@@ -140,6 +140,12 @@ const PricingInfoWrapper = () => {
   // Icons for each plan
   const icons = [CircleDollarSign, Box, Gem]
 
+  const priorityPhoneSupport = {
+    Savings: 'No',
+    Basic: 'No',
+    Artisan: 'Yes',
+  }
+
   return (
     <div className="w-full rounded-md border border-indigo-300">
       <table className="min-w-full divide-y divide-gray-200">
@@ -147,9 +153,9 @@ const PricingInfoWrapper = () => {
           <tr>
             <th
               scope="col"
-              className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-400"
+              className="pricing-th bg-indigo-900 px-6 py-3 text-center text-lg font-medium uppercase tracking-wider text-white md:bg-gray-900 md:text-left md:text-xs"
             >
-              Feature
+              Pricing Plans
             </th>
             {Object.keys(plans).map((plan, index) => {
               const LucideIcon = icons[index]
@@ -157,7 +163,7 @@ const PricingInfoWrapper = () => {
                 <th
                   key={plan}
                   scope="col"
-                  className="px-6 py-3 text-center text-xs font-medium uppercase tracking-wider text-gray-400"
+                  className="pricing-th px-6 py-3 text-center text-xs font-medium uppercase tracking-wider text-gray-300"
                 >
                   {plan}
                   <div className="mt-2">
@@ -169,142 +175,19 @@ const PricingInfoWrapper = () => {
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200 bg-gray-900">
-          {/* Rows for features */}
-          {/* Row for total price */}
-          <tr>
-            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-              Base Price
-            </td>
-            {Object.keys(plans).map((plan) => (
-              <td
-                key={plan}
-                className="text-md whitespace-nowrap px-6 py-4 text-center font-medium text-white"
-              >
-                {calculateTotalPrice(plans[plan], plan)} SGD
-              </td>
-            ))}
-          </tr>
+          <TotalPrice plans={plans} />
           <TrainedOnYourData trainedOnYourData={trainedOnYourData} />
           <RealtimeUpdates realtimeUpdates={realtimeUpdates} />
           <WebWidget webWidget={webWidget} />
-          <tr>
-            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-              Email Support
-            </td>
-            {Object.keys(emailSupport).map((plan) => (
-              <td
-                key={plan}
-                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
-              >
-                <div>Within</div>
-                <div>{emailSupport[plan]}</div>
-              </td>
-            ))}
-          </tr>
-          <tr>
-            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-              Performance Reports
-            </td>
-            {Object.keys(performanceReports).map((plan) => (
-              <td
-                key={plan}
-                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
-              >
-                {performanceReports[plan]}
-              </td>
-            ))}
-          </tr>
-          {/* Rows for deployment options */}
-          <tr>
-            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-              Deployment Options
-            </td>
-            {Object.keys(deploymentOptions).map((plan) => (
-              <td
-                key={plan}
-                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
-              >
-                {/* Bulleted */}
-                <ul className="list-inside list-disc">
-                  {deploymentOptions[plan].map((option) => (
-                    <li key={option}>{option}</li>
-                  ))}
-                </ul>
-              </td>
-            ))}
-          </tr>
+          <EmailSupport emailSupport={emailSupport} />
+          <PerformanceReports performanceReports={performanceReports} />
+          <DeploymentOptions deploymentOptions={deploymentOptions} />
           <TokenLimits tokenLimits={tokenLimits} />
           <ChatHistoryTranscripts chatHistoryTranscripts={chatHistoryTranscripts} />
-          <tr>
-            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-              Additional Data Sources
-            </td>
-            {Object.keys(additionalDataSources).map((plan) => (
-              <td
-                key={plan}
-                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
-              >
-                {/* if 0 then red cross emoji, else put the content*/}
-                {additionalDataSources[plan] === 0 ? (
-                  // Red Cross Emoticon
-                  '❌'
-                ) : (
-                  <div>
-                    {additionalDataSources[plan]}
-                    {/* <div className="text-xs text-gray-400">per month</div> */}
-                  </div>
-                )}
-              </td>
-            ))}
-          </tr>
-
-          <tr>
-            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-              Third Party Integrations
-            </td>
-            {Object.keys(thirdPartyIntegrations).map((plan) => (
-              <td
-                key={plan}
-                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
-              >
-                {/* Red cross if 0, else display the number */}
-                {thirdPartyIntegrations[plan] === 0 ? (
-                  // Red Cross Emoticon
-                  '❌'
-                ) : (
-                  <div>
-                    {thirdPartyIntegrations[plan]}
-                    {/* <div className="text-xs text-gray-400">per month</div> */}
-                  </div>
-                )}
-              </td>
-            ))}
-          </tr>
-
-          {/* Rows for model variants */}
-          <tr>
-            <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-              Model Variants
-            </td>
-            {/* Red cross if none, else display number with a + in front */}
-            {Object.keys(modelVariants).map((plan) => (
-              <td
-                key={plan}
-                className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400"
-              >
-                {modelVariants[plan] === 0 ? (
-                  // Red Cross Emoticon
-                  '❌'
-                ) : (
-                  <div>
-                    +{modelVariants[plan]}
-                    {/* <div className="text-xs text-gray-400">per month</div> */}
-                  </div>
-                )}
-              </td>
-            ))}
-          </tr>
-
+          <AdditionalDataSources additionalDataSources={additionalDataSources} />
+          <ThirdPartyIntegrations thirdPartyIntegrations={thirdPartyIntegrations} />
+          <ModelVariants modelVariants={modelVariants} />
+          <PriorityPhoneSupport priorityPhoneSupport={priorityPhoneSupport} />
           {/* ...other option rows */}
         </tbody>
       </table>
@@ -314,15 +197,42 @@ const PricingInfoWrapper = () => {
 
 export default PricingInfoWrapper
 
+const EmailSupport = ({ emailSupport }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Email Support</td>
+      {Object.keys(emailSupport).map((plan) => (
+        <td key={plan} className="pricing-td">
+          <div className="text-xs uppercase">Within</div>
+          <div className="">{emailSupport[plan]}</div>
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const PerformanceReports = ({ performanceReports }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Performance Reports</td>
+      {Object.keys(performanceReports).map((plan) => (
+        <td key={plan} className="pricing-td">
+          {performanceReports[plan]}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
 const TokenLimits = ({ tokenLimits }) => {
   {
     /* Token Limits */
   }
   return (
     <tr>
-      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Token Limits</td>
+      <td className="pricing-tr-label">Token Limits</td>
       {Object.keys(tokenLimits).map((plan) => (
-        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+        <td key={plan} className="pricing-td">
           {tokenLimits[plan]}
         </td>
       ))}
@@ -336,9 +246,9 @@ const RealtimeUpdates = ({ realtimeUpdates }) => {
   }
   return (
     <tr>
-      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Knowledge sync</td>
+      <td className="pricing-tr-label">Knowledge sync</td>
       {Object.keys(realtimeUpdates).map((plan) => (
-        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+        <td key={plan} className="pricing-td">
           {/* Green Tick if Yes */}
           {realtimeUpdates[plan] === 'Yes'
             ? // Green Tick Emoticon
@@ -357,11 +267,9 @@ const TrainedOnYourData = ({ trainedOnYourData }) => {
   }
   return (
     <tr>
-      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-        Trained on your website
-      </td>
+      <td className="pricing-tr-label">Trained on your website</td>
       {Object.keys(trainedOnYourData).map((plan) => (
-        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+        <td key={plan} className="pricing-td">
           {/* Green Tick if Yes */}
           {trainedOnYourData[plan] === 'Yes'
             ? // Green Tick Emoticon
@@ -377,9 +285,9 @@ const TrainedOnYourData = ({ trainedOnYourData }) => {
 const WebWidget = ({ webWidget }) => {
   return (
     <tr>
-      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">Web Widget</td>
+      <td className="pricing-tr-label">Web Widget</td>
       {Object.keys(webWidget).map((plan) => (
-        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+        <td key={plan} className="pricing-td">
           {/* {webWidget[plan]} */}
           {/* Greentick Emoticon */}
           ✔️
@@ -395,17 +303,131 @@ const ChatHistoryTranscripts = ({ chatHistoryTranscripts }) => {
   }
   return (
     <tr>
-      <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white">
-        Chat History Transcripts
-      </td>
+      <td className="pricing-tr-label">Chat History Transcripts</td>
       {Object.keys(chatHistoryTranscripts).map((plan) => (
-        <td key={plan} className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-400">
+        <td key={plan} className="pricing-td">
           {/* Green Tick if Yes */}
           {chatHistoryTranscripts[plan] === 'Yes'
             ? // Green Tick Emoticon
               '✔️'
             : // Red Cross Emoticon
               '❌'}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const ModelVariants = ({ modelVariants }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Model Variants</td>
+      {/* Red cross if none, else display number with a + in front */}
+      {Object.keys(modelVariants).map((plan) => (
+        <td key={plan} className="pricing-td">
+          {modelVariants[plan] === 0 ? (
+            // Red Cross Emoticon
+            '❌'
+          ) : (
+            <div>
+              +{modelVariants[plan]}
+              {/* <div className="text-xs text-gray-300">per month</div> */}
+            </div>
+          )}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const ThirdPartyIntegrations = ({ thirdPartyIntegrations }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Third Party Integrations</td>
+      {Object.keys(thirdPartyIntegrations).map((plan) => (
+        <td key={plan} className="pricing-td">
+          {/* Red cross if 0, else display the number */}
+          {thirdPartyIntegrations[plan] === 0 ? (
+            // Red Cross Emoticon
+            '❌'
+          ) : (
+            <div>
+              {thirdPartyIntegrations[plan]}
+              {/* <div className="text-xs text-gray-300">per month</div> */}
+            </div>
+          )}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const AdditionalDataSources = ({ additionalDataSources }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Additional Data Sources</td>
+      {Object.keys(additionalDataSources).map((plan) => (
+        <td key={plan} className="pricing-td">
+          {/* if 0 then red cross emoji, else put the content*/}
+          {additionalDataSources[plan] === 0 ? (
+            // Red Cross Emoticon
+            '❌'
+          ) : (
+            <div>
+              {additionalDataSources[plan]}
+              {/* <div className="text-xs text-gray-300">per month</div> */}
+            </div>
+          )}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const DeploymentOptions = ({ deploymentOptions }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Deployment Options</td>
+      {Object.keys(deploymentOptions).map((plan) => (
+        <td key={plan} className="pricing-td">
+          {/* Bulleted */}
+          <ul className="list-inside list-disc">
+            {deploymentOptions[plan].map((option) => (
+              <li key={option}>{option}</li>
+            ))}
+          </ul>
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const PriorityPhoneSupport = ({ priorityPhoneSupport }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Priority Phone Support</td>
+      {Object.keys(priorityPhoneSupport).map((plan) => (
+        <td key={plan} className="pricing-td">
+          {/* Green Tick if Yes */}
+          {priorityPhoneSupport[plan] === 'Yes'
+            ? // Green Tick Emoticon
+              '✔️'
+            : // Red Cross Emoticon
+              '❌'}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const TotalPrice = ({ plans }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Base Price</td>
+      {Object.keys(plans).map((plan) => (
+        <td key={plan} className="pricing-td text-center text-lg font-medium tracking-wider">
+          {/* Inject a comma after one character */}
+          {plans[plan].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} SGD
         </td>
       ))}
     </tr>
