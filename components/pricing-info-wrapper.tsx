@@ -35,18 +35,12 @@ const PricingInfoWrapper = () => {
     }, basePrice)
   }
 
-  const baseFeatures = [
-    "Trained on your website's public data.",
-    'Real-time updates via website sync.',
-  ]
-
   const additionalDataSources = {
     Savings: 0,
     Basic: 3,
     Artisan: 'Unlimited',
   }
 
-  // Define the plans and their base prices
   const plans = {
     Savings: 1500,
     Basic: 2500,
@@ -89,30 +83,6 @@ const PricingInfoWrapper = () => {
     Artisan: ['Web Widget', 'Slack or Discord', 'WhatsApp or Telegram'],
   }
 
-  const slackDeployment = {
-    Savings: 300,
-    Basic: 100,
-    Artisan: 0,
-  }
-
-  const whatsappDeployment = {
-    Savings: 500,
-    Basic: 300,
-    Artisan: 0,
-  }
-
-  const telegramDeployment = {
-    Savings: 300,
-    Basic: 100,
-    Artisan: 0,
-  }
-
-  const discordDeployment = {
-    Savings: 300,
-    Basic: 100,
-    Artisan: 0,
-  }
-
   const modelVariants = {
     Savings: 0,
     Basic: 1,
@@ -137,14 +107,26 @@ const PricingInfoWrapper = () => {
     Artisan: 'Yes',
   }
 
-  // Icons for each plan
-  const icons = [CircleDollarSign, Box, Gem]
-
   const priorityPhoneSupport = {
     Savings: 'No',
     Basic: 'No',
     Artisan: 'Yes',
   }
+
+  const consultingCalls = {
+    Savings: 0,
+    Basic: '2 hrs / mnth',
+    Artisan: '6 hrs / mnth',
+  }
+
+  const priorityAccessToBetaFeatures = {
+    Savings: 'No',
+    Basic: 'No',
+    Artisan: 'Yes',
+  }
+
+  // Icons for each plan
+  const icons = [CircleDollarSign, Box, Gem]
 
   return (
     <div className="w-full rounded-md border border-indigo-300">
@@ -183,12 +165,15 @@ const PricingInfoWrapper = () => {
           <PerformanceReports performanceReports={performanceReports} />
           <DeploymentOptions deploymentOptions={deploymentOptions} />
           <TokenLimits tokenLimits={tokenLimits} />
-          <ChatHistoryTranscripts chatHistoryTranscripts={chatHistoryTranscripts} />
+          <ConsultingCalls consultingCalls={consultingCalls} />
           <AdditionalDataSources additionalDataSources={additionalDataSources} />
+          <ChatHistoryTranscripts chatHistoryTranscripts={chatHistoryTranscripts} />
           <ThirdPartyIntegrations thirdPartyIntegrations={thirdPartyIntegrations} />
           <ModelVariants modelVariants={modelVariants} />
           <PriorityPhoneSupport priorityPhoneSupport={priorityPhoneSupport} />
-          {/* ...other option rows */}
+          <PriorityAccessToBetaFeatures
+            priorityAccessToBetaFeatures={priorityAccessToBetaFeatures}
+          />
         </tbody>
       </table>
     </div>
@@ -425,9 +410,49 @@ const TotalPrice = ({ plans }) => {
     <tr>
       <td className="pricing-tr-label">Base Price</td>
       {Object.keys(plans).map((plan) => (
-        <td key={plan} className="pricing-td text-center text-lg font-medium tracking-wider">
+        <td key={plan} className="pricing-td text-center font-medium tracking-wider">
           {/* Inject a comma after one character */}
           {plans[plan].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} SGD
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const ConsultingCalls = ({ consultingCalls }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Strategy Calls</td>
+      {Object.keys(consultingCalls).map((plan) => (
+        <td key={plan} className="pricing-td">
+          {/* Red cross if 0, else display the number */}
+          {consultingCalls[plan] === 0 ? (
+            // Red Cross Emoticon
+            '❌'
+          ) : (
+            <div>
+              {consultingCalls[plan]}
+              {/* <div className="text-xs text-gray-300">per month</div> */}
+            </div>
+          )}
+        </td>
+      ))}
+    </tr>
+  )
+}
+
+const PriorityAccessToBetaFeatures = ({ priorityAccessToBetaFeatures }) => {
+  return (
+    <tr>
+      <td className="pricing-tr-label">Priority Access to Beta Features</td>
+      {Object.keys(priorityAccessToBetaFeatures).map((plan) => (
+        <td key={plan} className="pricing-td">
+          {/* Green Tick if Yes */}
+          {priorityAccessToBetaFeatures[plan] === 'Yes'
+            ? // Green Tick Emoticon
+              '✔️'
+            : // Red Cross Emoticon
+              '❌'}
         </td>
       ))}
     </tr>
