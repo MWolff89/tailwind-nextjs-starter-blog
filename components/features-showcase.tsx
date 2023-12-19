@@ -48,9 +48,13 @@ export default function FeaturesShowcase() {
             Our chatbots are built different
           </h2>
           <p className="text-md mt-6 leading-6 text-gray-500 dark:text-gray-400 sm:text-lg sm:leading-8">
-            Businesses are constantly seeking innovative solutions to enhance user experience and
+            {/* Businesses are constantly seeking innovative solutions to enhance user experience and
             streamline operations. One such groundbreaking advancement is the transition from
-            traditional chatbots to AI-powered conversational agents.
+            traditional chatbots to AI-powered conversational agents. */}
+            Traditional chatbots can't match the superior performance and capabilities of our
+            conversational AI agents. These agents perform at an exceptionally high level. They
+            rival or surpass the finest human agents in delivering a fluid user experience, along
+            with significant cost reductions.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-3xl sm:mt-20 lg:mt-24 lg:max-w-5xl">
