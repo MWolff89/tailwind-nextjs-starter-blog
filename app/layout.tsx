@@ -13,6 +13,7 @@ import { Metadata } from 'next'
 import { Providers } from '@/components/providers'
 import BotpressWebChat from '@/lib/voiceflowwebchat'
 import React from 'react'
+// import VoiceFlowProactive from '@/lib/voiceflowproactive'
 // import { usePathname } from 'next/navigation'
 // import { Space_Grotesk } from 'next/font/google'
 // import Script from 'next/script'
@@ -117,6 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://mediafiles.botpress.cloud/e6fdd5bf-eb50-4148-bdfe-8d6e533580b5/webchat/config.js"
         ></script> */}
         <BotpressWebChat />
+        {/* <VoiceFlowProactive /> */}
       </body>
 
       {/* // In your component */}
