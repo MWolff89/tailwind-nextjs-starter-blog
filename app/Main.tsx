@@ -8,7 +8,6 @@ import PricingInfoWrapper from '@/components/pricing-info-wrapper'
 import FeaturesShowcase from '@/components/features-showcase'
 import JoinNow from '@/components/join-now'
 import QuotationBlock from '@/components/quotation-block'
-import { useEffect } from 'react'
 
 export const MAX_DISPLAY = 5
 
@@ -100,7 +99,7 @@ export default function Home({ posts }) {
           })}
         </ul>
       </div>
-      
+
       {/* {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
