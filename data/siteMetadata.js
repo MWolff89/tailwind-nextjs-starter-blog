@@ -12,7 +12,7 @@ const siteMetadata = {
   siteUrl: 'https://blackorchidai.com',
   // siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   siteLogo: '/static/images/logo2.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/blackorchidai-oi.jpg',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'root@blackorchidai.com',
   github: 'https://github.com',
