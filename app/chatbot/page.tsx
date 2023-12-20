@@ -1,5 +1,6 @@
 'use client'
 
+
 import { nanoid } from '@/lib/utils'
 import { Chat } from '@/components/chat'
 import { useEffect, useState } from 'react'
@@ -9,7 +10,19 @@ import {} from '@voiceflow/react-chat'
 export const runtime = 'edge'
 
 export default function ChatbotPage() {
+  const passwordToIndex = (password) => {
+    switch (password) {
+      case 'nkp':
+        return 'namkeepau'
+      case 'yoml':
+        return 'yoga-mala'
+      default:
+        return 'namkeepau'
+    }
+  }
+
   const [password, setPassword] = useState('')
+  const [index, setIndex] = useState(passwordToIndex(password))
   const [authenticated, setAuthenticated] = useState(false)
   const id = nanoid()
 
@@ -19,6 +32,15 @@ export default function ChatbotPage() {
   useEffect(() => {
     setChatTheme(resolvedTheme === 'dark' ? 'dark' : 'light')
   }, [resolvedTheme])
+
+  useEffect(() => {
+    setIndex(passwordToIndex(password))
+    if (!(window as any).voiceflow) {
+      return
+    } else {
+      (window as any).voiceflow.chat.hide()
+    }
+  }, [password])
 
   const handlePasswordSubmit = (e) => {
     // console.log(
@@ -32,7 +54,7 @@ export default function ChatbotPage() {
     e.preventDefault()
 
     // Check the password (replace 'yourpassword' with your actual password)
-    if (password === 'nkp') {
+    if (['yoml', 'nkp'].includes(password)) {
       setAuthenticated(true)
     } else {
       alert('Invalid password')
@@ -42,7 +64,7 @@ export default function ChatbotPage() {
     <div className={`bg-background`}>
       <div className="">
         {authenticated ? (
-          <Chat id={id} />
+          <Chat id={id} index={index} />
         ) : (
           <div className="flex items-center justify-center">
             <form onSubmit={handlePasswordSubmit} className="max-w-md rounded-lg p-8 shadow-md">

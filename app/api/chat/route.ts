@@ -17,9 +17,11 @@ const openai = new OpenAIApi(configuration)
 
 export async function POST(req: Request) {
   const json = await req.json()
-  const { messages, previewToken } = json
+  const { messages, previewToken, index } = json
 
   console.log(`Messages =>`, messages)
+
+  console.log(`Index =>`, index)
 
   const lastMessage = messages[messages.length - 1]
 
@@ -37,7 +39,7 @@ export async function POST(req: Request) {
     configuration.apiKey = previewToken
   }
 
-  const _context = await getContext(lastMessage.content)
+  const _context = await getContext(lastMessage.content, index)
 
   // console.log('__CONTEXT__ =>', _context)
 

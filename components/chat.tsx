@@ -28,9 +28,11 @@ const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'
 export interface ChatProps extends React.ComponentProps<'div'> {
   initialMessages?: Message[]
   id?: string
+  index?: string
 }
 
-export function Chat({ id, initialMessages, className }: ChatProps) {
+export function Chat({ id, initialMessages, className, index }: ChatProps) {
+  console.log('Chat.tsx: Chat: id: ', id, 'index: ', index)
   const [previewToken, setPreviewToken] = useLocalStorage<string | null>('ai-token', null)
   const [previewTokenDialog, setPreviewTokenDialog] = useState(IS_PREVIEW)
   const [previewTokenInput, setPreviewTokenInput] = useState(previewToken ?? '')
@@ -40,6 +42,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
     body: {
       id,
       previewToken,
+      index
     },
     onResponse(response) {
       if (response.status === 401) {
