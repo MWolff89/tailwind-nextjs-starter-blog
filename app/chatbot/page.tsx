@@ -1,6 +1,5 @@
 'use client'
 
-
 import { nanoid } from '@/lib/utils'
 import { Chat } from '@/components/chat'
 import { useEffect, useState } from 'react'
@@ -38,7 +37,7 @@ export default function ChatbotPage() {
     if (!(window as any).voiceflow) {
       return
     } else {
-      (window as any).voiceflow.chat.hide()
+      ;(window as any).voiceflow.chat.hide()
     }
   }, [password])
 
