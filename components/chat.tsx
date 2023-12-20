@@ -59,7 +59,7 @@ export function Chat({ id, initialMessages, className, index }: ChatProps) {
             <ChatScrollAnchor trackVisibility={isLoading} />
           </>
         ) : (
-          <EmptyScreen setInput={setInput} index={index}/>
+          <EmptyScreen setInput={setInput} index={index!} />
         )}
       </div>
       <ChatPanel

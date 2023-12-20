@@ -55,8 +55,14 @@ const indexToContent = {
   },
 }
 
-export function EmptyScreen({ setInput, index }: Pick<UseChatHelpers, 'setInput' | 'index'>) {
-  const { title, description, exampleMessages } = indexToContent[index as keyof typeof indexToContent]
+type EmptyScreenProps = {
+  setInput: UseChatHelpers['setInput']
+  index: string
+}
+
+export function EmptyScreen({ setInput, index }: EmptyScreenProps) {
+  const { title, description, exampleMessages } =
+    indexToContent[index as keyof typeof indexToContent]
   return (
     <div className="mx-auto max-w-2xl px-4">
       <div className="bg-background rounded-lg border p-8">
