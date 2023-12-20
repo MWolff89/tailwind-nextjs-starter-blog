@@ -42,7 +42,7 @@ export function Chat({ id, initialMessages, className, index }: ChatProps) {
     body: {
       id,
       previewToken,
-      index
+      index,
     },
     onResponse(response) {
       if (response.status === 401) {

@@ -1,5 +1,7 @@
 'use client'
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { nanoid } from '@/lib/utils'
 import { Chat } from '@/components/chat'
 import { useEffect, useState } from 'react'
