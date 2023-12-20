@@ -32,7 +32,7 @@ export interface ChatProps extends React.ComponentProps<'div'> {
 }
 
 export function Chat({ id, initialMessages, className, index }: ChatProps) {
-  console.log('Chat.tsx: Chat: id: ', id, 'index: ', index)
+  // console.log('Chat.tsx: Chat: id: ', id, 'index: ', index)
   const [previewToken, setPreviewToken] = useLocalStorage<string | null>('ai-token', null)
   const [previewTokenDialog, setPreviewTokenDialog] = useState(IS_PREVIEW)
   const [previewTokenInput, setPreviewTokenInput] = useState(previewToken ?? '')
@@ -59,7 +59,7 @@ export function Chat({ id, initialMessages, className, index }: ChatProps) {
             <ChatScrollAnchor trackVisibility={isLoading} />
           </>
         ) : (
-          <EmptyScreen setInput={setInput} />
+          <EmptyScreen setInput={setInput} index={index}/>
         )}
       </div>
       <ChatPanel
