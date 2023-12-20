@@ -1,3 +1,5 @@
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
+
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 
@@ -119,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ></script> */}
         <BotpressWebChat />
         {/* <VoiceFlowProactive /> */}
+        <VercelAnalytics />
       </body>
 
       {/* // In your component */}
