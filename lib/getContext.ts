@@ -3,8 +3,9 @@ import { queryPineconeVectorStore } from "./utils"
 
 export async function getContext(query: string, index: string) {
     const client = new PineconeClient()
+    const apiKey = index === 'yoga-mandala' ? process.env.PINECONE_API_KEY_BLACKORCHID : process.env.PINECONE_API_KEY
     await client.init({
-        apiKey: process.env.PINECONE_API_KEY || '',
+        apiKey: apiKey || '',
         environment: process.env.PINECONE_ENVIRONMENT || ''
     })
 
