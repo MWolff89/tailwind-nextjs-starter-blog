@@ -145,6 +145,25 @@ const kalidassLawExampleMessages = [
   },
 ]
 
+const rexLegalExampleMessages = [
+  {
+    heading: 'Tell me more about Rex Legal',
+    message: `Tell me more about Rex Legal`,
+  },
+  {
+    heading: 'Where are you located?',
+    message: `Where are you located?`,
+  },
+  {
+    heading: 'What are your rates?',
+    message: `What are your rates?`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -180,6 +199,11 @@ const indexToContent = {
     title: 'Kalidass Law',
     description: 'Kalidass Law Chatbot',
     exampleMessages: kalidassLawExampleMessages,
+  },
+  'rex-legal': {
+    title: 'Rex Legal',
+    description: 'Rex Legal Chatbot',
+    exampleMessages: rexLegalExampleMessages,
   },
 }
 
