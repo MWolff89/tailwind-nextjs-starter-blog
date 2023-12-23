@@ -23,6 +23,8 @@ export default function ChatbotPage() {
         return 'lava-yoga'
       case 'unyg':
         return 'union-yoga'
+      case 'ygpls':
+        return 'yoga-plus'
       default:
         return 'namkeepau'
     }
@@ -61,7 +63,7 @@ export default function ChatbotPage() {
     e.preventDefault()
 
     // Check the password (replace 'yourpassword' with your actual password)
-    if (['yoml', 'nkp', 'ymdl', 'lvyg', 'unyg'].includes(password)) {
+    if (['yoml', 'nkp', 'ymdl', 'lvyg', 'unyg', 'ygpls'].includes(password)) {
       setAuthenticated(true)
     } else {
       alert('Invalid password')

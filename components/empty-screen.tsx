@@ -107,6 +107,25 @@ const unionYogaExampleMessages = [
   },
 ]
 
+const yogaPlusExampleMessages = [
+  {
+    heading: 'Tell me more about Yoga Plus',
+    message: `Tell me more about Yoga Plus`,
+  },
+  {
+    heading: 'Where are you located?',
+    message: `Where are you located?`,
+  },
+  {
+    heading: 'What are your rates?',
+    message: `What are your rates?`,
+  },
+  {
+    heading: 'What classes do you have?',
+    message: `What classes do you have?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -132,6 +151,11 @@ const indexToContent = {
     title: 'Union Yoga',
     description: 'Union Yoga Chatbot',
     exampleMessages: unionYogaExampleMessages,
+  },
+  'yoga-plus': {
+    title: 'Yoga Plus',
+    description: 'Yoga Plus Chatbot',
+    exampleMessages: yogaPlusExampleMessages,
   },
 }
 
