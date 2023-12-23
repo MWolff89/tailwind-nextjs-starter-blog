@@ -65,6 +65,29 @@ const yogaMandalaExampleMessages = [
   },
 ]
 
+const lavaYogaExampleMessages = [
+  {
+    heading: 'Tell me more about Lava Yoga',
+    message: `Tell me more about Lava Yoga`,
+  },
+  {
+    heading: 'Where are you located?',
+    message: `Where are you located?`,
+  },
+  {
+    heading: 'What are your rates?',
+    message: `What are your rates?`,
+  },
+  {
+    heading: 'What classes do you have?',
+    message: `What classes do you have?`,
+  },
+  {
+    heading: `I'm a beginner at yoga, what would you recommend?`,
+    message: `I'm a beginner at yoga, what would you recommend?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -80,6 +103,11 @@ const indexToContent = {
     title: 'Yoga Mandala',
     description: 'Yoga Mandala Chatbot',
     exampleMessages: yogaMandalaExampleMessages,
+  },
+  'lava-yoga': {
+    title: 'Lava Yoga',
+    description: 'Lava Yoga Chatbot',
+    exampleMessages: lavaYogaExampleMessages,
   },
 }
 
