@@ -88,6 +88,25 @@ const lavaYogaExampleMessages = [
   },
 ]
 
+const unionYogaExampleMessages = [
+  {
+    heading: 'Tell me more about Union Yoga',
+    message: `Tell me more about Union Yoga`,
+  },
+  {
+    heading: 'Where are you located?',
+    message: `Where are you located?`,
+  },
+  {
+    heading: 'What are your rates?',
+    message: `What are your rates?`,
+  },
+  {
+    heading: 'What classes do you have?',
+    message: `What classes do you have?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -108,6 +127,11 @@ const indexToContent = {
     title: 'Lava Yoga',
     description: 'Lava Yoga Chatbot',
     exampleMessages: lavaYogaExampleMessages,
+  },
+  'union-yoga': {
+    title: 'Union Yoga',
+    description: 'Union Yoga Chatbot',
+    exampleMessages: unionYogaExampleMessages,
   },
 }
 
