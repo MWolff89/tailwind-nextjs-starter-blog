@@ -126,6 +126,25 @@ const yogaPlusExampleMessages = [
   },
 ]
 
+const kalidassLawExampleMessages = [
+  {
+    heading: 'Tell me more about Kalidass Law',
+    message: `Tell me more about Kalidass Law`,
+  },
+  {
+    heading: 'Where are you located?',
+    message: `Where are you located?`,
+  },
+  {
+    heading: 'What are your rates?',
+    message: `What are your rates?`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -156,6 +175,11 @@ const indexToContent = {
     title: 'Yoga Plus',
     description: 'Yoga Plus Chatbot',
     exampleMessages: yogaPlusExampleMessages,
+  },
+  'kalidass-law': {
+    title: 'Kalidass Law',
+    description: 'Kalidass Law Chatbot',
+    exampleMessages: kalidassLawExampleMessages,
   },
 }
 
