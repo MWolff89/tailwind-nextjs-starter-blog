@@ -37,6 +37,8 @@ export default function ChatbotPage() {
         return 'irb-law'
       case 'encl':
         return 'ensoul-clinic'
+      case 'frll':
+        return 'farallon-law'
       default:
         return 'namkeepau'
     }
@@ -89,6 +91,7 @@ export default function ChatbotPage() {
         'jcpl',
         'irbl',
         'encl',
+        'frll',
       ].includes(password)
     ) {
       setAuthenticated(true)

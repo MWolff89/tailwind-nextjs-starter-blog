@@ -250,6 +250,35 @@ const ensoulClinicExampleMessages = [
   },
 ]
 
+const farallonLawExampleMessages = [
+  {
+    heading: 'Tell me more about Farallon Law',
+    message: `Tell me more about Farallon Law`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading: 'How can I contact you?',
+    message: `How can I contact you?`,
+  },
+  {
+    heading:
+      "Could you explain the process of dealing with the CAD if they've contacted me for an interview?",
+    message:
+      "Could you explain the process of dealing with the CAD if they've contacted me for an interview?",
+  },
+  {
+    heading: 'What should I know about breach of fiduciary duties in Singapore?',
+    message: 'What should I know about breach of fiduciary duties in Singapore?',
+  },
+  {
+    heading: 'What is minority oppression in the context of Singaporean corporate law?',
+    message: 'What is minority oppression in the context of Singaporean corporate law?',
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -310,6 +339,11 @@ const indexToContent = {
     title: 'Ensoul Clinic',
     description: 'Ensoul Clinic Chatbot',
     exampleMessages: ensoulClinicExampleMessages,
+  },
+  'farallon-law': {
+    title: 'Farallon Law',
+    description: 'Farallon Law Chatbot',
+    exampleMessages: farallonLawExampleMessages,
   },
 }
 
