@@ -164,6 +164,25 @@ const rexLegalExampleMessages = [
   },
 ]
 
+const minmedExampleMessages = [
+  {
+    heading: 'Tell me more about Minmed',
+    message: `Tell me more about Minmed`,
+  },
+  {
+    heading: 'Where are you located?',
+    message: `Where are you located?`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading: 'I saw your cycle shop near robertson',
+    message: `I saw your cycle shop near robertson`,
+  }
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -204,6 +223,11 @@ const indexToContent = {
     title: 'Rex Legal',
     description: 'Rex Legal Chatbot',
     exampleMessages: rexLegalExampleMessages,
+  },
+  minmed: {
+    title: 'Minmed',
+    description: 'Minmed Chatbot',
+    exampleMessages: minmedExampleMessages,
   },
 }
 
