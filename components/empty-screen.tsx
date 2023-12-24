@@ -225,6 +225,29 @@ const irbLawExampleMessages = [
   },
 ]
 
+const ensoulClinicExampleMessages = [
+  {
+    heading: 'Tell me more about Ensoul Clinic',
+    message: `Tell me more about Ensoul Clinic`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading: "What's the difference between pico laser and traditional laser treatments for pigmentation?",
+    message: "What's the difference between pico laser and traditional laser treatments for pigmentation?"
+  },
+  {
+    heading: "What safety measures does Ensoul Clinic have in place for its treatments?",
+    message: "What safety measures does Ensoul Clinic have in place for its treatments?"
+  },
+  {
+    heading: 'How does Ensoul Clinic personalize treatments for individual aesthetic goals?',
+    message: 'How does Ensoul Clinic personalize treatments for individual aesthetic goals?'
+  }
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -281,6 +304,11 @@ const indexToContent = {
     description: 'I.R.B Law Chatbot',
     exampleMessages: irbLawExampleMessages,
   },
+  'ensoul-clinic': {
+    title: 'Ensoul Clinic',
+    description: 'Ensoul Clinic Chatbot',
+    exampleMessages: ensoulClinicExampleMessages
+  }
 }
 
 type EmptyScreenProps = {
