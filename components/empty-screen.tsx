@@ -245,7 +245,7 @@ const ensoulClinicExampleMessages = [
   {
     heading: 'How does Ensoul Clinic personalize treatments for individual aesthetic goals?',
     message: 'How does Ensoul Clinic personalize treatments for individual aesthetic goals?'
-  }
+  },
 ]
 
 const indexToContent = {
