@@ -183,6 +183,25 @@ const minmedExampleMessages = [
   },
 ]
 
+const jcpLawExampleMessages = [
+  {
+    heading: 'Tell me more about JCP Law',
+    message: `Tell me more about JCP Law`,
+  },
+  {
+    heading: 'Where are you located?',
+    message: `Where are you located?`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading: 'How can I contact you?',
+    message: `How can I contact you?`,
+  }
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -228,6 +247,11 @@ const indexToContent = {
     title: 'Minmed',
     description: 'Minmed Chatbot',
     exampleMessages: minmedExampleMessages,
+  },
+  'jcp-law': {
+    title: 'JCP Law',
+    description: 'JCP Law Chatbot',
+    exampleMessages: jcpLawExampleMessages,
   },
 }
 
