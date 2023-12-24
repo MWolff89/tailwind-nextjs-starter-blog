@@ -180,7 +180,7 @@ const minmedExampleMessages = [
   {
     heading: 'I saw your cycle shop near robertson',
     message: `I saw your cycle shop near robertson`,
-  }
+  },
 ]
 
 const indexToContent = {
