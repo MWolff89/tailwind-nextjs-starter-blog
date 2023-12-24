@@ -33,6 +33,8 @@ export default function ChatbotPage() {
         return 'minmed'
       case 'jcpl':
         return 'jcp-law'
+      case 'irbl':
+        return 'irb-law'
       default:
         return 'namkeepau'
     }
@@ -72,9 +74,19 @@ export default function ChatbotPage() {
 
     // Check the password (replace 'yourpassword' with your actual password)
     if (
-      ['yoml', 'nkp', 'ymdl', 'lvyg', 'unyg', 'ygpls', 'kldlw', 'rxlgl', 'mnd', 'jcpl'].includes(
-        password
-      )
+      [
+        'yoml',
+        'nkp',
+        'ymdl',
+        'lvyg',
+        'unyg',
+        'ygpls',
+        'kldlw',
+        'rxlgl',
+        'mnd',
+        'jcpl',
+        'irbl',
+      ].includes(password)
     ) {
       setAuthenticated(true)
     } else {

@@ -199,7 +199,30 @@ const jcpLawExampleMessages = [
   {
     heading: 'How can I contact you?',
     message: `How can I contact you?`,
-  }
+  },
+]
+
+const irbLawExampleMessages = [
+  {
+    heading: 'Tell me more about I.R.B Law',
+    message: `Tell me more about I.R.B Law`,
+  },
+  {
+    heading: 'Where are you located?',
+    message: `Where are you located?`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading: 'How can I contact you?',
+    message: `How can I contact you?`,
+  },
+  {
+    heading: 'Who are the lawyers in your firm?',
+    message: `Who are the lawyers in your firm?`,
+  },
 ]
 
 const indexToContent = {
@@ -252,6 +275,11 @@ const indexToContent = {
     title: 'JCP Law',
     description: 'JCP Law Chatbot',
     exampleMessages: jcpLawExampleMessages,
+  },
+  'irb-law': {
+    title: 'I.R.B Law',
+    description: 'I.R.B Law Chatbot',
+    exampleMessages: irbLawExampleMessages,
   },
 }
 
