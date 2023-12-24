@@ -59,7 +59,7 @@ export default function ChatbotPage() {
     if (!(window as any).voiceflow) {
       return
     } else {
-      ; (window as any).voiceflow.chat.hide()
+      ;(window as any).voiceflow.chat.hide()
     }
   }, [password])
 
@@ -122,15 +122,18 @@ export default function ChatbotPage() {
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className={`w-full rounded-md border px-4 py-2 focus:border-${chatTheme === 'dark' ? 'blue' : 'blue-400'
-                    } focus:outline-none ${chatTheme === 'dark' ? 'text-black' : 'text-black' // Change text color accordingly
-                    }`}
+                  className={`w-full rounded-md border px-4 py-2 focus:border-${
+                    chatTheme === 'dark' ? 'blue' : 'blue-400'
+                  } focus:outline-none ${
+                    chatTheme === 'dark' ? 'text-black' : 'text-black' // Change text color accordingly
+                  }`}
                 />
               </div>
               <Button
                 type="submit"
-                className={`flex w-full items-center justify-center ${chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-                  }`}
+                className={`flex w-full items-center justify-center ${
+                  chatTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
+                }`}
               >
                 Unlock Chat
               </Button>
