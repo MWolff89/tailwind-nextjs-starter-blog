@@ -355,7 +355,7 @@ export async function POST(req: Request) {
     Instead, you may suggest follow up questions that the user can ask that are present in the context.
     `,
   }
-
+  // 
   const indexToPrompt = {
     namkeepau: namKeePauPrompt,
     'yoga-mala': yogaMalaPrompt,
