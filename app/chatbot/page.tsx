@@ -39,6 +39,8 @@ export default function ChatbotPage() {
         return 'ensoul-clinic'
       case 'frll':
         return 'farallon-law'
+      case 'rgll':
+        return 'regal-law'
       default:
         return 'namkeepau'
     }
@@ -92,6 +94,7 @@ export default function ChatbotPage() {
         'irbl',
         'encl',
         'frll',
+        'rgll',
       ].includes(password)
     ) {
       setAuthenticated(true)

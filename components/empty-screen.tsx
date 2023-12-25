@@ -260,10 +260,6 @@ const farallonLawExampleMessages = [
     message: `What services do you provide?`,
   },
   {
-    heading: 'How can I contact you?',
-    message: `How can I contact you?`,
-  },
-  {
     heading:
       "Could you explain the process of dealing with the CAD if they've contacted me for an interview?",
     message:
@@ -276,6 +272,33 @@ const farallonLawExampleMessages = [
   {
     heading: 'What is minority oppression in the context of Singaporean corporate law?',
     message: 'What is minority oppression in the context of Singaporean corporate law?',
+  },
+]
+
+const regalLawExampleMessages = [
+  {
+    heading: 'Tell me more about Regal Law',
+    message: `Tell me more about Regal Law`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading:
+      'Can you provide information on the process for obtaining a free legal consultation with Regal Law?',
+    message:
+      'Can you provide information on the process for obtaining a free legal consultation with Regal Law?',
+  },
+  {
+    heading: 'What makes your team of expert lawyers stand out in handling criminal law cases?',
+    message: 'What makes your team of expert lawyers stand out in handling criminal law cases?',
+  },
+  {
+    heading:
+      'Can you explain the legal process for someone charged with a criminal offense in Singapore?',
+    message:
+      'Can you explain the legal process for someone charged with a criminal offense in Singapore?',
   },
 ]
 
@@ -344,6 +367,11 @@ const indexToContent = {
     title: 'Farallon Law',
     description: 'Farallon Law Chatbot',
     exampleMessages: farallonLawExampleMessages,
+  },
+  'regal-law': {
+    title: 'Regal Law',
+    description: 'Regal Law Chatbot',
+    exampleMessages: regalLawExampleMessages,
   },
 }
 
