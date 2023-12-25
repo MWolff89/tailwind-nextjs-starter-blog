@@ -333,6 +333,29 @@ const jooToonLLCExampleMessages = [
   },
 ]
 
+const yuenLawExampleMessages = [
+  {
+    heading: 'Tell me more about Yuen Law',
+    message: `Tell me more about Yuen Law`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading: 'How does Yuen Law assist with intellectual property registration and enforcement?',
+    message: 'How does Yuen Law assist with intellectual property registration and enforcement?',
+  },
+  {
+    heading: 'Could you provide guidance on estate planning and the creation of wills?',
+    message: 'Could you provide guidance on estate planning and the creation of wills?',
+  },
+  {
+    heading: 'How does Yuen Law approach client management and ensure high-quality service?',
+    message: 'How does Yuen Law approach client management and ensure high-quality service?',
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -408,6 +431,11 @@ const indexToContent = {
     title: 'Joo Toon LLC',
     description: 'Joo Toon LLC Chatbot',
     exampleMessages: jooToonLLCExampleMessages,
+  },
+  'yuen-law': {
+    title: 'Yuen Law',
+    description: 'Yuen Law Chatbot',
+    exampleMessages: yuenLawExampleMessages,
   },
 }
 
