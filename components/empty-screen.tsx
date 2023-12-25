@@ -308,6 +308,29 @@ const regalLawExampleMessages = [
   },
 ]
 
+const jooToonLLCExampleMessages = [
+  {
+    heading: 'Tell me more about Joo Toon LLC',
+    message: `Tell me more about Joo Toon LLC`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading: 'How does Joo Toon LLC determine fees for legal services?',
+    message: 'How does Joo Toon LLC determine fees for legal services?',
+  },
+  {
+    heading: 'What should I consider when dealing with a breach of director’s duties?',
+    message: 'What should I consider when dealing with a breach of director’s duties?',
+  },
+  {
+    heading: 'Can you tell me more about your experience with commercial litigation cases?',
+    message: 'Can you tell me more about your experience with commercial litigation cases?',
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -378,6 +401,11 @@ const indexToContent = {
     title: 'Regal Law',
     description: 'Regal Law Chatbot',
     exampleMessages: regalLawExampleMessages,
+  },
+  'joo-toon-llc': {
+    title: 'Joo Toon LLC',
+    description: 'Joo Toon LLC Chatbot',
+    exampleMessages: jooToonLLCExampleMessages,
   },
 }
 
