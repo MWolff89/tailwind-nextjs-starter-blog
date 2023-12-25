@@ -193,12 +193,16 @@ const jcpLawExampleMessages = [
     message: `Where are you located?`,
   },
   {
-    heading: 'What services do you provide?',
-    message: `What services do you provide?`,
+    heading: 'How can I prepare for my first legal consultation with a JCP Law attorney?',
+    message: `How can I prepare for my first legal consultation with a JCP Law attorney?`,
   },
   {
-    heading: 'How can I contact you?',
-    message: `How can I contact you?`,
+    heading: 'What are the steps involved in scheduling an appointment with a lawyer at JCP Law?',
+    message: `What are the steps involved in scheduling an appointment with a lawyer at JCP Law?`,
+  },
+  {
+    heading: 'Are there any specific areas of law that JCP Law specializes in?',
+    message: `Are there any specific areas of law that JCP Law specializes in?`,
   },
 ]
 
