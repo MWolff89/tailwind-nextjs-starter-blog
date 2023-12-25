@@ -100,7 +100,7 @@ export default function ChatbotPage() {
         'frll',
         'rgll',
         'jtll',
-        'yll'
+        'yll',
       ].includes(password)
     ) {
       setAuthenticated(true)
