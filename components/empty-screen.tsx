@@ -151,16 +151,18 @@ const rexLegalExampleMessages = [
     message: `Tell me more about Rex Legal`,
   },
   {
-    heading: 'Where are you located?',
-    message: `Where are you located?`,
+    heading: "I'm facing criminal charges. How can Rex Legal assist me in my defense?",
+    message: `I'm facing criminal charges. How can Rex Legal assist me in my defense?`,
   },
   {
-    heading: 'What are your rates?',
-    message: `What are your rates?`,
+    heading:
+      "I'm interested in learning about the recent cases Rex Legal has handled. Can you share some insights or direct me to where I can find more information?",
+    message: `I'm interested in learning about the recent cases Rex Legal has handled. Can you share some insights or direct me to where I can find more information?`,
   },
   {
-    heading: 'What services do you provide?',
-    message: `What services do you provide?`,
+    heading:
+      'What steps should I take if I want to schedule a free consultation with one of your lawyers?',
+    message: `What steps should I take if I want to schedule a free consultation with one of your lawyers?`,
   },
 ]
 
