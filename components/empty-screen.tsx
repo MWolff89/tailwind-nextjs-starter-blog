@@ -208,20 +208,22 @@ const irbLawExampleMessages = [
     message: `Tell me more about I.R.B Law`,
   },
   {
-    heading: 'Where are you located?',
-    message: `Where are you located?`,
-  },
-  {
     heading: 'What services do you provide?',
     message: `What services do you provide?`,
   },
   {
-    heading: 'How can I contact you?',
-    message: `How can I contact you?`,
+    heading: 'What are the requirements for obtaining a Personal Protection Order?',
+    message: `What are the requirements for obtaining a Personal Protection Order?`,
   },
   {
-    heading: 'Who are the lawyers in your firm?',
-    message: `Who are the lawyers in your firm?`,
+    heading:
+      'Can you provide information on the services related to Syariah Law, such as Faraid and Muslim Wills?',
+    message: `Can you provide information on the services related to Syariah Law, such as Faraid and Muslim Wills?`,
+  },
+  {
+    heading:
+      'Could you explain the concept of Lasting Power of Attorney and when it might be necessary?',
+    message: `Could you explain the concept of Lasting Power of Attorney and when it might be necessary?`,
   },
 ]
 
