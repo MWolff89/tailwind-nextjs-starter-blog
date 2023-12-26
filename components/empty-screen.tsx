@@ -390,6 +390,20 @@ const wmhLawExampleMessages = [
     heading: 'What services do you provide?',
     message: `What services do you provide?`,
   },
+  {
+    heading:
+      'How does WMH Law Corporation integrate legal technology to enhance productivity and reduce costs?',
+    message:
+      'How does WMH Law Corporation integrate legal technology to enhance productivity and reduce costs?',
+  },
+  {
+    heading: `Can you tell me more about the firm's recognition as a "SmartLaw" Singapore Law Practice?`,
+    message: `Can you tell me more about the firm's recognition as a "SmartLaw" Singapore Law Practice?`,
+  },
+  {
+    heading: `How can I arrange a preliminary Skype consultation with a lawyer from WMH Law Corporation?`,
+    message: `How can I arrange a preliminary Skype consultation with a lawyer from WMH Law Corporation?`,
+  },
 ]
 
 const indexToContent = {
