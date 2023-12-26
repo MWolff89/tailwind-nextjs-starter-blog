@@ -356,6 +356,31 @@ const yuenLawExampleMessages = [
   },
 ]
 
+const gjcLawExampleMessages = [
+  {
+    heading: 'Tell me more about GJC Law',
+    message: `Tell me more about GJC Law`,
+  },
+  {
+    heading:
+      'Can you explain the divorce process in Singapore and what are the grounds for divorce?',
+    message:
+      'Can you explain the divorce process in Singapore and what are the grounds for divorce?',
+  },
+  {
+    heading:
+      'How can I prepare for a custody battle, and what factors will the court consider when determining child custody?',
+    message:
+      'How can I prepare for a custody battle, and what factors will the court consider when determining child custody?',
+  },
+  {
+    heading:
+      'What are the financial implications of divorce, including division of assets and spousal maintenance?',
+    message:
+      'What are the financial implications of divorce, including division of assets and spousal maintenance?',
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -436,6 +461,11 @@ const indexToContent = {
     title: 'Yuen Law',
     description: 'Yuen Law Chatbot',
     exampleMessages: yuenLawExampleMessages,
+  },
+  'gjc-law': {
+    title: 'GJC Law',
+    description: 'GJC Law Chatbot',
+    exampleMessages: gjcLawExampleMessages,
   },
 }
 

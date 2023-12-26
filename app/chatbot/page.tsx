@@ -45,6 +45,8 @@ export default function ChatbotPage() {
         return 'joo-toon-llc'
       case 'yll':
         return 'yuen-law'
+      case 'gjcl':
+        return 'gjc-law'
       default:
         return 'namkeepau'
     }
@@ -101,6 +103,7 @@ export default function ChatbotPage() {
         'rgll',
         'jtll',
         'yll',
+        'gjcl',
       ].includes(password)
     ) {
       setAuthenticated(true)
