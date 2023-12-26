@@ -381,6 +381,17 @@ const gjcLawExampleMessages = [
   },
 ]
 
+const wmhLawExampleMessages = [
+  {
+    heading: 'Tell me more about WMH Law',
+    message: `Tell me more about WMH Law`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -466,6 +477,11 @@ const indexToContent = {
     title: 'GJC Law',
     description: 'GJC Law Chatbot',
     exampleMessages: gjcLawExampleMessages,
+  },
+  'wmh-law': {
+    title: 'WMH Law',
+    description: 'WMH Law Chatbot',
+    exampleMessages: wmhLawExampleMessages,
   },
 }
 
