@@ -492,6 +492,28 @@ const cushmanWakefieldExampleMessages = [
     heading: 'Tell me more about Cushman & Wakefield',
     message: `Tell me more about Cushman & Wakefield`,
   },
+  {
+    heading:
+      'Can you provide an overview of the current commercial real estate market trends in Singapore?',
+    message:
+      'Can you provide an overview of the current commercial real estate market trends in Singapore?',
+  },
+  {
+    heading: 'Can you detail the process of leasing commercial property through you in Singapore?',
+    message: 'Can you detail the process of leasing commercial property through you in Singapore?',
+  },
+  {
+    heading:
+      'What are some future-proof real estate strategies that you recommend for new developments?',
+    message:
+      'What are some future-proof real estate strategies that you recommend for new developments?',
+  },
+  {
+    heading:
+      'Could you explain how AI is transforming the commercial real estate industry and what that means for investors?',
+    message:
+      'Could you explain how AI is transforming the commercial real estate industry and what that means for investors?',
+  },
 ]
 
 const indexToContent = {
