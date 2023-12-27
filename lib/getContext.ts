@@ -21,6 +21,7 @@ export async function getContext(query: string, index: string) {
     'gjc-law',
     'wmh-law',
     'godwin-campos-llc',
+    'tembusu-law',
   ].includes(index)
     ? process.env.PINECONE_API_KEY_BLACKORCHID
     : process.env.PINECONE_API_KEY

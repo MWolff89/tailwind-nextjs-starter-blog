@@ -433,6 +433,33 @@ const godwinCamposLLCExampleMessages = [
   },
 ]
 
+const tembusuLawExampleMessages = [
+  {
+    heading: 'Tell me more about Tembusu Law',
+    message: `Tell me more about Tembusu Law`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading: 'Can you explain the typical fee structure for legal services at Tembusu Law?',
+    message: 'Can you explain the typical fee structure for legal services at Tembusu Law?',
+  },
+  {
+    heading:
+      'What are the differences between divorce and separation in Singapore, and how can I choose the right option for my situation?',
+    message:
+      'What are the differences between divorce and separation in Singapore, and how can I choose the right option for my situation?',
+  },
+  {
+    heading:
+      'What are the latest updates or changes in corporate and commercial law that might affect my business?',
+    message:
+      'What are the latest updates or changes in corporate and commercial law that might affect my business?',
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -528,6 +555,11 @@ const indexToContent = {
     title: 'Godwin Campos LLC',
     description: 'Godwin Campos LLC Chatbot',
     exampleMessages: godwinCamposLLCExampleMessages,
+  },
+  'tembusu-law': {
+    title: 'Tembusu Law',
+    description: 'Tembusu Law Chatbot',
+    exampleMessages: tembusuLawExampleMessages,
   },
 }
 
