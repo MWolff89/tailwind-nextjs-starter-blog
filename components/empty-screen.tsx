@@ -406,6 +406,33 @@ const wmhLawExampleMessages = [
   },
 ]
 
+const godwinCamposLLCExampleMessages = [
+  {
+    heading: 'Tell me more about Godwin Campos LLC',
+    message: `Tell me more about Godwin Campos LLC`,
+  },
+  {
+    heading: 'What services do you provide?',
+    message: `What services do you provide?`,
+  },
+  {
+    heading:
+      'Can you provide more details about the free first consultation offered by Godwin Campos LLC?',
+    message:
+      'Can you provide more details about the free first consultation offered by Godwin Campos LLC?',
+  },
+  {
+    heading: "Could you explain the firm's approach to handling divorce and litigation cases?",
+    message: "Could you explain the firm's approach to handling divorce and litigation cases?",
+  },
+  {
+    heading:
+      'Can you share some success stories or testimonials from previous clients of the firm?',
+    message:
+      'Can you share some success stories or testimonials from previous clients of the firm?',
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -496,6 +523,11 @@ const indexToContent = {
     title: 'WMH Law',
     description: 'WMH Law Chatbot',
     exampleMessages: wmhLawExampleMessages,
+  },
+  'godwin-campos-llc': {
+    title: 'Godwin Campos LLC',
+    description: 'Godwin Campos LLC Chatbot',
+    exampleMessages: godwinCamposLLCExampleMessages,
   },
 }
 
