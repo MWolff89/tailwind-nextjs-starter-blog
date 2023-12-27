@@ -55,6 +55,8 @@ export default function ChatbotPage() {
         return 'tembusu-law'
       case 'wrcnt':
         return 'write-connection'
+      case 'CWfuture':
+        return 'cushmanwakefield'
       default:
         return 'namkeepau'
     }
@@ -116,6 +118,7 @@ export default function ChatbotPage() {
         'gcpl',
         'tmsl',
         'wrcnt',
+        'CWfuture',
       ].includes(password)
     ) {
       setAuthenticated(true)

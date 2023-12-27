@@ -487,6 +487,13 @@ const writeConnectionExampleMessages = [
   },
 ]
 
+const cushmanWakefieldExampleMessages = [
+  {
+    heading: 'Tell me more about Cushman & Wakefield',
+    message: `Tell me more about Cushman & Wakefield`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -592,6 +599,11 @@ const indexToContent = {
     title: 'Write Connection',
     description: 'Write Connection Chatbot',
     exampleMessages: writeConnectionExampleMessages,
+  },
+  cushmanwakefield: {
+    title: 'Cushman & Wakefield',
+    description: 'Cushman & Wakefield Chatbot',
+    exampleMessages: cushmanWakefieldExampleMessages,
   },
 }
 
