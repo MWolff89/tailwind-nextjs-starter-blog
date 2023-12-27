@@ -465,6 +465,26 @@ const writeConnectionExampleMessages = [
     heading: 'Tell me more about Write Connection',
     message: `Tell me more about Write Connection`,
   },
+  {
+    heading: 'Can you explain the teaching methodology used and how it benefits students?',
+    message: 'Can you explain the teaching methodology used and how it benefits students?',
+  },
+  {
+    heading:
+      'What are the key learning outcomes for students at different levels of the Writing Enrichment program?',
+    message:
+      'What are the key learning outcomes for students at different levels of the Writing Enrichment program?',
+  },
+  {
+    heading:
+      'How do you cater to the individual needs of students with different strengths and challenges?',
+    message:
+      'How do you cater to the individual needs of students with different strengths and challenges?',
+  },
+  {
+    heading: 'How do you incorporate technology into your curriculum to enhance learning?',
+    message: 'How do you incorporate technology into your curriculum to enhance learning?',
+  },
 ]
 
 const indexToContent = {
