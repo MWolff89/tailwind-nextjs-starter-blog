@@ -460,6 +460,13 @@ const tembusuLawExampleMessages = [
   },
 ]
 
+const writeConnectionExampleMessages = [
+  {
+    heading: 'Tell me more about Write Connection',
+    message: `Tell me more about Write Connection`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -560,6 +567,11 @@ const indexToContent = {
     title: 'Tembusu Law',
     description: 'Tembusu Law Chatbot',
     exampleMessages: tembusuLawExampleMessages,
+  },
+  'write-connection': {
+    title: 'Write Connection',
+    description: 'Write Connection Chatbot',
+    exampleMessages: writeConnectionExampleMessages,
   },
 }
 

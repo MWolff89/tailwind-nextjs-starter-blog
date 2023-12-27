@@ -53,6 +53,8 @@ export default function ChatbotPage() {
         return 'godwin-campos-llc'
       case 'tmsl':
         return 'tembusu-law'
+      case 'wrcnt':
+        return 'write-connection'
       default:
         return 'namkeepau'
     }
@@ -113,6 +115,7 @@ export default function ChatbotPage() {
         'wmhl',
         'gcpl',
         'tmsl',
+        'wrcnt',
       ].includes(password)
     ) {
       setAuthenticated(true)
