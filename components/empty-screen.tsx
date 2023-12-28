@@ -516,7 +516,7 @@ const cushmanWakefieldExampleMessages = [
   },
 ]
 
-const ivresgExampleMessages = [
+const IVREscentExampleMessages = [
   {
     heading: 'Tell me more about I.V. Resg',
     message: `Tell me more about I.V. Resg`,
@@ -653,7 +653,7 @@ const indexToContent = {
   'ivre-sg': {
     title: 'I.VRE',
     description: 'I.VRE Chatbot',
-    exampleMessages: ivresgExampleMessages,
+    exampleMessages: IVREscentExampleMessages,
   },
 }
 

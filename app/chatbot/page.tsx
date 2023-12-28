@@ -57,7 +57,7 @@ export default function ChatbotPage() {
         return 'write-connection'
       case 'CWfuture':
         return 'cushmanwakefield'
-      case 'ivresg':
+      case 'IVREscent':
         return 'ivre-sg'
       default:
         return 'namkeepau'
@@ -121,7 +121,7 @@ export default function ChatbotPage() {
         'tmsl',
         'wrcnt',
         'CWfuture',
-        'ivresg',
+        'IVREscent',
       ].includes(password)
     ) {
       setAuthenticated(true)
