@@ -516,6 +516,29 @@ const cushmanWakefieldExampleMessages = [
   },
 ]
 
+const ivresgExampleMessages = [
+  {
+    heading: 'Tell me more about I.V. Resg',
+    message: `Tell me more about I.V. Resg`,
+  },
+  {
+    heading: `How does the I'VRE perfume subscription service work, and what are the options available?`,
+    message: `How does the I'VRE perfume subscription service work, and what are the options available?`,
+  },
+  {
+    heading: `I'm looking for a gift for my friend who loves fragrances. What does I'VRE offer that could help me?`,
+    message: `I'm looking for a gift for my friend who loves fragrances. What does I'VRE offer that could help me?`,
+  },
+  {
+    heading: `What scents pair well together for layering, and how can I create a unique fragrance profile?`,
+    message: `What scents pair well together for layering, and how can I create a unique fragrance profile?`,
+  },
+  {
+    heading: `Can you suggest a perfume that would suit my preference for woody and spicy notes?`,
+    message: `Can you suggest a perfume that would suit my preference for woody and spicy notes?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -626,6 +649,11 @@ const indexToContent = {
     title: 'Cushman & Wakefield',
     description: 'Cushman & Wakefield Chatbot',
     exampleMessages: cushmanWakefieldExampleMessages,
+  },
+  'ivre-sg': {
+    title: 'I.VRE',
+    description: 'I.VRE Chatbot',
+    exampleMessages: ivresgExampleMessages,
   },
 }
 
