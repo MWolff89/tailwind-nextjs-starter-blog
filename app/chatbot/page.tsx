@@ -59,6 +59,8 @@ export default function ChatbotPage() {
         return 'cushmanwakefield'
       case 'IVREscent':
         return 'ivre-sg'
+      case 'fpctcb':
+        return 'foptics-club'
       default:
         return 'namkeepau'
     }
@@ -122,6 +124,7 @@ export default function ChatbotPage() {
         'wrcnt',
         'CWfuture',
         'IVREscent',
+        'fpctcb',
       ].includes(password)
     ) {
       setAuthenticated(true)

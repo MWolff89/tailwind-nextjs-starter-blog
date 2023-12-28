@@ -539,6 +539,31 @@ const IVREscentExampleMessages = [
   },
 ]
 
+const fopticsClubExampleMessages = [
+  {
+    heading: 'Tell me more about Foptics Club',
+    message: `Tell me more about Foptics Club`,
+  },
+  {
+    heading:
+      'Can you recommend a pair of glasses for someone who spends a lot of time in front of a computer?',
+    message:
+      'Can you recommend a pair of glasses for someone who spends a lot of time in front of a computer?',
+  },
+  {
+    heading: 'What frame shapes would suit a round face best?',
+    message: 'What frame shapes would suit a round face best?',
+  },
+  {
+    heading: 'What are the perks of joining the Foptics+ membership program?',
+    message: 'What are the perks of joining the Foptics+ membership program?',
+  },
+  {
+    heading: 'Are there any ongoing promotions for first-time buyers at Foptics Club?',
+    message: 'Are there any ongoing promotions for first-time buyers at Foptics Club?',
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -654,6 +679,11 @@ const indexToContent = {
     title: 'I.VRE',
     description: 'I.VRE Chatbot',
     exampleMessages: IVREscentExampleMessages,
+  },
+  'foptics-club': {
+    title: 'Foptics Club',
+    description: 'Foptics Club Chatbot',
+    exampleMessages: fopticsClubExampleMessages,
   },
 }
 
