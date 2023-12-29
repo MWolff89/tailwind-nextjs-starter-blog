@@ -564,6 +564,33 @@ const fopticsClubExampleMessages = [
   },
 ]
 
+const feiSiongGroupExampleMessages = [
+  {
+    heading: 'Tell me more about Fei Siong Group',
+    message: `Tell me more about Fei Siong Group`,
+  },
+  {
+    heading: `Can you recommend a dish from Encik Tan that's both popular and Halal-certified?`,
+    message: `Can you recommend a dish from Encik Tan that's both popular and Halal-certified?`,
+  },
+  {
+    heading: `I had an experience at one of your outlets I'd like to share. How can I provide feedback?`,
+    message: `I had an experience at one of your outlets I'd like to share. How can I provide feedback?`,
+  },
+  {
+    heading: `Does Fei Siong Group offer catering services for corporate events, and how can I arrange for it?`,
+    message: `Does Fei Siong Group offer catering services for corporate events, and how can I arrange for it?`,
+  },
+  {
+    heading: `I'm interested in opening a franchise. What are the requirements and process to franchise one of Fei Siong Group's brands?`,
+    message: `I'm interested in opening a franchise. What are the requirements and process to franchise one of Fei Siong Group's brands?`,
+  },
+  {
+    heading: `How is Fei Siong Group utilizing technology to enhance the dining experience for customers?`,
+    message: `How is Fei Siong Group utilizing technology to enhance the dining experience for customers?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -684,6 +711,11 @@ const indexToContent = {
     title: 'Foptics Club',
     description: 'Foptics Club Chatbot',
     exampleMessages: fopticsClubExampleMessages,
+  },
+  'feisiong-group': {
+    title: 'Fei Siong Group',
+    description: 'Fei Siong Group Chatbot',
+    exampleMessages: feiSiongGroupExampleMessages,
   },
 }
 

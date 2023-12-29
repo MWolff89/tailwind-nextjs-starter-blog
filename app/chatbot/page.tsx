@@ -61,6 +61,8 @@ export default function ChatbotPage() {
         return 'ivre-sg'
       case 'fpctcb':
         return 'foptics-club'
+      case 'fsg':
+        return 'feisiong-group'
       default:
         return 'namkeepau'
     }
@@ -125,6 +127,7 @@ export default function ChatbotPage() {
         'CWfuture',
         'IVREscent',
         'fpctcb',
+        'fsg',
       ].includes(password)
     ) {
       setAuthenticated(true)
