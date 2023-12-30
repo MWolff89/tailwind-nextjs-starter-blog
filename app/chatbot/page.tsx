@@ -63,6 +63,8 @@ export default function ChatbotPage() {
         return 'foptics-club'
       case 'fsg':
         return 'feisiong-group'
+      case 'CartrackTech':
+        return 'cartrack'
       default:
         return 'namkeepau'
     }
@@ -128,6 +130,7 @@ export default function ChatbotPage() {
         'IVREscent',
         'FopticsFuture',
         'fsg',
+        'CartrackTech',
       ].includes(password)
     ) {
       setAuthenticated(true)

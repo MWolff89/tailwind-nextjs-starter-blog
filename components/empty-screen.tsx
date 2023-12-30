@@ -591,6 +591,33 @@ const feiSiongGroupExampleMessages = [
   },
 ]
 
+const cartrackExampleMessages = [
+  {
+    heading: 'Tell me more about Cartrack',
+    message: `Tell me more about Cartrack`,
+  },
+  {
+    heading: `What are the benefits of using Cartrack's fleet management system?`,
+    message: `What are the benefits of using Cartrack's fleet management system?`,
+  },
+  {
+    heading: `Could you provide a comparison of ROI for businesses before and after implementing Cartrack's solutions?`,
+    message: `Could you provide a comparison of ROI for businesses before and after implementing Cartrack's solutions?`,
+  },
+  {
+    heading: `In what ways can Cartrack's platform integrate with my existing business systems?`,
+    message: `In what ways can Cartrack's platform integrate with my existing business systems?`,
+  },
+  {
+    heading: `How can AI-powered telematics improve the safety and efficiency of my fleet operations?`,
+    message: `How can AI-powered telematics improve the safety and efficiency of my fleet operations?`,
+  },
+  {
+    heading: `What are the latest trends in telematics that Cartrack is leveraging to enhance its services?`,
+    message: `What are the latest trends in telematics that Cartrack is leveraging to enhance its services?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -716,6 +743,11 @@ const indexToContent = {
     title: 'Fei Siong Group',
     description: 'Fei Siong Group Chatbot',
     exampleMessages: feiSiongGroupExampleMessages,
+  },
+  cartrack: {
+    title: 'Cartrack',
+    description: 'Cartrack Chatbot',
+    exampleMessages: cartrackExampleMessages,
   },
 }
 
