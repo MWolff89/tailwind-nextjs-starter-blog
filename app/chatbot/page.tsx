@@ -59,7 +59,7 @@ export default function ChatbotPage() {
         return 'cushmanwakefield'
       case 'IVREscent':
         return 'ivre-sg'
-      case 'fpctcb':
+      case 'FopticsFuture':
         return 'foptics-club'
       case 'fsg':
         return 'feisiong-group'
@@ -126,7 +126,7 @@ export default function ChatbotPage() {
         'wrcnt',
         'CWfuture',
         'IVREscent',
-        'fpctcb',
+        'FopticsFuture',
         'fsg',
       ].includes(password)
     ) {
