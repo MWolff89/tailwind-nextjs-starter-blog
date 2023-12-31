@@ -641,6 +641,25 @@ const capitalHrmExampleMessages = [
   },
 ]
 
+const royalTGroupExampleMessages = [
+  {
+    heading: 'Tell me more about Royal T Group',
+    message: `Tell me more about Royal T Group`,
+  },
+  {
+    heading: `Could you recommend a menu item from Paik's Bibim that's suitable for someone with a gluten allergy?`,
+    message: `Could you recommend a menu item from Paik's Bibim that's suitable for someone with a gluten allergy?`,
+  },
+  {
+    heading: `Does Royal T Group offer catering services for corporate events, and if so, what are the options and pricing?`,
+    message: `Does Royal T Group offer catering services for corporate events, and if so, what are the options and pricing?`,
+  },
+  {
+    heading: `I have several questions about different aspects of your services. Can you help me with a complex inquiry?`,
+    message: `I have several questions about different aspects of your services. Can you help me with a complex inquiry?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -776,6 +795,11 @@ const indexToContent = {
     title: 'Capital HRM',
     description: 'Capital HRM Chatbot',
     exampleMessages: capitalHrmExampleMessages,
+  },
+  'royal-t-group': {
+    title: 'Royal T Group',
+    description: 'Royal T Group Chatbot',
+    exampleMessages: royalTGroupExampleMessages,
   },
 }
 

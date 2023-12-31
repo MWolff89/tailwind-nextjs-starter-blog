@@ -67,6 +67,8 @@ export default function ChatbotPage() {
         return 'cartrack'
       case 'CapitalHRMExcellence':
         return 'capital-hrm'
+      case 'RoyalTGourmet':
+        return 'royal-t-group'
       default:
         return 'namkeepau'
     }
@@ -134,6 +136,7 @@ export default function ChatbotPage() {
         'fsg',
         'CartrackTech',
         'CapitalHRMExcellence',
+        'RoyalTGourmet',
       ].includes(password)
     ) {
       setAuthenticated(true)
