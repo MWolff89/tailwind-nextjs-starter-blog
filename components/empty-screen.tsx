@@ -618,6 +618,29 @@ const cartrackExampleMessages = [
   },
 ]
 
+const capitalHrmExampleMessages = [
+  {
+    heading: 'Tell me more about Capital HRM',
+    message: `Tell me more about Capital HRM`,
+  },
+  {
+    heading: `Can you provide guidance on how to develop a strategic HR plan to improve employee engagement and retention?`,
+    message: `Can you provide guidance on how to develop a strategic HR plan to improve employee engagement and retention?`,
+  },
+  {
+    heading: `What are the key legal considerations we should be aware of when hiring internationally?`,
+    message: `What are the key legal considerations we should be aware of when hiring internationally?`,
+  },
+  {
+    heading: `What are the best practices for setting up a performance management system that aligns with our company's goals?`,
+    message: `What are the best practices for setting up a performance management system that aligns with our company's goals?`,
+  },
+  {
+    heading: `What HR technologies are available to automate our recruitment process, and how can we integrate them effectively`,
+    message: `What HR technologies are available to automate our recruitment process, and how can we integrate them effectively`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -748,6 +771,11 @@ const indexToContent = {
     title: 'Cartrack',
     description: 'Cartrack Chatbot',
     exampleMessages: cartrackExampleMessages,
+  },
+  'capital-hrm': {
+    title: 'Capital HRM',
+    description: 'Capital HRM Chatbot',
+    exampleMessages: capitalHrmExampleMessages,
   },
 }
 
