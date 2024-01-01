@@ -683,6 +683,29 @@ const daikinExampleMessages = [
   },
 ]
 
+const zansanExampleMessages = [
+  {
+    heading: 'Tell me more about Zansan',
+    message: `Tell me more about Zansan`,
+  },
+  {
+    heading: `How can Zansan digital locks be integrated with existing smart home systems or IoT devices?`,
+    message: `How can Zansan digital locks be integrated with existing smart home systems or IoT devices?`,
+  },
+  {
+    heading: `How does Zansan stay ahead of the competition in the digital lock industry in Singapore?`,
+    message: `How does Zansan stay ahead of the competition in the digital lock industry in Singapore?`,
+  },
+  {
+    heading: `What advanced security features do Zansan digital locks offer, such as biometric recognition or blockchain technology?`,
+    message: `What advanced security features do Zansan digital locks offer, such as biometric recognition or blockchain technology?`,
+  },
+  {
+    heading: `Could you guide me through troubleshooting a problem with my Zansan digital lock?`,
+    message: `Could you guide me through troubleshooting a problem with my Zansan digital lock?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -828,6 +851,11 @@ const indexToContent = {
     title: 'Daikin',
     description: 'Daikin Chatbot',
     exampleMessages: daikinExampleMessages,
+  },
+  zansan: {
+    title: 'Zansan',
+    description: 'Zansan Chatbot',
+    exampleMessages: zansanExampleMessages,
   },
 }
 

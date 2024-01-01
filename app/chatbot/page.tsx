@@ -71,6 +71,8 @@ export default function ChatbotPage() {
         return 'royal-t-group'
       case 'dkn':
         return 'daikin'
+      case 'zsn':
+        return 'zansan'
       default:
         return 'namkeepau'
     }
@@ -140,6 +142,7 @@ export default function ChatbotPage() {
         'CapitalHRMExcellence',
         'RoyalTGourmet',
         'dkn',
+        'zsn',
       ].includes(password)
     ) {
       setAuthenticated(true)
