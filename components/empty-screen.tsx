@@ -660,6 +660,29 @@ const royalTGroupExampleMessages = [
   },
 ]
 
+const daikinExampleMessages = [
+  {
+    heading: 'Tell me more about Daikin',
+    message: `Tell me more about Daikin`,
+  },
+  {
+    heading: `Can you provide me with the latest energy-efficient air conditioning solutions for my home?`,
+    message: `Can you provide me with the latest energy-efficient air conditioning solutions for my home?`,
+  },
+  {
+    heading: `What are the benefits of Daikin's air purifier range, and how do they contribute to healthier indoor air quality?`,
+    message: `What are the benefits of Daikin's air purifier range, and how do they contribute to healthier indoor air quality?`,
+  },
+  {
+    heading: `How does Daikin's Smart Control technology integrate with home automation systems like Google Home and Amazon Alexa?`,
+    message: `How does Daikin's Smart Control technology integrate with home automation systems like Google Home and Amazon Alexa?`,
+  },
+  {
+    heading: `What are the steps to troubleshoot connectivity issues with the Daikin Mobile Controller app?`,
+    message: `What are the steps to troubleshoot connectivity issues with the Daikin Mobile Controller app?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -800,6 +823,11 @@ const indexToContent = {
     title: 'Royal T Group',
     description: 'Royal T Group Chatbot',
     exampleMessages: royalTGroupExampleMessages,
+  },
+  daikin: {
+    title: 'Daikin',
+    description: 'Daikin Chatbot',
+    exampleMessages: daikinExampleMessages,
   },
 }
 

@@ -69,6 +69,8 @@ export default function ChatbotPage() {
         return 'capital-hrm'
       case 'RoyalTGourmet':
         return 'royal-t-group'
+      case 'dkn':
+        return 'daikin'
       default:
         return 'namkeepau'
     }
@@ -137,6 +139,7 @@ export default function ChatbotPage() {
         'CartrackTech',
         'CapitalHRMExcellence',
         'RoyalTGourmet',
+        'dkn',
       ].includes(password)
     ) {
       setAuthenticated(true)
