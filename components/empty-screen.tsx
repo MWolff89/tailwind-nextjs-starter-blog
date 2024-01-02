@@ -754,6 +754,29 @@ const joArtysanExampleMessages = [
   },
 ]
 
+const jhKimTaekwondoExampleMessages = [
+  {
+    heading: 'Tell me more about JH Kim Taekwondo',
+    message: `Tell me more about JH Kim Taekwondo`,
+  },
+  {
+    heading: 'What are the benefits of learning taekwondo?',
+    message: 'What are the benefits of learning taekwondo?',
+  },
+  {
+    heading: 'What are the different classes available at JH Kim Taekwondo?',
+    message: 'What are the different classes available at JH Kim Taekwondo?',
+  },
+  {
+    heading: 'How can I book a trial class at JH Kim Taekwondo?',
+    message: 'How can I book a trial class at JH Kim Taekwondo?',
+  },
+  {
+    heading: 'What are the fees for classes at JH Kim Taekwondo?',
+    message: 'What are the fees for classes at JH Kim Taekwondo?',
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -914,6 +937,11 @@ const indexToContent = {
     title: 'Jo Artysan',
     description: 'Jo Artysan Chatbot',
     exampleMessages: joArtysanExampleMessages,
+  },
+  'jhkim-taekwondo': {
+    title: 'JH Kim Taekwondo',
+    description: 'JH Kim Taekwondo Chatbot',
+    exampleMessages: jhKimTaekwondoExampleMessages,
   },
 }
 

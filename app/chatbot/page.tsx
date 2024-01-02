@@ -77,6 +77,8 @@ export default function ChatbotPage() {
         return 'dasher-smart-home'
       case 'JA':
         return 'jo-artysan'
+      case 'RJHK':
+        return 'jhkim-taekwondo'
       default:
         return 'namkeepau'
     }
@@ -149,6 +151,7 @@ export default function ChatbotPage() {
         'zsn',
         'DSG',
         'JA',
+        'RJHK',
       ].includes(password)
     ) {
       setAuthenticated(true)
