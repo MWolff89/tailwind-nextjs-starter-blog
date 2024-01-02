@@ -736,6 +736,22 @@ const joArtysanExampleMessages = [
     heading: 'Tell me more about Jo Artysan',
     message: `Tell me more about Jo Artysan`,
   },
+  {
+    heading: 'Can you explain the difference between microblading and eyebrow embroidery?',
+    message: 'Can you explain the difference between microblading and eyebrow embroidery?',
+  },
+  {
+    heading: 'What should I expect during my first semi-permanent makeup session?',
+    message: 'What should I expect during my first semi-permanent makeup session?',
+  },
+  {
+    heading: 'How can I book an appointment for a beauty consultation at Jo Artysan?',
+    message: 'How can I book an appointment for a beauty consultation at Jo Artysan?',
+  },
+  {
+    heading: 'Can you provide tips on how to maintain my semi-permanent makeup results for longer?',
+    message: 'Can you provide tips on how to maintain my semi-permanent makeup results for longer?',
+  },
 ]
 
 const indexToContent = {
