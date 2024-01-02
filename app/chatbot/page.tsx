@@ -73,7 +73,7 @@ export default function ChatbotPage() {
         return 'daikin'
       case 'zsn':
         return 'zansan'
-      case 'dshr':
+      case 'DSG':
         return 'dasher-smart-home'
       default:
         return 'namkeepau'
@@ -145,7 +145,7 @@ export default function ChatbotPage() {
         'RoyalTGourmet',
         'dkn',
         'zsn',
-        'dshr',
+        'DSG',
       ].includes(password)
     ) {
       setAuthenticated(true)
