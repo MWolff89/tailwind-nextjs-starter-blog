@@ -32,6 +32,7 @@ export async function getContext(query: string, index: string) {
     'royal-t-group',
     'daikin',
     'zansan',
+    'dasher-smart-home',
   ].includes(index)
     ? process.env.PINECONE_API_KEY_BLACKORCHID
     : process.env.PINECONE_API_KEY

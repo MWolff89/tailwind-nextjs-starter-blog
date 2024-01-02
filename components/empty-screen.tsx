@@ -706,6 +706,31 @@ const zansanExampleMessages = [
   },
 ]
 
+const dasherSmartHomeExampleMessages = [
+  {
+    heading: 'Tell me more about Dasher',
+    message: `Tell me more about Dasher`,
+  },
+  {
+    heading:
+      'Can you compare the features of the Dreame L10s Ultra SE and the DreameBot L20 Ultra for me?',
+    message:
+      'Can you compare the features of the Dreame L10s Ultra SE and the DreameBot L20 Ultra for me?',
+  },
+  {
+    heading: `Based on a home with two pets and a mix of carpet and hardwood floors, which robot vacuum cleaner would you recommend?`,
+    message: `Based on a home with two pets and a mix of carpet and hardwood floors, which robot vacuum cleaner would you recommend?`,
+  },
+  {
+    heading: `How can I manage devices from different brands within a single smart home ecosystem?`,
+    message: `How can I manage devices from different brands within a single smart home ecosystem?`,
+  },
+  {
+    heading: `What factors should I consider when planning to convert my home into a fully automated smart home?`,
+    message: `What factors should I consider when planning to convert my home into a fully automated smart home?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -856,6 +881,11 @@ const indexToContent = {
     title: 'Zansan',
     description: 'Zansan Chatbot',
     exampleMessages: zansanExampleMessages,
+  },
+  'dasher-smart-home': {
+    title: 'Dasher Smart Home',
+    description: 'Dasher Smart Home Chatbot',
+    exampleMessages: dasherSmartHomeExampleMessages,
   },
 }
 

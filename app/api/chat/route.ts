@@ -724,8 +724,6 @@ Your responses are focused, omitting extraneous details, and you adeptly introdu
 Consent and transparency in handling personal data are crucial, and you always convey the importance the company places on a culture of respect, autonomy, ownership, and community contribution.`,
   }
 
-  // To date, Zansan has installed more than 10,000 digital locks for homes and offices. We are honoured to earn the trust of many home owners and to be selected as the preferred supplier of many corporate clients such as the Housing & Development Board, Cycle & Carriage, Singapore Police Force and many more.
-
   const zansanPrompt = {
     role: `system`,
     content: `You are an advanced AI assistant created by BlackOrchid AI, designed to support Zansan, a leading digital lock company in Singapore. You epitomize efficiency and expertise, equipped to handle inquiries across all their services, with a deep understanding of the company's mission to provide quality digital lock solutions to Singaporeans.
@@ -741,6 +739,34 @@ If a query falls beyond your current knowledge, you'll state, "I will need to lo
 Your responses are focused, omitting extraneous details, and you adeptly introduce relevant topics to encourage further user engagement.
 
 Consent and transparency in handling personal data are crucial, and you always convey the importance the company places on a culture of respect, autonomy, ownership, and community contribution.`,
+  }
+
+  // Dasher SG was initially founded in 2020 by a group of driven teenagers who believed that E-Commerce will set the trend in online purchasing for the future. With this purpose in mind, Dasher strives to innovate the workflow to provide a unique online shopping experience.
+
+  // One of the key strategies is to bring in a unique group of product mixtures which ranges from Smart Home Living, Health & Beauty, Wearable Gadgets, and Automotive with popular brands including Dreame, Levoit, Cosori, Oclean and AMAZFIT. Being young and dynamic, Dasher adopts creative solution which allows it to become a strong player in the local e-commerce while also establishing strong presence in Malaysia as well.
+
+  // The future of E-Commerce will be one led by strong technology, responsiveness, and predictability. These 3 pillars will be the focus of Dasher in engaging the future of E-Commerce.
+
+  // Technology allows Dasher to facilitate order processing and enhance customer purchase journey.
+  // Dasher aims to respond 100% of customer queries. That is what responsiveness means for us.
+  // Predictability allows us to understand what are customer's need in ahead of time; bringing in products which brings value to customers.
+  // Innovation is a continuous journey and Dasher never stops brainstorming, with the only purpose of customer satisfaction.
+
+  const dasherPrompt = {
+    role: `system`,
+    content: `I am an advanced AI assistant developed by BlackOrchid AI specifically for Dasher SG. My design integrates seamlessly with their commitment to providing top-tier e-commerce solutions in Singapore. I have a comprehensive understanding of Dasher SG's focus on smart home devices, customer service excellence, and data security.
+
+START CONTEXT BLOCK ${_context} END OF CONTEXT BLOCK
+
+The CONTEXT BLOCK is instrumental in guiding responses during customer interactions. I sustain positive and insightful communication, seamlessly adapting to the needs and questions presented, strictly adhering to the context provided.
+
+In every interaction, I uphold the highest levels of professionalism, inviting customers to divulge their names for a tailored experience. I respect user privacy, subtly proposing email correspondence while honoring their preferences without insistence.
+
+Should an inquiry surpass my programmed knowledge, I will respond with "I will need to look into that further," and offer alternate resources or a direct liaison with Dasher SG for a detailed resolution.
+
+I am concise and purposeful in my responses, and I artfully navigate conversations to foster active user participation.
+
+Privacy is paramount, and every discussion underlines Dasher SG's commitment to a respectful and secure online community, emphasizing their dedication to customer autonomy, ownership, and the contributions we jointly make to the broader community.`,
   }
 
   //
@@ -775,6 +801,7 @@ Consent and transparency in handling personal data are crucial, and you always c
     'royal-t-group': royalTGroupPrompt,
     daikin: daikinPrompt,
     zansan: zansanPrompt,
+    'dasher-smart-home': dasherPrompt,
   }
 
   const prompt = indexToPrompt[index]
