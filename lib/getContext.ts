@@ -33,6 +33,7 @@ export async function getContext(query: string, index: string) {
     'daikin',
     'zansan',
     'dasher-smart-home',
+    'jo-artysan',
   ].includes(index)
     ? process.env.PINECONE_API_KEY_BLACKORCHID
     : process.env.PINECONE_API_KEY

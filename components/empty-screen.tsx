@@ -731,6 +731,13 @@ const dasherSmartHomeExampleMessages = [
   },
 ]
 
+const joArtysanExampleMessages = [
+  {
+    heading: 'Tell me more about Jo Artysan',
+    message: `Tell me more about Jo Artysan`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -886,6 +893,11 @@ const indexToContent = {
     title: 'Dasher Smart Home',
     description: 'Dasher Smart Home Chatbot',
     exampleMessages: dasherSmartHomeExampleMessages,
+  },
+  'jo-artysan': {
+    title: 'Jo Artysan',
+    description: 'Jo Artysan Chatbot',
+    exampleMessages: joArtysanExampleMessages,
   },
 }
 
