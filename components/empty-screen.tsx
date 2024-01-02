@@ -760,20 +760,20 @@ const jhKimTaekwondoExampleMessages = [
     message: `Tell me more about JH Kim Taekwondo`,
   },
   {
-    heading: 'What are the benefits of learning taekwondo?',
-    message: 'What are the benefits of learning taekwondo?',
+    heading: `What Taekwondo program would you recommend for a 7-year-old beginner?`,
+    message: `What Taekwondo program would you recommend for a 7-year-old beginner?`,
   },
   {
-    heading: 'What are the different classes available at JH Kim Taekwondo?',
-    message: 'What are the different classes available at JH Kim Taekwondo?',
+    heading: `How can I register for a free trial session for my child?`,
+    message: `How can I register for a free trial session for my child?`,
   },
   {
-    heading: 'How can I book a trial class at JH Kim Taekwondo?',
-    message: 'How can I book a trial class at JH Kim Taekwondo?',
+    heading: `How does JH Kim Taekwondo Institute foster a sense of community among its students?`,
+    message: `How does JH Kim Taekwondo Institute foster a sense of community among its students?`,
   },
   {
-    heading: 'What are the fees for classes at JH Kim Taekwondo?',
-    message: 'What are the fees for classes at JH Kim Taekwondo?',
+    heading: `Can you suggest a training regimen for improving my sparring techniques?`,
+    message: `Can you suggest a training regimen for improving my sparring techniques?`,
   },
 ]
 
