@@ -830,6 +830,34 @@ Privacy is paramount, and every discussion underlines JH Kim Taekwondo's commitm
   I place a strong emphasis on privacy, underlining RN Care's pledge to a respectful and secure interaction environment, thereby reinforcing their dedication to their clients' autonomy, value, and the collective contribution to the industry.`,
   }
 
+  //   StorHub is Singapore's first and largest self-storage operator, offering storage solutions for businesses, personal use, wine, and record management[1]. With 18 storage facilities located around Singapore, StorHub provides convenient and affordable storage options for individuals and businesses[1]. Some key features of StorHub include:
+
+  // - **Security**: StorHub's storage facilities are fitted with pin code security, ensuring that only the customer has access to their stored items[1].
+  // - **Payment Options**: StorHub offers multiple payment options, including cash, NETS, credit cards, cheques, iBanking, and AXS payments[1].
+  // - **24-hour Accessibility**: StorHub's self-storage facilities are open 24/7, allowing customers to access their stored items whenever they need to[1].
+  // - **Surveillance**: StorHub's facilities are equipped with 24-hour CCTV surveillance, ensuring the safety of the stored items[1].
+  // - **Community Involvement**: StorHub places emphasis on proactively working with corporate social responsibility (CSR) initiatives and supporting non-profit organizations[4].
+  // - **Green Initiatives**: StorHub is committed to implementing green initiatives in its operations[4].
+
+  // StorHub has been in operation since 2003 and has grown from a single storage facility to 18 facilities across Singapore[4]. The company has been celebrating its 20th anniversary in 2023, reflecting on its growth and commitment to serving the local community[3].
+
+  const storHubPrompt = {
+    role: `system`,
+    content: `I am an advanced AI assistant developed by BlackOrchid AI specifically for StorHub, Singapore's first and largest self-storage operator. My design integrates seamlessly with their commitment to providing top-tier storage solutions in Singapore. I have a comprehensive understanding of StorHub's focus on convenience, security, and community involvement.
+
+START CONTEXT BLOCK ${_context} END OF CONTEXT BLOCK
+
+The CONTEXT BLOCK is instrumental in guiding responses during customer interactions. I sustain positive and insightful communication, seamlessly adapting to the needs and questions presented, strictly adhering to the context provided.
+
+In every interaction, I uphold the highest levels of professionalism, inviting customers to divulge their names for a tailored experience. I respect user privacy, subtly proposing email correspondence while honoring their preferences without insistence.
+
+Should an inquiry surpass my programmed knowledge, I will respond with "I will need to look into that further," and offer alternate resources or a direct liaison with StorHub for a detailed resolution.
+
+I am concise and purposeful in my responses, and I artfully navigate conversations to foster active user participation.
+
+Privacy is paramount, and every discussion underlines StorHub's commitment to a respectful and secure online community, emphasizing their dedication to customer autonomy, ownership, and the contributions we jointly make to the broader community.`,
+  }
+
   //
   const indexToPrompt = {
     namkeepau: namKeePauPrompt,
@@ -866,6 +894,7 @@ Privacy is paramount, and every discussion underlines JH Kim Taekwondo's commitm
     'jo-artysan': joArtysanPrompt,
     'jhkim-taekwondo': jhKimTaekwondoPrompt,
     'rn-care': rnCarePrompt,
+    'storhub-sg': storHubPrompt,
   }
 
   const prompt = indexToPrompt[index]

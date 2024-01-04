@@ -800,6 +800,31 @@ const rnCareExampleMessages = [
   },
 ]
 
+const storhubExampleMessages = [
+  {
+    heading: 'Tell me more about Storhub',
+    message: `Tell me more about Storhub`,
+  },
+  {
+    heading:
+      'Can you guide me through the process of estimating the right storage unit size for my needs?',
+    message:
+      'Can you guide me through the process of estimating the right storage unit size for my needs?',
+  },
+  {
+    heading: 'How does StorHub ensure the security and safety of my stored items?',
+    message: 'How does StorHub ensure the security and safety of my stored items?',
+  },
+  {
+    heading: 'Can you explain the different insurance options available for my stored belongings?',
+    message: 'Can you explain the different insurance options available for my stored belongings?',
+  },
+  {
+    heading: `Can you assist me in understanding the terms and conditions of StorHub's storage rental agreement?`,
+    message: `Can you assist me in understanding the terms and conditions of StorHub's storage rental agreement?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -970,6 +995,11 @@ const indexToContent = {
     title: 'RN Care',
     description: 'RN Care Chatbot',
     exampleMessages: rnCareExampleMessages,
+  },
+  'storhub-sg': {
+    title: 'Storhub',
+    description: 'Storhub Chatbot',
+    exampleMessages: storhubExampleMessages,
   },
 }
 
