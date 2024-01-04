@@ -79,6 +79,8 @@ export default function ChatbotPage() {
         return 'jo-artysan'
       case 'RJHK':
         return 'jhkim-taekwondo'
+      case 'RNCDemo':
+        return 'rn-care'
       default:
         return 'namkeepau'
     }
@@ -152,6 +154,7 @@ export default function ChatbotPage() {
         'DSG',
         'JA',
         'RJHK',
+        'RNCDemo',
       ].includes(password)
     ) {
       setAuthenticated(true)

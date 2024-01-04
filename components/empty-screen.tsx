@@ -777,6 +777,29 @@ const jhKimTaekwondoExampleMessages = [
   },
 ]
 
+const rnCareExampleMessages = [
+  {
+    heading: 'Tell me more about RN Care',
+    message: `Tell me more about RN Care`,
+  },
+  {
+    heading: `Based on my resume and work experience in healthcare, what roles would I be best suited for?`,
+    message: `Based on my resume and work experience in healthcare, what roles would I be best suited for?`,
+  },
+  {
+    heading: `What are the latest advancements in recruitment technology, and how can they be leveraged to improve candidate sourcing?`,
+    message: `What are the latest advancements in recruitment technology, and how can they be leveraged to improve candidate sourcing?`,
+  },
+  {
+    heading: `What are the key considerations for ensuring compliance with Singapore's employment laws when hiring foreign talent?`,
+    message: `What are the key considerations for ensuring compliance with Singapore's employment laws when hiring foreign talent?`,
+  },
+  {
+    heading: `What strategies should a company consider when trying to attract top engineering talent in a competitive market?`,
+    message: `What strategies should a company consider when trying to attract top engineering talent in a competitive market?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -942,6 +965,11 @@ const indexToContent = {
     title: 'JH Kim Taekwondo',
     description: 'JH Kim Taekwondo Chatbot',
     exampleMessages: jhKimTaekwondoExampleMessages,
+  },
+  'rn-care': {
+    title: 'RN Care',
+    description: 'RN Care Chatbot',
+    exampleMessages: rnCareExampleMessages,
   },
 }
 
