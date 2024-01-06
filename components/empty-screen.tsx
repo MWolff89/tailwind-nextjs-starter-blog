@@ -825,6 +825,29 @@ const storhubExampleMessages = [
   },
 ]
 
+const homageExampleMessages = [
+  {
+    heading: 'Tell me more about Homage',
+    message: `Tell me more about Homage`,
+  },
+  {
+    heading: `Can you explain the differences between various types of home care services and help me determine which one would be best for my situation?`,
+    message: `Can you explain the differences between various types of home care services and help me determine which one would be best for my situation?`,
+  },
+  {
+    heading: `Based on my mother's post-stroke condition, which includes limited mobility on her right side, what kind of therapy services would you recommend?`,
+    message: `Based on my mother's post-stroke condition, which includes limited mobility on her right side, what kind of therapy services would you recommend?`,
+  },
+  {
+    heading: `If I'm planning to be away for a week, how can Homage assist in taking care of my elderly father who has diabetes and requires daily medication?`,
+    message: `If I'm planning to be away for a week, how can Homage assist in taking care of my elderly father who has diabetes and requires daily medication?`,
+  },
+  {
+    heading: `What are some tips for creating a safe home environment for someone with dementia, and how can Homage support us in this?`,
+    message: `What are some tips for creating a safe home environment for someone with dementia, and how can Homage support us in this?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -1000,6 +1023,11 @@ const indexToContent = {
     title: 'Storhub',
     description: 'Storhub Chatbot',
     exampleMessages: storhubExampleMessages,
+  },
+  'homage-sg': {
+    title: 'Homage',
+    description: 'Homage Chatbot',
+    exampleMessages: homageExampleMessages,
   },
 }
 

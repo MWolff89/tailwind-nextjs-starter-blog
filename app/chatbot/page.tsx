@@ -83,6 +83,8 @@ export default function ChatbotPage() {
         return 'rn-care'
       case 'StorhubDemo':
         return 'storhub-sg'
+      case 'HMG':
+        return 'homage-sg'
       default:
         return 'namkeepau'
     }
@@ -158,6 +160,7 @@ export default function ChatbotPage() {
         'RJHK',
         'RNCDemo',
         'StorhubDemo',
+        'HMG',
       ].includes(password)
     ) {
       setAuthenticated(true)
