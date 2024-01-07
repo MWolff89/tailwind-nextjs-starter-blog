@@ -871,6 +871,13 @@ const yewDigitalLockExampleMessages = [
   },
 ]
 
+const greaterClubExampleMessages = [
+  {
+    heading: 'Tell me more about Greater Club',
+    message: `Tell me more about Greater Club`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -1056,6 +1063,11 @@ const indexToContent = {
     title: 'Yew Digital Lock',
     description: 'Yew Digital Lock Chatbot',
     exampleMessages: yewDigitalLockExampleMessages,
+  },
+  'greater-club': {
+    title: 'Greater Club',
+    description: 'Greater Club Chatbot',
+    exampleMessages: greaterClubExampleMessages,
   },
 }
 

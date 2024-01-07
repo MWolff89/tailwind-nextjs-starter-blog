@@ -87,6 +87,8 @@ export default function ChatbotPage() {
         return 'homage-sg'
       case 'YEWDGLOCK':
         return 'yew-digital-lock'
+      case 'GRTCLB':
+        return 'greater-club'
       default:
         return 'namkeepau'
     }
@@ -114,6 +116,9 @@ export default function ChatbotPage() {
       ;(window as any).voiceflow.chat.hide()
     }
   }, [password])
+
+  // TO DEL
+  // m - arg min as rec (q, m) + Beta * rel (q, m)
 
   const handlePasswordSubmit = (e) => {
     // console.log(
@@ -171,6 +176,7 @@ export default function ChatbotPage() {
         'StorhubDemo',
         'HMG',
         'YEWDGLOCK',
+        'GRTCLB',
       ].includes(password)
     ) {
       setAuthenticated(true)
