@@ -85,6 +85,8 @@ export default function ChatbotPage() {
         return 'storhub-sg'
       case 'HMG':
         return 'homage-sg'
+      case 'YEWDGLOCK':
+        return 'yew-digital-lock'
       default:
         return 'namkeepau'
     }
@@ -168,6 +170,7 @@ export default function ChatbotPage() {
         'RNCDemo',
         'StorhubDemo',
         'HMG',
+        'YEWDGLOCK',
       ].includes(password)
     ) {
       setAuthenticated(true)

@@ -848,6 +848,29 @@ const homageExampleMessages = [
   },
 ]
 
+const yewDigitalLockExampleMessages = [
+  {
+    heading: 'Tell me more about Yew Digital Lock',
+    message: `Tell me more about Yew Digital Lock`,
+  },
+  {
+    heading: `Is it possible to integrate Yew Digital Lock with other smart home systems I currently use?`,
+    message: `Is it possible to integrate Yew Digital Lock with other smart home systems I currently use?`,
+  },
+  {
+    heading: `How do Yew Digital Lock's products compare to traditional lock systems in terms of security and convenience?`,
+    message: `How do Yew Digital Lock's products compare to traditional lock systems in terms of security and convenience?`,
+  },
+  {
+    heading: `Can you explain the differences between the various digital lock models offered by Yew Digital Lock?`,
+    message: `Can you explain the differences between the various digital lock models offered by Yew Digital Lock?`,
+  },
+  {
+    heading: `I'm having trouble setting up my new digital lock. Can you guide me through the troubleshooting process?`,
+    message: `I'm having trouble setting up my new digital lock. Can you guide me through the troubleshooting process?`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -1028,6 +1051,11 @@ const indexToContent = {
     title: 'Homage',
     description: 'Homage Chatbot',
     exampleMessages: homageExampleMessages,
+  },
+  'yew-digital-lock': {
+    title: 'Yew Digital Lock',
+    description: 'Yew Digital Lock Chatbot',
+    exampleMessages: yewDigitalLockExampleMessages,
   },
 }
 
