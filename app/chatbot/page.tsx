@@ -90,6 +90,8 @@ export default function ChatbotPage() {
     }
   }
 
+  const expiredPasswords = ['ymdl', 'yoml']
+
   const [password, setPassword] = useState('')
   const [index, setIndex] = useState(passwordToIndex(password))
   const [authenticated, setAuthenticated] = useState(false)
@@ -122,6 +124,11 @@ export default function ChatbotPage() {
     // )
     e.preventDefault()
 
+    // Check if password has expired
+    if (expiredPasswords.includes(password)) {
+      alert('This chatbot has expired. Please contact us to renew it.')
+      return
+    }
     // Check the password (replace 'yourpassword' with your actual password)
     if (
       [
