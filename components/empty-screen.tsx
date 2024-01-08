@@ -876,6 +876,29 @@ const greaterClubExampleMessages = [
     heading: 'Tell me more about Greater Club',
     message: `Tell me more about Greater Club`,
   },
+  {
+    heading: `What are some effective strategies for scaling a business in a competitive market like Singapore?`,
+    message: `What are some effective strategies for scaling a business in a competitive market like Singapore?`,
+  },
+  {
+    heading: `What are the emerging technologies that could impact the finance industry in the next five years?`,
+    message: `What are the emerging technologies that could impact the finance industry in the next five years?`,
+  },
+  {
+    heading: `How can artificial intelligence be leveraged to enhance customer service?`,
+    message: `How can artificial intelligence be leveraged to enhance customer service?`,
+  },
+  {
+    heading: `How can a community platform like Greater facilitate meaningful connections among its members?`,
+    message: `How can a community platform like Greater facilitate meaningful connections among its members?`,
+  },
+]
+
+const modeAestheticsExampleMessages = [
+  {
+    heading: 'Tell me more about Mode Aesthetics',
+    message: `Tell me more about Mode Aesthetics`,
+  },
 ]
 
 const indexToContent = {
@@ -1068,6 +1091,11 @@ const indexToContent = {
     title: 'Greater Club',
     description: 'Greater Club Chatbot',
     exampleMessages: greaterClubExampleMessages,
+  },
+  'mode-aesthetics': {
+    title: 'Mode Aesthetics',
+    description: 'Mode Aesthetics Chatbot',
+    exampleMessages: modeAestheticsExampleMessages,
   },
 }
 
