@@ -901,6 +901,13 @@ const modeAestheticsExampleMessages = [
   },
 ]
 
+const absolutelyBatterExampleMessages = [
+  {
+    heading: 'Tell me more about Absolutely Batter',
+    message: `Tell me more about Absolutely Batter`,
+  },
+]
+
 const indexToContent = {
   namkeepau: {
     title: 'Nam Kee Pau',
@@ -1096,6 +1103,11 @@ const indexToContent = {
     title: 'Mode Aesthetics',
     description: 'Mode Aesthetics Chatbot',
     exampleMessages: modeAestheticsExampleMessages,
+  },
+  'absolutely-batter': {
+    title: 'Absolutely Batter',
+    description: 'Absolutely Batter Chatbot',
+    exampleMessages: absolutelyBatterExampleMessages,
   },
 }
 

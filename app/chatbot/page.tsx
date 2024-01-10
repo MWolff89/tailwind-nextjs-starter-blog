@@ -91,6 +91,8 @@ export default function ChatbotPage() {
         return 'greater-club'
       case 'MODEAES':
         return 'mode-aesthetics'
+      case 'ABSBAT':
+        return 'absolutely-batter'
       default:
         return 'namkeepau'
     }
@@ -180,6 +182,7 @@ export default function ChatbotPage() {
         'YEWDGLOCK',
         'GRTCLB',
         'MODEAES',
+        'ABSBAT',
       ].includes(password)
     ) {
       setAuthenticated(true)
