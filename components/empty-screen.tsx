@@ -1117,8 +1117,7 @@ type EmptyScreenProps = {
 }
 
 export function EmptyScreen({ setInput, index }: EmptyScreenProps) {
-  const { title, exampleMessages } =
-    indexToContent[index as keyof typeof indexToContent]
+  const { title, exampleMessages } = indexToContent[index as keyof typeof indexToContent]
   return (
     <div className="mx-auto max-w-2xl px-4">
       <div className="bg-background rounded-lg border p-8">
