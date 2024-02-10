@@ -1029,7 +1029,7 @@ const indexToContent = {
     description: 'Foptics Club Chatbot',
     exampleMessages: fopticsClubExampleMessages,
   },
-  'feisiong-group': {
+  'fei-siong-group': {
     title: 'Fei Siong Group',
     description: 'Fei Siong Group Chatbot',
     exampleMessages: feiSiongGroupExampleMessages,

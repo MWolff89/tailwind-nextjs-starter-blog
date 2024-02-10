@@ -6,6 +6,7 @@ import { twMerge } from 'tailwind-merge'
 import { OpenAI } from 'langchain/llms/openai'
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai'
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter'
+import { Index, RecordMetadata } from '@pinecone-database/pinecone'
 // import { loadQAStuffChain } from 'langchain/chains'
 // import { Document } from 'langchain/document'
 
@@ -106,25 +107,21 @@ export const updatePinecone = async (client: any, indexName: string, docs: any[]
   }
 }
 
-export const queryPineconeVectorStore = async (
-  client: any,
-  indexName: string,
-  question: string
-) => {
+export const queryPineconeVectorStore = async (index: Index<RecordMetadata>, question: string) => {
   // 1. Start query process
   console.log('Querying Pinecone vector store...')
   // 2. Retrieve the Pinecone index
-  const index = client.Index(indexName)
+  // const index = client.Index(indexName)
   // 3. Create query embedding
   const queryEmbedding = await new OpenAIEmbeddings().embedQuery(question)
   // 4. Query Pinecone index and return top 10 matches
   let queryResponse = await index.query({
-    queryRequest: {
-      topK: 10,
-      vector: queryEmbedding,
-      includeMetadata: true,
-      includeValues: true,
-    },
+    // queryRequest: {
+    topK: 10,
+    vector: queryEmbedding,
+    includeMetadata: true,
+    includeValues: true,
+    // },
   })
   // 5. Log the number of matches
   console.log(`Found ${queryResponse.matches.length} matches...`)

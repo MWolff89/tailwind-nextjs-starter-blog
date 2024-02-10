@@ -62,7 +62,7 @@ export default function ChatbotPage() {
       case 'FopticsFuture':
         return 'foptics-club'
       case 'fsg':
-        return 'feisiong-group'
+        return 'fei-siong-group'
       case 'CartrackTech':
         return 'cartrack'
       case 'CapitalHRMExcellence':

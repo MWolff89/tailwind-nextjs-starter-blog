@@ -993,7 +993,7 @@ Privacy is paramount, and every discussion underlines Absolutely Batter's commit
     cushmanwakefield: cushmanWakefieldPrompt,
     'ivre-sg': ivrePrompt,
     'foptics-club': fopticsClubPrompt,
-    'feisiong-group': feisiongGroupPrompt,
+    'fei-siong-group': feisiongGroupPrompt,
     cartrack: cartrackPrompt,
     'capital-hrm': capitalHrmPrompt,
     'royal-t-group': royalTGroupPrompt,
